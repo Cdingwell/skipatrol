@@ -1,0 +1,409 @@
+[23-Jul-2013 15:11:36 America/Denver] PHP Warning:  mysql_query(): Access denied for user 'superjh2'@'localhost' (using password: NO) in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:11:36 America/Denver] PHP Warning:  mysql_query(): A link to the server could not be established in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:11:36 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/list.php on line 8
+[23-Jul-2013 15:12:52 America/Denver] PHP Warning:  mysql_query(): Access denied for user 'superjh2'@'localhost' (using password: NO) in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:12:52 America/Denver] PHP Warning:  mysql_query(): A link to the server could not be established in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:18:06 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home3/superjh2/public_html/dalhousie/list.php on line 15
+[23-Jul-2013 15:18:35 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home3/superjh2/public_html/dalhousie/list.php on line 15
+[23-Jul-2013 15:18:58 America/Denver] PHP Warning:  mysqli_connect() expects parameter 5 to be long, string given in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:18:58 America/Denver] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home3/superjh2/public_html/dalhousie/list.php on line 13
+[23-Jul-2013 15:18:58 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/list.php on line 15
+[23-Jul-2013 15:18:58 America/Denver] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, null given in /home3/superjh2/public_html/dalhousie/list.php on line 48
+[23-Jul-2013 15:20:52 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 15:20:52 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 15:23:22 America/Denver] PHP Warning:  mysqli_connect() expects parameter 5 to be long, string given in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:23:22 America/Denver] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home3/superjh2/public_html/dalhousie/list.php on line 13
+[23-Jul-2013 15:23:22 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/list.php on line 15
+[23-Jul-2013 15:23:22 America/Denver] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, null given in /home3/superjh2/public_html/dalhousie/list.php on line 46
+[23-Jul-2013 15:23:29 America/Denver] PHP Warning:  mysqli_connect() expects parameter 5 to be long, string given in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:23:29 America/Denver] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home3/superjh2/public_html/dalhousie/list.php on line 13
+[23-Jul-2013 15:23:29 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/list.php on line 15
+[23-Jul-2013 15:23:29 America/Denver] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, null given in /home3/superjh2/public_html/dalhousie/list.php on line 46
+[23-Jul-2013 15:24:06 America/Denver] PHP Warning:  mysql_connect() expects parameter 5 to be long, string given in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:24:06 America/Denver] PHP Fatal error:  Call to undefined function mysql_connect_errno() in /home3/superjh2/public_html/dalhousie/list.php on line 8
+[23-Jul-2013 15:24:46 America/Denver] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:24:48 America/Denver] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:25:00 America/Denver] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:25:00 America/Denver] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:25:01 America/Denver] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:25:02 America/Denver] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:25:47 America/Denver] PHP Warning:  mysql_query(): Access denied for user 'superjh2'@'localhost' (using password: NO) in /home3/superjh2/public_html/dalhousie/list.php on line 7
+[23-Jul-2013 15:25:47 America/Denver] PHP Warning:  mysql_query(): A link to the server could not be established in /home3/superjh2/public_html/dalhousie/list.php on line 7
+[23-Jul-2013 15:25:47 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/list.php on line 9
+[23-Jul-2013 15:27:49 America/Denver] PHP Warning:  mysql_query(): Access denied for user 'superjh2'@'localhost' (using password: NO) in /home3/superjh2/public_html/dalhousie/list.php on line 7
+[23-Jul-2013 15:27:49 America/Denver] PHP Warning:  mysql_query(): A link to the server could not be established in /home3/superjh2/public_html/dalhousie/list.php on line 7
+[23-Jul-2013 15:27:49 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/list.php on line 9
+[23-Jul-2013 15:27:59 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 15:27:59 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 15:28:21 America/Denver] PHP Warning:  mysql_query(): Access denied for user 'superjh2'@'localhost' (using password: NO) in /home3/superjh2/public_html/dalhousie/list.php on line 7
+[23-Jul-2013 15:28:21 America/Denver] PHP Warning:  mysql_query(): A link to the server could not be established in /home3/superjh2/public_html/dalhousie/list.php on line 7
+[23-Jul-2013 15:28:21 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/list.php on line 9
+[23-Jul-2013 15:29:33 America/Denver] PHP Warning:  mysql_query(): Access denied for user 'superjh2'@'localhost' (using password: NO) in /home3/superjh2/public_html/dalhousie/list.php on line 8
+[23-Jul-2013 15:29:33 America/Denver] PHP Warning:  mysql_query(): A link to the server could not be established in /home3/superjh2/public_html/dalhousie/list.php on line 8
+[23-Jul-2013 15:29:33 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/list.php on line 10
+[23-Jul-2013 15:29:58 America/Denver] PHP Warning:  mysql_query(): Access denied for user 'superjh2'@'localhost' (using password: NO) in /home3/superjh2/public_html/dalhousie/list.php on line 8
+[23-Jul-2013 15:29:58 America/Denver] PHP Warning:  mysql_query(): A link to the server could not be established in /home3/superjh2/public_html/dalhousie/list.php on line 8
+[23-Jul-2013 15:29:58 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/list.php on line 10
+[23-Jul-2013 15:31:14 America/Denver] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home3/superjh2/public_html/dalhousie/list.php on line 13
+[23-Jul-2013 15:31:15 America/Denver] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home3/superjh2/public_html/dalhousie/list.php on line 13
+[23-Jul-2013 15:32:19 America/Denver] PHP Parse error:  syntax error, unexpected '<' in /home3/superjh2/public_html/dalhousie/list.php on line 41
+[23-Jul-2013 15:32:52 America/Denver] PHP Parse error:  syntax error, unexpected '<' in /home3/superjh2/public_html/dalhousie/list.php on line 41
+[23-Jul-2013 15:32:57 America/Denver] PHP Warning:  mysql_query(): Access denied for user 'superjh2'@'localhost' (using password: NO) in /home3/superjh2/public_html/dalhousie/list.php on line 8
+[23-Jul-2013 15:32:57 America/Denver] PHP Warning:  mysql_query(): A link to the server could not be established in /home3/superjh2/public_html/dalhousie/list.php on line 8
+[23-Jul-2013 15:32:57 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/list.php on line 10
+[23-Jul-2013 15:35:03 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 15:35:03 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 15:35:08 America/Denver] PHP Warning:  mysql_query(): Access denied for user 'superjh2'@'localhost' (using password: NO) in /home3/superjh2/public_html/dalhousie/list.php on line 8
+[23-Jul-2013 15:35:08 America/Denver] PHP Warning:  mysql_query(): A link to the server could not be established in /home3/superjh2/public_html/dalhousie/list.php on line 8
+[23-Jul-2013 15:35:08 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/list.php on line 10
+[23-Jul-2013 15:35:53 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 15:35:53 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 15:43:10 America/Denver] PHP Warning:  mysql_query(): Access denied for user 'superjh2'@'localhost' (using password: NO) in /home3/superjh2/public_html/dalhousie/list.php on line 8
+[23-Jul-2013 15:43:10 America/Denver] PHP Warning:  mysql_query(): A link to the server could not be established in /home3/superjh2/public_html/dalhousie/list.php on line 8
+[23-Jul-2013 15:43:10 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/list.php on line 10
+[23-Jul-2013 15:43:13 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 15:43:13 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 15:44:06 America/Denver] PHP Warning:  mysql_query(): Access denied for user 'superjh2'@'localhost' (using password: NO) in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:44:06 America/Denver] PHP Warning:  mysql_query(): A link to the server could not be established in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:44:06 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/list.php on line 10
+[23-Jul-2013 15:44:33 America/Denver] PHP Warning:  mysql_query(): Access denied for user 'superjh2'@'localhost' (using password: NO) in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:44:33 America/Denver] PHP Warning:  mysql_query(): A link to the server could not be established in /home3/superjh2/public_html/dalhousie/list.php on line 6
+[23-Jul-2013 15:44:33 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/list.php on line 10
+[23-Jul-2013 15:52:01 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 15:52:01 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 15:52:01 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/login.php on line 29
+[23-Jul-2013 15:59:09 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 15:59:09 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 16:00:14 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 16:00:14 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 16:01:09 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 16:01:09 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 16:05:22 America/Denver] PHP Warning:  mysql_connect() expects parameter 5 to be long, string given in /home3/superjh2/public_html/dalhousie/config.php on line 2
+[23-Jul-2013 16:07:02 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home3/superjh2/public_html/dalhousie/config.php on line 2
+[23-Jul-2013 16:07:02 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/list.php on line 12
+[23-Jul-2013 16:07:05 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 16:07:05 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 16:09:22 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home3/superjh2/public_html/dalhousie/config.php on line 2
+[23-Jul-2013 16:09:22 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/list.php on line 12
+[23-Jul-2013 16:09:33 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 16:09:33 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 16:17:01 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/list.php on line 11
+[23-Jul-2013 16:17:52 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 16:17:52 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 16:17:57 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/list.php on line 11
+[23-Jul-2013 16:19:54 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/list.php on line 11
+[23-Jul-2013 16:20:35 America/Denver] PHP Warning:  mysql_connect(): Access denied for user 'superjh2_emly'@'localhost' (using password: YES) in /home3/superjh2/public_html/dalhousie/config.php on line 3
+[23-Jul-2013 16:22:54 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home3/superjh2/public_html/dalhousie/config.php on line 12
+[23-Jul-2013 16:26:08 America/Denver] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home3/superjh2/public_html/dalhousie/config.php on line 8
+[23-Jul-2013 16:27:31 America/Denver] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home3/superjh2/public_html/dalhousie/config.php on line 8
+[23-Jul-2013 16:28:57 America/Denver] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home3/superjh2/public_html/dalhousie/config.php on line 8
+[23-Jul-2013 16:28:57 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/config.php on line 9
+[23-Jul-2013 16:29:28 America/Denver] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home3/superjh2/public_html/dalhousie/config.php on line 8
+[23-Jul-2013 16:29:28 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/config.php on line 9
+[23-Jul-2013 16:29:30 America/Denver] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home3/superjh2/public_html/dalhousie/config.php on line 8
+[23-Jul-2013 16:29:30 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/config.php on line 9
+[23-Jul-2013 16:29:59 America/Denver] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home3/superjh2/public_html/dalhousie/config.php on line 8
+[23-Jul-2013 16:31:06 America/Denver] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home3/superjh2/public_html/dalhousie/config.php on line 7
+[23-Jul-2013 16:33:19 America/Denver] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/superjh2/public_html/dalhousie/list.php on line 7
+[23-Jul-2013 16:33:19 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home3/superjh2/public_html/dalhousie/list.php on line 11
+[23-Jul-2013 16:35:50 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 16:35:50 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 16:35:50 America/Denver] PHP Warning:  mysqli_select_db() expects exactly 2 parameters, 1 given in /home3/superjh2/public_html/dalhousie/login.php on line 18
+[23-Jul-2013 16:37:19 America/Denver] PHP Parse error:  syntax error, unexpected ',' in /home3/superjh2/public_html/dalhousie/login.php on line 25
+[23-Jul-2013 16:37:22 America/Denver] PHP Parse error:  syntax error, unexpected ',' in /home3/superjh2/public_html/dalhousie/login.php on line 25
+[23-Jul-2013 16:38:10 America/Denver] PHP Parse error:  syntax error, unexpected ',' in /home3/superjh2/public_html/dalhousie/login.php on line 27
+[23-Jul-2013 16:39:52 America/Denver] PHP Parse error:  syntax error, unexpected ',' in /home3/superjh2/public_html/dalhousie/login.php on line 27
+[23-Jul-2013 16:40:34 America/Denver] PHP Parse error:  syntax error, unexpected ',' in /home3/superjh2/public_html/dalhousie/login.php on line 27
+[23-Jul-2013 16:40:57 America/Denver] PHP Parse error:  syntax error, unexpected ',' in /home3/superjh2/public_html/dalhousie/login.php on line 27
+[23-Jul-2013 16:43:41 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 16:43:41 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 16:43:41 America/Denver] PHP Warning:  mysqli_select_db() expects exactly 2 parameters, 1 given in /home3/superjh2/public_html/dalhousie/login.php on line 18
+[23-Jul-2013 16:46:09 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 16:46:09 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 16:46:09 America/Denver] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/superjh2/public_html/dalhousie/login.php on line 22
+[23-Jul-2013 16:46:09 America/Denver] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home3/superjh2/public_html/dalhousie/login.php on line 25
+[23-Jul-2013 16:58:04 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 16:58:04 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 16:58:04 America/Denver] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:00:00 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:00:00 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:00:00 America/Denver] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:00:04 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:00:04 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:00:04 America/Denver] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:00:35 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:00:35 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:00:35 America/Denver] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:01:10 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:01:10 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:01:10 America/Denver] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:03:37 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:03:37 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:03:37 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:13 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:13 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:13 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:13 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:13 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:13 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:14 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:14 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:14 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:14 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:14 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:14 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:14 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:14 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:14 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:14 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:14 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:14 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:14 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:14 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:14 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:15 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:15 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:15 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:15 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:15 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:15 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:15 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:15 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:15 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:16 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:16 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:16 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:16 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:16 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:16 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:16 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:16 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:16 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:16 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:16 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:16 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:16 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:16 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:16 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:17 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:17 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:17 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:17 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:17 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:17 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:17 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:17 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:17 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:17 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:17 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:17 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:17 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:17 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:17 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:04:18 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:04:18 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:04:18 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:41 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:41 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:41 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:41 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:41 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:41 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:42 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:42 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:42 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:42 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:42 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:42 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:42 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:42 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:42 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:42 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:42 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:42 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:42 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:42 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:42 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:43 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:43 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:43 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:43 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:43 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:43 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:43 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:43 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:43 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:43 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:43 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:43 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:43 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:43 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:43 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:44 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:44 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:44 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:44 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:44 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:44 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:44 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:44 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:44 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:44 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:44 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:44 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:44 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:44 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:44 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:45 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:45 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:45 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:45 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:45 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:45 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:45 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:45 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:45 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:06:45 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:06:45 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:06:45 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:18 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:18 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:18 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:18 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:18 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:18 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:19 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:19 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:19 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:19 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:19 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:19 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:19 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:19 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:19 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:19 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:19 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:19 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:19 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:19 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:19 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:20 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:20 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:20 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:20 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:20 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:20 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:20 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:20 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:20 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:20 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:20 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:20 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:20 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:20 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:20 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:21 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:21 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:21 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:21 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:21 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:21 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:21 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:21 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:21 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:21 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:21 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:21 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:21 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:21 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:21 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:22 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:22 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:22 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:22 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:22 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:22 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:22 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:22 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:22 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:22 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:22 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:22 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:22 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:22 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:22 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:23 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:23 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:23 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:23 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:23 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:23 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:23 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:23 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:23 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:23 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:23 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:23 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:23 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:23 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:23 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:24 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:24 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:24 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:24 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:24 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:24 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:24 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:24 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:24 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:24 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:24 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:24 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:25 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:25 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:25 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:25 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:25 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:25 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:25 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:25 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:25 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:25 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:25 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:25 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:25 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:25 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:25 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:26 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:26 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:26 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:26 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:26 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:26 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:26 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:26 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:26 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:26 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:26 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:26 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[23-Jul-2013 17:07:27 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[23-Jul-2013 17:07:27 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[23-Jul-2013 17:07:27 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 15
+[25-Jul-2013 04:26:39 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[25-Jul-2013 04:26:39 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[25-Jul-2013 04:26:39 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 16
+[25-Jul-2013 04:26:39 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[25-Jul-2013 04:26:39 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[25-Jul-2013 04:26:39 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 16
+[26-Jul-2013 05:57:40 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[26-Jul-2013 05:57:40 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[26-Jul-2013 05:57:40 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 16
+[26-Jul-2013 05:57:41 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[26-Jul-2013 05:57:41 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[26-Jul-2013 05:57:41 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 16
+[26-Jul-2013 23:41:08 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[26-Jul-2013 23:41:08 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[26-Jul-2013 23:41:08 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 16
+[26-Jul-2013 23:41:09 America/Denver] PHP Notice:  Undefined index: login in /home3/superjh2/public_html/dalhousie/login.php on line 6
+[26-Jul-2013 23:41:09 America/Denver] PHP Notice:  Undefined index: pass in /home3/superjh2/public_html/dalhousie/login.php on line 7
+[26-Jul-2013 23:41:09 America/Denver] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home3/superjh2/public_html/dalhousie/login.php on line 16
