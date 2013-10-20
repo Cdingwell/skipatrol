@@ -1,0 +1,59 @@
+<!--
+.welcomeMessage = welcome message
+#nav = navigation
+.h_title = card title
+.content
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<title>Superior Zone Administration Home</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/api.js"></script>
+<script type="text/javascript" src="js/tricks.js"></script>
+<script type="text/javascript" src="js/handlebars.js"></script>
+<script type="text/javascript" src="js/templates.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/welcome.js"></script>
+<script type="text/javascript" src="js/managePatrollers.js"></script>
+<script type="text/javascript" src="js/boot.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".box .h_title").not(this).next("ul").hide("normal");
+	$(".box .h_title").not(this).next("#home").show("normal");
+	$(".box").children(".h_title").click( function() { $(this).next("ul").slideToggle(); });
+});
+</script>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrap">
+	<div id="header">
+		<div id="top">
+			<div class="left welcomeMessage">
+			</div>
+			<div class="right">
+				<div class="align-right">
+					<p>Ski Patrol</p>
+				</div>
+			</div>
+		</div>
+		<div id="nav">
+			<!--
+			<ul>
+				<li class="upp"><a href="index.php">Main</a></li>
+				<li class="upp"><a href="patrollers.php">Patrollers</a></li>
+				<li class="upp"><a href="form.php">Forms</a></li>
+			</ul>
+			-->
+		</div>
+	</div>
+	
+	<div id="content"></div>
+</div>
+
+</body>
+</html>

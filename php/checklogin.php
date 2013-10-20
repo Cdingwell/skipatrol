@@ -1,30 +1,28 @@
 <?php
 
 session_start();
+include('../config.php');
+include('functions.php');
+include('session.class.php');
 
-// username and password sent from form 
-$myusername=$_POST['login']; 
-$mypassword=$_POST['pass']; 
+// connect to database
+$con = new mysqli(DBHOST, DBUSER, DBPASS, DB);
 
-$con=mysqli_connect("localhost","superjh2_tyler","grantt","superjh2_appdev")
-or die("Unable to Connect");
+// do a login attempt
+$sql = $con->prepare("SELECT id from Patroller where Name=? AND password=?");
+$sql->bind_param("ss", $_POST['username'], $_POST['password']);
+$sql->execute();
+$sql->bind_result($result);
+$sql->fetch();
+$sql->close();
 
+// indicate login failure
+if(empty($result))
+	exitWithJSON(array( 'success' => 'false' ));
 
-$query1=mysqli_query($con,"SELECT * from Patroller where Name='$myusername' AND password='$mypassword';") or die("ERROR");
-$rowcount=mysqli_num_rows($query1);
+// if login worked make a session
+$session = new sessionManager();
+$sessionid = $session->createSessionForUserid($result);
+exitWithJSON(array( 'success' => 'true', 'sessionid' => $sessionid ));
 
-
-
-
-// If result matched $myusername and $mypassword, table row must be 1 row
-if($rowcount==1){
-    // set loggedin to true
-    $_SESSION['loggedin'] = true;
-    $_SESSION['username'] = $myusername;
-    //redirect
-    header("location:index.php");
-}
-else {
-    header("location:../login.html");
-}
 ?>

@@ -1,15 +1,3 @@
-<?php
-    session_start();
-
-    //Make sure the loggedin variable is set and equals true, and that the previous page was the login page
-    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {    
-
-    } 
-    else {
-        header("location:../login.html");
-    }
-?>
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />

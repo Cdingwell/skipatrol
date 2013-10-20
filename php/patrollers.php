@@ -1,12 +1,7 @@
 <?php
-    session_start();
-    //Make sure the loggedin variable is set and equals true, and that the previous page was the login page
-    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {    
-    
-    } 
-    else {
-        header("location:../login.html");
-    }
+    include('../config.php');
+    include('functions.php');
+    include('session.class.php');
 ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
@@ -31,7 +26,6 @@ $(function(){
 	<div id="header">
 		<div id="top">
 			<div class="left">
-				<p>Welcome, <strong><?php echo $_SESSION['username']; ?></strong> [ <a href="logout.php">logout</a> ]</p>
 			</div>
 			<div class="right">
 				<div class="align-right">
@@ -82,7 +76,7 @@ $(function(){
                                if (isset($_POST['Edit']))
                                 {
                                $ID=$_POST['Edit'];
-                                $con=mysqli_connect("localhost","superjh2_tyler","grantt","superjh2_appdev");
+                                $con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB);
 			        $query = "select * from Patroller WHERE id='$ID';";
                                 $result = mysqli_query($con,$query);
                                 
@@ -106,7 +100,7 @@ $(function(){
                                 if (isset($_POST['Save']))
                                 {
                                 $ID=$_POST['Save'];
-                                $con=mysqli_connect("localhost","superjh2_tyler","grantt","superjh2_appdev") or DIE("Unable to Connect -Save");
+                                $con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB) or DIE("Unable to Connect -Save");
                                 $Name=$_POST[Name];
                                 $InstID=$_POST[InstID];
                                 $Email=$_POST[Email];
@@ -123,11 +117,11 @@ $(function(){
                                if (isset($_POST['Delete']))
                                 {
                                 $ID=$_POST['Delete'];
-                                $con=mysqli_connect("localhost","superjh2_tyler","grantt","superjh2_appdev") or DIE("Unable to Connect -Save");
+                                $con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB) or DIE("Unable to Connect -Save");
                             
 			        $deleteQuery = "Delete from Patroller WHERE id='$ID';";
                                 $resultDelete = mysqli_query($con,$deleteQuery) or DIE("Error");
-                               mysqli_close;
+                               mysqli_close();
                                }
                              ?>
                         <div class="full_w">
@@ -160,7 +154,7 @@ $(function(){
                                 echo "</form>";
                                 if (isset($_POST['Add']))
                                 {
-                                $con=mysqli_connect("localhost","superjh2_tyler","grantt","superjh2_appdev") or DIE("Unable to Connect -Add");
+                                $con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB) or DIE("Unable to Connect -Add");
                                 $Name=$_POST[Name];
                                 $InstID=$_POST[InstID];
                                 $Email=$_POST[Email];
@@ -202,7 +196,7 @@ $(function(){
 						<tr class="align-center">
 
                                 <?php
-				$con=mysqli_connect("localhost","superjh2_tyler","grantt","superjh2_appdev");
+				$con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB);
 				$query = "select * from Patroller;";
                                 $result = mysqli_query($con,$query);
                                 echo "<form method='post' action=''>";
