@@ -7,7 +7,7 @@ var form = [
 		fields: [
 			{ name: 'Travel, turn, climb, stop', type: 'checkbox', sqlName: '123123' },
 			{ name: 'Travel, turn, climb, stop', type: 'checkbox', sqlName: '123123' },
-			{ name: 'Travel, turn, climb, stop', type: 'checkbox', sqlName: '123123' },
+			{ name: 'Travel, turn, climb, stop', type: 'checkbox', sqlName: '123123' }
 		]
 	},
 
@@ -18,18 +18,29 @@ var form = [
 		fields: [
 			{ name: 'Travel, turn, climb, stop', type: 'checkbox', sqlName: '123123', twoPerson: true },
 			{ name: 'Travel, turn, climb, stop', type: 'checkbox', sqlName: '123123' },
-			{ name: 'Travel, turn, climb, stop', type: 'checkbox', sqlName: '123123' },
+			{ name: 'Travel, turn, climb, stop', type: 'checkbox', sqlName: '123123' }
 		]
 	},
 
 
 
 	{
-		name: 'Some random form with example of a dropdown',
+		name: 'Toboggan Loaded',
 		fields: [
-			{ name: 'Weather', type: 'dropdown', sqlName: '123123', options: ['rain', 'snow', 'volcano'] },
+			{ name: 'Travel, turn, climb, stop', type: 'checkbox', sqlName: '123123', twoPerson: true },
 			{ name: 'Travel, turn, climb, stop', type: 'checkbox', sqlName: '123123' },
-			{ name: 'Travel, turn, climb, stop', type: 'checkbox', sqlName: '123123' },
+			{ name: 'Travel, turn, climb, stop', type: 'checkbox', sqlName: '123123' }
+		]
+	},
+
+
+
+	{
+		name: 'Choose left right or both',
+		fields: [
+			{ name: 'Foot', type: 'dropdown', sqlName: 'foot', options: ['left', 'right', 'both'] },
+			{ name: 'Ankle', type: 'dropdown', sqlName: 'ankle', options: ['left', 'right', 'both'] },
+			{ name: 'Hip', type: 'dropdown', sqlName: 'hip', options: ['left', 'right', 'both'] }
 		]
 	}
 
