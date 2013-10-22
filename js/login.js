@@ -1,6 +1,7 @@
 var login = trick({
 	events: {
-		'click #loginButton': 'loginAttempt'
+		'click #loginButton': 'loginAttempt', // try logging in when login button is pressed
+		'keypress input': 'loginAttemptFromKeyPress' // if user hit enter we will want to attempt a login
 	},
 	defaults: {
 		loading: false
@@ -24,6 +25,11 @@ login.prototype.init = function() {
 login.prototype.render = function() {
 	var buffer = Handlebars.templates['login']();
 	this.el.innerHTML = buffer;
+}
+
+login.prototype.loginAttemptFromKeyPress = function(e, target) {
+	if(e.keyCode == 13)
+		this.loginAttempt(e, target);
 }
 
 login.prototype.loginAttempt = function(e, target) {

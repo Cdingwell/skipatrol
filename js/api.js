@@ -26,7 +26,7 @@ api.prototype.login = function(username, password, callback) {
 
 }
 
-api.prototype.addPatroller.deletePatroller = function(id, callback) {
+api.prototype.deletePatroller = function(id, callback) {
 	$.post(this.base + 'php/getPatrollers.php?action=deletePatroller', { sessionid: this.sessionid, id: id }, function(d) {
 		if(typeof callback == 'function')
 			callback(d);
@@ -35,14 +35,30 @@ api.prototype.addPatroller.deletePatroller = function(id, callback) {
 
 // add a new patroller
 
-api.prototype.addPatroller = function(name, instid, email, phonenumb, cspnum, password, callback) {
-	$.post(this.base + 'php/getPatrollers.php?action=addPatroller', { sessionid: this.sessionid, name: name, instid: instid, email: email, phonenumb: phonenumb, cspnum: cspnum, password: password }, callback);
+api.prototype.addPatroller = function(data, callback) {
+	data.sessionid = this.sessionid;
+	$.post(this.base + 'php/getPatrollers.php?action=addPatroller', data, callback);
 }
 
 // get patrollers
 
 api.prototype.getPatrollers = function(callback) {
 	$.post(this.base + 'php/getPatrollers.php?action=getPatrollers', { sessionid: this.sessionid }, callback);
+}
+
+// get single patroller when given the patroller's id
+
+api.prototype.getPatroller = function(id, callback) {
+	$.post(this.base + 'php/getPatrollers.php?action=getPatrollers', { sessionid: this.sessionid, id: id }, function(data) {
+		if(data.length == 1)
+			callback(data[0]);
+	});
+}
+
+// get single patroller history
+
+api.prototype.getPatrollerHistory = function(id, callback) {
+	$.post(this.base + 'php/getPatrollers.php?action=getPatrollerHistory', { sessionid: this.sessionid, id: id }, callback);
 }
 
 // edit patroller, MUST pass POST variable with id

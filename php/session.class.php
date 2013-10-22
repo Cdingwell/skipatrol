@@ -9,10 +9,12 @@
 			$sessionid = uniqid();
 			$useragent = $_SERVER['HTTP_USER_AGENT'];
 			$ip = $_SERVER['REMOTE_ADDR'];
+			if($ip == "::1")
+				$ip = '127.0.0.1';
 			// do the insertion
 			$con = $this->connectDB();
-			$stmt = $con->prepare("INSERT INTO sessions VALUES ('', ?, ?, ?, ?, ?)");
-			$stmt->bind_param('isssi', $userid, $sessionid, $useragent, $ip, time() );   // bind $sample to the parameter
+			$stmt = $con->prepare("INSERT INTO sessions VALUES ('', ?, ?, ?, ?, ?, ?)");
+			$stmt->bind_param('isssii', $userid, $sessionid, $useragent, $ip, time(), time() );   // bind $sample to the parameter
 			$stmt->execute();
 			return $sessionid;
 		}
@@ -32,6 +34,8 @@
 			// grab more user variables
 			$useragent = $_SERVER['HTTP_USER_AGENT'];
 			$ip = $_SERVER['REMOTE_ADDR'];
+			if($ip == "::1")
+				$ip = '127.0.0.1';
 			// do the query to pull userid from session
 			$con = $this->connectDB();
 			$sql = $con->prepare("SELECT userid FROM sessions WHERE session=? AND useragent=? AND ip=?");
@@ -40,10 +44,18 @@
 			$sql->bind_result($result);
 			$sql->fetch();
 			$sql->close();
-			// store userid
-			$userid = $result;
+			// determine if session is legit
+			$session_is_legit = !empty($result);
+			// if session is legit update the sessions last active time
+			if($session_is_legit) {
+				$con = $this->connectDB();
+				$stmt = $con->prepare("UPDATE `sessions` SET `lastactive` = ? WHERE `session` = ?");
+				$stmt->bind_param('is', time(), $sessionid );   // bind $sample to the parameter
+				$stmt->execute();
+				$stmt->close();
+			}
 			// return if its a legit session
-			return !empty($result);
+			return $session_is_legit;
 		}
 
 	}

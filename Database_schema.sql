@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.11.1
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 30, 2013 at 08:19 AM
--- Server version: 5.5.32
--- PHP Version: 5.2.17
+-- Generation Time: Oct 20, 2013 at 09:25 PM
+-- Server version: 5.6.12
+-- PHP Version: 5.5.0
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,20 +17,17 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `superjh2_appdev`
+-- Database: `skipatrol`
 --
+CREATE DATABASE IF NOT EXISTS `skipatrol` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `skipatrol`;
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `Accident`
 --
--- Creation: Jul 27, 2013 at 11:36 AM
--- Last update: Jul 27, 2013 at 11:36 AM
--- Last check: Jul 27, 2013 at 11:36 AM
---
 
-DROP TABLE IF EXISTS `Accident`;
 CREATE TABLE IF NOT EXISTS `Accident` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Timestamp` date NOT NULL,
@@ -76,12 +73,7 @@ INSERT INTO `Accident` (`id`, `Timestamp`, `reportNum`, `CSPSNum1`, `CSPSNum2`, 
 --
 -- Table structure for table `FirstAid`
 --
--- Creation: Jul 27, 2013 at 11:36 AM
--- Last update: Jul 27, 2013 at 11:36 AM
--- Last check: Jul 27, 2013 at 11:36 AM
---
 
-DROP TABLE IF EXISTS `FirstAid`;
 CREATE TABLE IF NOT EXISTS `FirstAid` (
   `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `SID` int(11) DEFAULT NULL,
@@ -130,12 +122,7 @@ INSERT INTO `FirstAid` (`Timestamp`, `SID`, `FAID`, `prioritySurvey`, `secondary
 --
 -- Table structure for table `Instructor`
 --
--- Creation: Jul 27, 2013 at 11:36 AM
--- Last update: Jul 28, 2013 at 01:07 AM
--- Last check: Jul 27, 2013 at 11:36 AM
---
 
-DROP TABLE IF EXISTS `Instructor`;
 CREATE TABLE IF NOT EXISTS `Instructor` (
   `name` varchar(200) DEFAULT NULL,
   `instID` varchar(200) NOT NULL DEFAULT '',
@@ -159,12 +146,7 @@ INSERT INTO `Instructor` (`name`, `instID`, `email`, `phoneNum`, `password`) VAL
 --
 -- Table structure for table `OnSnow`
 --
--- Creation: Jul 27, 2013 at 11:36 AM
--- Last update: Jul 27, 2013 at 11:36 AM
--- Last check: Jul 27, 2013 at 11:36 AM
---
 
-DROP TABLE IF EXISTS `OnSnow`;
 CREATE TABLE IF NOT EXISTS `OnSnow` (
   `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `SID` int(11) DEFAULT NULL,
@@ -261,12 +243,7 @@ INSERT INTO `OnSnow` (`Timestamp`, `SID`, `snowID`, `instID`, `travelTurnClimbSt
 --
 -- Table structure for table `Patroller`
 --
--- Creation: Jul 27, 2013 at 11:36 AM
--- Last update: Jul 27, 2013 at 11:36 AM
--- Last check: Jul 27, 2013 at 11:36 AM
---
 
-DROP TABLE IF EXISTS `Patroller`;
 CREATE TABLE IF NOT EXISTS `Patroller` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(200) DEFAULT NULL,
@@ -277,26 +254,62 @@ CREATE TABLE IF NOT EXISTS `Patroller` (
   `password` varchar(41) DEFAULT NULL,
   `login` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`,`InstID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Dumping data for table `Patroller`
 --
 
 INSERT INTO `Patroller` (`id`, `Name`, `InstID`, `Email`, `PhoneNum`, `CSPSNum`, `password`, `login`) VALUES
-(8, 'Emily', '5555', 'emily@email.com', '1239876', '134', 'grantt', 1);
+(8, 'Emily', '5555', 'c', '1239876', '134', 'grantt', 1),
+(13, 'bob', '5', 'rrr', '4', '4', '123', NULL),
+(15, 'a', '5', 'slut', '7', '8', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sessions`
+--
+
+CREATE TABLE IF NOT EXISTS `sessions` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `userid` bigint(20) NOT NULL,
+  `session` varchar(255) NOT NULL,
+  `useragent` varchar(255) NOT NULL,
+  `ip` varchar(255) NOT NULL,
+  `created` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+
+--
+-- Dumping data for table `sessions`
+--
+
+INSERT INTO `sessions` (`id`, `userid`, `session`, `useragent`, `ip`, `created`) VALUES
+(4, 8, '524d840cc061c', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1657.2 Safari/537.36', '::1', 1380811788),
+(5, 8, '524d876420090', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1657.2 Safari/537.36', '::1', 1380812644),
+(6, 8, '524d8a87dba15', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1657.2 Safari/537.36', '::1', 1380813447),
+(7, 8, '524d8a8af3804', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1657.2 Safari/537.36', '::1', 1380813450),
+(8, 8, '524d8ab08f28e', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1657.2 Safari/537.36', '::1', 1380813488),
+(9, 8, '524d8aec39ee6', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1657.2 Safari/537.36', '::1', 1380813548),
+(10, 8, '5256b5a796f19', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1666.0 Safari/537.36', '::1', 1381414311),
+(11, 8, '5256b6176270c', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1666.0 Safari/537.36', '::1', 1381414423),
+(12, 8, '5256b627e1bc7', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1666.0 Safari/537.36', '::1', 1381414439),
+(13, 8, '5256b670d90e6', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1666.0 Safari/537.36', '::1', 1381414512),
+(14, 8, '5256b6a0c95c7', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1666.0 Safari/537.36', '::1', 1381414560),
+(15, 8, '5256b82ace255', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1666.0 Safari/537.36', '::1', 1381414954),
+(16, 8, '5256bc6a9cf6a', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1666.0 Safari/537.36', '::1', 1381416042),
+(17, 8, '525ff435acb4c', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1672.2 Safari/537.36', '::1', 1382020149),
+(18, 8, '525ffbbfe231a', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1672.2 Safari/537.36', '::1', 1382022079),
+(19, 8, '525ffc3f188bf', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1672.2 Safari/537.36', '::1', 1382022207),
+(20, 8, '52600242599d3', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1672.2 Safari/537.36', '::1', 1382023746);
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `Student`
 --
--- Creation: Jul 27, 2013 at 11:36 AM
--- Last update: Jul 27, 2013 at 11:36 AM
--- Last check: Jul 27, 2013 at 11:36 AM
---
 
-DROP TABLE IF EXISTS `Student`;
 CREATE TABLE IF NOT EXISTS `Student` (
   `name` varchar(200) DEFAULT NULL,
   `SID` int(11) NOT NULL,

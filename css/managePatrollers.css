@@ -1,25 +1,112 @@
-.table .row .item {
+.managePatrollers .manage {
+	margin: 10px;
+}
+
+.managePatrollers .filterContainer {
+	display: inline-block;
+	width: calc(100% - 129px);
+}
+
+.managePatrollers .filterContainer input {
+	width: 100%;
+	padding: 5px;
+}
+
+.managePatrollers .manage .addNew .icon-plus-sign-alt {
+	margin-right: 7px;
+}
+
+.managePatrollers .table {
+	margin: 10px;
+}
+
+.managePatrollers .table .row .item {
 	display: inline-block;
 	width: 16%;
 	text-align: center;
 }
 
-.table .row {
+.managePatrollers .table .row {
 	height: 30px;
 	line-height: 30px;
+	background-color: #f9f9f9;
 }
 
-.table .row.head {
+.managePatrollers .table .row.head {
 	background-color: rgba(0, 0, 0, 0.2);
 	font-weight: bold;
 	color: black;
 }
 
-.table .row:nth-child(2n) {
+.managePatrollers .table .row:nth-child(2n) {
 	background-color: rgba(0, 0, 0, 0.05);
 }
 
-.table .row:hover {
+.managePatrollers .table .row:hover {
 	background-color: #d8f4ff;
 	cursor: pointer;
+}
+
+.managePatrollers .table .icon-pencil, .managePatrollers .table .icon-time {
+	margin-left: 10px;
+}
+
+.overlay {
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	overflow-y: scroll;
+}
+
+.overlay .title {
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	margin-bottom: 5px;
+}
+
+.overlay .node {
+	padding: 25px;
+}
+
+.overlay .node input {
+	border: none;
+	padding: 10px;
+	border-radius: 4px;
+	width: calc(100% - 20px);
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.overlay .node button i {
+	margin-right: 5px;
+}
+
+.overlay .node.save {
+	float: right;
+}
+
+.overlay .node.cancel {
+	float: left;
+}
+
+.overlay.history .cancel {
+	float: inherit;
+}
+
+.overlay.history .item {
+	font-size: 14px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.overlay.history .header {
+	font-weight: bold;
+}
+
+.overlay.history .item .value {
+	display: inline-block;
+	width: 30%;
 }
