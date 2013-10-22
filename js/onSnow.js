@@ -27,7 +27,7 @@ var form = [
 	{
 		name: 'Some random form with example of a dropdown',
 		fields: [
-			{ name: 'Weather', type: 'checkbox', sqlName: '123123', options: ['rain', 'snow', 'volcano'] },
+			{ name: 'Weather', type: 'dropdown', sqlName: '123123', options: ['rain', 'snow', 'volcano'] },
 			{ name: 'Travel, turn, climb, stop', type: 'checkbox', sqlName: '123123' },
 			{ name: 'Travel, turn, climb, stop', type: 'checkbox', sqlName: '123123' },
 		]
@@ -38,9 +38,10 @@ var form = [
 ];
 
 /* DIFFERENT VALUES THAT 'type' CAN BE
+ *
  * checkbox
- * input
- * textarea
- * dropdown
-
+ * input		-	this is a one line input field
+ * textarea		-	this is a multiline input field
+ * dropdown		-	use this for either a dropdown OR a radio box
+ *
  */
