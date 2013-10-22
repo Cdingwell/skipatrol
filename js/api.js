@@ -15,16 +15,44 @@ api.prototype.base = '';
 
 api.prototype.sessionid = localStorage.skiSessionID ? localStorage.skiSessionID : false;
 
+// table of permissions for bitperms
+
+api.prototype.perms = {
+	'guest': 1,
+	'admin': 2
+};
+
+// checks to see if user has given permissions
+api.prototype.checkPerms = function(perms) {
+	return perms & this.userPermissions;
+}
+
+// store which permissions the user has here
+
+api.prototype.userPermissions = localStorage.userPermissions ? localStorage.userPermissions : api.prototype.perms.guest;
+
 // attempt a login
 
 api.prototype.login = function(username, password, callback) {
 	$.post(this.base + 'php/checklogin.php', { username: username, password: password }, function(data) {
 		if(data.success)
 			this.sessionid = localStorage.skiSessionID = data.sessionid;
+			this.userPermissions = localStorage.userPermissions = data.login;
 		callback(data.success == "true");
 	}.bind(this));
 
 }
+
+// mechanism to logout
+
+api.prototype.logout = function() {
+	this.sessionid = false;
+	this.userPermissions = this.perms.guest;
+	delete localStorage.userPermissions;
+	delete localStorage.skiSessionID;
+}
+
+// do a logout
 
 api.prototype.deletePatroller = function(id, callback) {
 	$.post(this.base + 'php/getPatrollers.php?action=deletePatroller', { sessionid: this.sessionid, id: id }, function(d) {

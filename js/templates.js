@@ -19,7 +19,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div id=\"main\" class=\"loginContainer\"> \n    <div class=\"full_w\">\n        <div class=\"h_title\">Please Login</div>\n        <div class=\"h_content\">\n\n            <div id=\"form\">\n                <div class=\"inContainer\">\n                    <label for=\"login\">Username</label>\n                    <input id=\"login\" name=\"login\" class=\"text\" />\n                </div>\n                <div class=\"inContainer\">\n                    <label for=\"pass\">Password</label>\n                    <input id=\"pass\" name=\"pass\" type=\"password\" class=\"text\" />\n                </div>\n                <div class=\"buttonContainer\">\n                    <button type=\"submit\" class=\"ok\" id=\"loginButton\">Login</button>\n                </div>\n            </div>\n\n        </div>\n    </div>\n</div>";
+  return "<div id=\"main\" class=\"loginContainer\"> \n    <div class=\"full_w\">\n        <div class=\"h_title\"><i class=\"icon-lock\"></i>Please Login</div>\n        <div class=\"h_content\">\n\n            <div id=\"form\">\n                <div class=\"inContainer\">\n                    <label for=\"login\">Username</label>\n                    <input id=\"login\" name=\"login\" class=\"text\" />\n                </div>\n                <div class=\"inContainer\">\n                    <label for=\"pass\">Password</label>\n                    <input id=\"pass\" name=\"pass\" type=\"password\" class=\"text\" />\n                </div>\n                <div class=\"buttonContainer\">\n                    <button type=\"submit\" class=\"ok\" id=\"loginButton\"><i class=\"icon-ok\"></i>Login</button>\n                </div>\n            </div>\n\n        </div>\n    </div>\n</div>";
   });
 templates['managePatrollers.edit'] = template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
@@ -56,7 +56,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, functionType="function";
 
 
-  buffer += "<div id=\"main\" class=\"loginContainer\"> \n    <div class=\"full_w\">\n        <div class=\"h_title\">Manage Patrollers</div>\n        <div class=\"h_content\">\n\n            <div class=\"manage\">\n                <button class=\"addNew\"><i class=\"icon-plus-sign-alt\"></i>Add Patroller</button>\n                <div class=\"filterContainer\">\n                    <input class=\"filter\" placeholder=\"Start typing to ilter\">\n                </div>\n            </div>\n\n            <div class=\"table\">\n                <div class=\"row head\">\n                    <div class=\"item\"></div>\n                    <div class=\"item\">CSP #</div>\n                    <div class=\"item\">InstID</div>\n                    <div class=\"item\">Name</div>\n                    <div class=\"item\">E-mail</div>\n                    <div class=\"item\">Phone</div>\n                </div>\n                ";
+  buffer += "<div id=\"main\" class=\"loginContainer\"> \n    <div class=\"full_w\">\n        <div class=\"h_title\"><i class=\"icon-briefcase\"></i>Manage Patrollers</div>\n        <div class=\"h_content\">\n\n            <div class=\"manage\">\n                <button class=\"addNew\"><i class=\"icon-plus-sign-alt\"></i>Add Patroller</button>\n                <div class=\"filterContainer\">\n                    <input class=\"filter\" placeholder=\"Start typing to filter\">\n                </div>\n            </div>\n\n            <div class=\"table\">\n                <div class=\"row head\">\n                    <div class=\"item\"></div>\n                    <div class=\"item\">CSP #</div>\n                    <div class=\"item\">InstID</div>\n                    <div class=\"item\">Name</div>\n                    <div class=\"item\">E-mail</div>\n                    <div class=\"item\">Phone</div>\n                </div>\n                ";
   if (stack1 = helpers.table) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.table; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
@@ -126,6 +126,30 @@ function program1(depth0,data) {
   else { stack1 = depth0.PhoneNum; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
     + "</div>\n	</div>\n\n";
+  return buffer;
+  }
+
+  stack1 = helpers.each.call(depth0, depth0, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { return stack1; }
+  else { return ''; }
+  });
+templates['navigation'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var stack1, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n	<a href=\"";
+  if (stack1 = helpers.href) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.href; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</a>\n";
   return buffer;
   }
 

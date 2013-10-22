@@ -3,6 +3,10 @@ $('document').ready(function() {
 	// this is where we will store le content
 	var content = $('#content');
 
+	// slap in the navigation
+	var nav = new navigation();
+	$('#header').append(nav.el);
+
 	// detect and pursue page changes
 	function followHashPage() {
 		var page = window.location.hash.replace('#/','');

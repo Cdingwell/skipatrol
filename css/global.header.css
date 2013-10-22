@@ -1,0 +1,23 @@
+#header {
+	background-color: #ac1a30;
+	background-image: url(../img/logo.png);
+	background-position: 7px 5px;
+	background-size: auto 40px;
+	background-repeat: no-repeat;
+	height: 10px;
+	line-height: 10px;
+	color: white;
+	font-size: 14px;
+	padding: 20px;
+	border-bottom: 3px solid #75121f;
+}
+
+#header .nav {
+	text-align: right;
+}
+
+#header .nav a {
+	display: inline-block;
+	margin-left: 16px;
+	color: white;
+}

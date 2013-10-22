@@ -9,20 +9,20 @@ include('session.class.php');
 $con = new mysqli(DBHOST, DBUSER, DBPASS, DB);
 
 // do a login attempt
-$sql = $con->prepare("SELECT id from Patroller where Name=? AND password=?");
+$sql = $con->prepare("SELECT id, login from Patroller where Name=? AND password=?");
 $sql->bind_param("ss", $_POST['username'], $_POST['password']);
 $sql->execute();
-$sql->bind_result($result);
+$sql->bind_result($userid, $login);
 $sql->fetch();
 $sql->close();
 
 // indicate login failure
-if(empty($result))
+if(empty($userid))
 	exitWithJSON(array( 'success' => 'false' ));
 
 // if login worked make a session
 $session = new sessionManager();
-$sessionid = $session->createSessionForUserid($result);
-exitWithJSON(array( 'success' => 'true', 'sessionid' => $sessionid ));
+$sessionid = $session->createSessionForUserid($userid);
+exitWithJSON(array( 'success' => 'true', 'sessionid' => $sessionid, 'login' => $login ));
 
 ?>

@@ -10,6 +10,10 @@ var login = trick({
 
 login.prototype.init = function() {
 
+	// logout
+	api().logout();
+	$('body').trigger('permChange');
+
 	// show or hide a loading class
 	this.on('change:loading', function(isLoading) {
 		this.$el.find('.loading').remove();
@@ -49,6 +53,7 @@ login.prototype.loginAttempt = function(e, target) {
 		this.set('loading', false);
 		if(status) {
 			window.location.hash = '#/Welcome';
+			$('body').trigger('permChange');
 		}else{
 			alert('You have entered invalid login details.');
 		}

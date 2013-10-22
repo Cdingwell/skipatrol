@@ -6,7 +6,7 @@
 
     } 
     else {
-        header("location:../login.html");
+        //header("location:../login.html");
     }
 
     $con=mysqli_connect("localhost","superjh2_tyler","grantt","superjh2_appdev");
