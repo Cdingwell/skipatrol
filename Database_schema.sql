@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 20, 2013 at 09:25 PM
--- Server version: 5.6.12
--- PHP Version: 5.5.0
+-- Generation Time: Oct 22, 2013 at 02:00 PM
+-- Server version: 5.5.31
+-- PHP Version: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -254,7 +254,7 @@ CREATE TABLE IF NOT EXISTS `Patroller` (
   `password` varchar(41) DEFAULT NULL,
   `login` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`,`InstID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `Patroller`
@@ -262,8 +262,11 @@ CREATE TABLE IF NOT EXISTS `Patroller` (
 
 INSERT INTO `Patroller` (`id`, `Name`, `InstID`, `Email`, `PhoneNum`, `CSPSNum`, `password`, `login`) VALUES
 (8, 'Emily', '5555', 'c', '1239876', '134', 'grantt', 1),
-(13, 'bob', '5', 'rrr', '4', '4', '123', NULL),
-(15, 'a', '5', 'slut', '7', '8', NULL, NULL);
+(13, 'c236666', 'b', 'd23', 'e23', 'a23', '123', NULL),
+(16, 'c', 'b', 'd', 'e', 'a', 'f', NULL),
+(17, '3', '2', '4', '5', '1', '6', NULL),
+(18, '33', '22', '44', '55', '11', '66', NULL),
+(19, 'dfg', 'dfg', 'dfg', 'fdg333333', 'fdg', 'dfg', NULL);
 
 -- --------------------------------------------------------
 
@@ -278,31 +281,17 @@ CREATE TABLE IF NOT EXISTS `sessions` (
   `useragent` varchar(255) NOT NULL,
   `ip` varchar(255) NOT NULL,
   `created` int(11) NOT NULL,
+  `lastactive` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
 
 --
 -- Dumping data for table `sessions`
 --
 
-INSERT INTO `sessions` (`id`, `userid`, `session`, `useragent`, `ip`, `created`) VALUES
-(4, 8, '524d840cc061c', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1657.2 Safari/537.36', '::1', 1380811788),
-(5, 8, '524d876420090', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1657.2 Safari/537.36', '::1', 1380812644),
-(6, 8, '524d8a87dba15', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1657.2 Safari/537.36', '::1', 1380813447),
-(7, 8, '524d8a8af3804', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1657.2 Safari/537.36', '::1', 1380813450),
-(8, 8, '524d8ab08f28e', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1657.2 Safari/537.36', '::1', 1380813488),
-(9, 8, '524d8aec39ee6', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1657.2 Safari/537.36', '::1', 1380813548),
-(10, 8, '5256b5a796f19', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1666.0 Safari/537.36', '::1', 1381414311),
-(11, 8, '5256b6176270c', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1666.0 Safari/537.36', '::1', 1381414423),
-(12, 8, '5256b627e1bc7', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1666.0 Safari/537.36', '::1', 1381414439),
-(13, 8, '5256b670d90e6', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1666.0 Safari/537.36', '::1', 1381414512),
-(14, 8, '5256b6a0c95c7', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1666.0 Safari/537.36', '::1', 1381414560),
-(15, 8, '5256b82ace255', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1666.0 Safari/537.36', '::1', 1381414954),
-(16, 8, '5256bc6a9cf6a', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1666.0 Safari/537.36', '::1', 1381416042),
-(17, 8, '525ff435acb4c', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1672.2 Safari/537.36', '::1', 1382020149),
-(18, 8, '525ffbbfe231a', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1672.2 Safari/537.36', '::1', 1382022079),
-(19, 8, '525ffc3f188bf', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1672.2 Safari/537.36', '::1', 1382022207),
-(20, 8, '52600242599d3', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1672.2 Safari/537.36', '::1', 1382023746);
+INSERT INTO `sessions` (`id`, `userid`, `session`, `useragent`, `ip`, `created`, `lastactive`) VALUES
+(23, 8, '526435092cf7a', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1672.2 Safari/537.36', '127.0.0.1', 1382298889, 1382302480),
+(24, 8, '5264437729523', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1672.2 Safari/537.36', '127.0.0.1', 1382302583, 1382382080);
 
 -- --------------------------------------------------------
 
