@@ -7,7 +7,7 @@ var firstAidorm = [
 			{ name: 'Secondary Survey', type: 'dropdown', sqlName: 'secondarySurvey', options: ['First Initial','First Initial','Third Initial'] },
 			{ name: 'Vital Signs Evaluation Registration', type: 'dropdown', sqlName: 'vitalSigns', options: ['First Initial','First Initial','Third Initial'] },
 			]
-	}
+	},
 	
 	{
 		name: 'SPINAL INJURIES',
@@ -30,7 +30,7 @@ var firstAidorm = [
 			{ name: 'Lower Leg', type: 'dropdown', sqlName: 'lowerLeg', options: ['First Initial','First Initial','Third Initial'] }
 			{ name: 'Shoulder Dislocation', type: 'dropdown', sqlName: 'shoulderDislocation', options: ['First Initial','First Initial','Third Initial'] }
 		]
-	}
+	},
 	
 
 	{
@@ -40,7 +40,7 @@ var firstAidorm = [
 			{ name: 'Large Arm Sling', type: 'dropdown', sqlName: 'largeArmSling', options: ['First Initial','First Initial','Third Initial'] },
 			{ name: 'Body Sling', type: 'dropdown', sqlName: 'bodySling', options: ['First Initial','First Initial','Third Initial'] },
 			]
-	}
+	},
 
 	{
 		name: 'Bandgaes',
