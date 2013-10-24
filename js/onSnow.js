@@ -1,7 +1,5 @@
 var form = [
 
-
-
 	{
 		name: 'Ski/Ride',
 		fields: [

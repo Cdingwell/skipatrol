@@ -7,10 +7,10 @@ var formManager = {
      /* take a javascript datastructure (will provide example later)
       * and return an html form cooresponding to the elements of the form */
 
-     objectToHtml: function(form) {
+     objectToHtml: function(form, formName) {
 
           // this is where the html elements of the form will be stored
-          var buffer = ['<form name="' + form.name + '">'];
+          var buffer = [formName ? '<form name="' + formName + '">' : ''];
 
           // we must parse every different category of the form
           for(var i = 0; i < form.length; i++) {
@@ -51,7 +51,7 @@ var formManager = {
           }
 
           // close the form
-          buffer.push('</form>');
+          buffer.push(formName ? '</form>' : '');
 
           // join each buffer element and return the buffer
           return buffer.join('');
