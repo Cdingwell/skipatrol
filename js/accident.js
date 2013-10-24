@@ -11,7 +11,7 @@
 			{ name: 'Gender', type: 'dropdown', sqlName: 'gender', options: ['Male', 'Female', 'Other'] }
 			
 			]
-	}
+	},
 
 			
 	{
@@ -36,7 +36,7 @@
 			{ name: 'Thumb', type: 'dropdown', sqlName: 'thumb', options: ['left', 'right', 'both'] },
 			{ name: 'Finger', type: 'dropdown', sqlName: 'finger', options: ['left', 'right', 'both'] }
 			]
-	}
+	},
 	
 	{
 		name: 'Complaints - Mark all that apply',
@@ -48,6 +48,8 @@
 			{ name: 'Face', type: 'checkbox', sqlName: 'face'},
 			{ name: 'Medical', type: 'checkbox', sqlName: 'medical' },
 			{ name: 'No Injury', type: 'checkbox', sqlName: 'noInjury' }
+			]
+	},
 			
 	{
 		name: 'Complaints - Treatment Protocol',
@@ -68,7 +70,7 @@
 			{ name: 'Deceased', type: 'checkbox', sqlName: 'deceased' },
 			{ name: 'Unknown', type: 'checkbox', sqlName: 'unknown' }
 		]
-	}
+	},
 		
 		
 	{
@@ -79,7 +81,7 @@
 			{ name: 'Activity', type: 'dropdown', sqlName: 'activity', options: ['Alpine', 'Snowboard', 'Telemark', 'Nordic', 'Touring', 'Tubing', 'Non-skiing', 'Other'] },
 			{ name: 'Involvement', type: 'dropdown', sqlName: 'involvement', options: ['Recreation skiing/riding', 'Recreation jumping', 'Competition', 'Training', 'In Lesson', 'Tube Slide', 'Unknown'] }
 		]
-	}
+	},
 	
 	{
 		name: 'Conditions',
@@ -98,17 +100,17 @@
 		name: 'Transport',
 		fields: [
 			{ name: 'To First Aid', type: 'dropdown', sqlName: 'firstAid', options: ['Walk/Ski', 'Toboggan', 'Snowmobile', 'Helicopter', 'Download', 'On-hill', 'Other', 'Unknown', 'N/A'] },
-			{ name: 'From Base', type: 'dropdown', sqlName: 'fromBase', options: ['Private Car', 'Taxi', 'Company', 'Ambulance', 'Bus', 'Helicopter', 'Walk/Ski', 'Other', 'Unknown', 'N/A'] },
+			{ name: 'From Base', type: 'dropdown', sqlName: 'fromBase', options: ['Private Car', 'Taxi', 'Company', 'Ambulance', 'Bus', 'Helicopter', 'Walk/Ski', 'Other', 'Unknown', 'N/A'] }
 			
 		]
-	}
+	},
 	
 	{
 		name: 'If not a collision, what was the primary cause of accident?',
 		fields: [
 			{ name: 'Non Collision', type: 'dropdown', sqlName: 'nonCollision', options: ['Fall - Skier lost control', 'Fall - Caught an edge', 'Fall & struck by own equipment', 'Fall - Jumping', 'Fall - change of conditions', 'Fall - change of terrain', 'Near collision', 'Prior medical condition', 'Skied off trail', 'Equipment failure(Not binding)', 'Binding pre-released', 'Hit by others equipment', 'N/A'] },
 			{ name: 'Lift Related', type: 'dropdown', sqlName: 'liftRelated', options: ['Clothing caught on lift', 'Fall while loading', 'Fall after unload', 'Fall from lift', 'Jump chair lift', 'Injured by restraining bar', 'Struck by chair', 'N/A']},
-			{ name: 'Non-Skiing Related', type: 'checkbox', sqlName: 'nonSkiingRelated', options: ['Slip & fall (Non skiing)', 'Cold/weather related', 'Not otherwise classified', 'Other', 'N/A']},
+			{ name: 'Non-Skiing Related', type: 'checkbox', sqlName: 'nonSkiingRelated', options: ['Slip & fall (Non skiing)', 'Cold/weather related', 'Not otherwise classified', 'Other', 'N/A']}
 		]
 	}
 
