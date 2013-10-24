@@ -1,3 +1,5 @@
+var accident = [
+	
 	{
 		name: 'Basic Information',
 		fields: [
@@ -113,6 +115,7 @@
 			{ name: 'Non-Skiing Related', type: 'checkbox', sqlName: 'nonSkiingRelated', options: ['Slip & fall (Non skiing)', 'Cold/weather related', 'Not otherwise classified', 'Other', 'N/A']}
 		]
 	}
+	
 
 	
 
