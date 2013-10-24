@@ -105,6 +105,17 @@ var form = [
 		]
 	}
 	
+	
+	{
+		name: 'Critical Outcome',
+		fields: [
+			{ name: 'Demonstrates safety, control and competency while performing a simulation that includes: Being called to an accident, getting and inspecting a toboggan, bringin an unloaded toboggan to an incident site, securing a toboggan, basic incident site management, loading a patient, and operating a loaded toboggan.', type: 'checkbox', sqlName: 'crticalSection' },
+			{ name: 'Instructor/Patroller', type: 'input', sqlName: 'instID' },
+			{ name: 'Date', type: 'input', sqlName: 'Timestamp' },
+			{ name: 'Notes', type: 'textarea', sqlName: 'notes' }
+		]
+	}	
+	
 
 
 ];
