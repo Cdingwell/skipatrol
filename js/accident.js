@@ -98,7 +98,7 @@ var accident = [
 			{ name: 'Ability', type: 'dropdown', sqlName: 'ability', options: ['Beginner', 'Novice', 'Intermediate', 'Advanced', 'Expert', 'Unknown', 'N/A'] },
 			{ name: 'Collision', type: 'checkbox', sqlName: 'collision'}
 			]
-	}
+	},
 			
 	{
 		name: 'Transport',
