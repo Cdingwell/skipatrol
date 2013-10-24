@@ -19,7 +19,12 @@ api.prototype.sessionid = localStorage.skiSessionID ? localStorage.skiSessionID 
 
 api.prototype.perms = {
 	'guest': 1,
-	'admin': 2
+	'admin': 2,
+	'student': 4,
+	'instructor': 8,
+	'zone_education_leader': 16,
+	'divisional_education_leader': 32,
+	'national_education_leader': 64
 };
 
 // checks to see if user has given permissions
