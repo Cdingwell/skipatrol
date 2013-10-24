@@ -97,6 +97,8 @@ var accident = [
 			{ name: 'Helmet', type: 'dropdown', sqlName: 'helmet', options: ['Owned', 'Rental', 'None'] },
 			{ name: 'Ability', type: 'dropdown', sqlName: 'ability', options: ['Beginner', 'Novice', 'Intermediate', 'Advanced', 'Expert', 'Unknown', 'N/A'] },
 			{ name: 'Collision', type: 'checkbox', sqlName: 'collision'}
+			]
+	}
 			
 	{
 		name: 'Transport',
@@ -115,8 +117,6 @@ var accident = [
 			{ name: 'Non-Skiing Related', type: 'checkbox', sqlName: 'nonSkiingRelated', options: ['Slip & fall (Non skiing)', 'Cold/weather related', 'Not otherwise classified', 'Other', 'N/A']}
 		]
 	}
-	
-
 	
 
 
