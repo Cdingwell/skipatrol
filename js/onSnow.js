@@ -1,6 +1,28 @@
 var form = [
 
 	{
+		name: '[WIP] These fields were in the table and were not accounted for in the form!',
+		fields: [
+			{ name: 'SID', type: 'input', sqlName: 'SID' },
+			{ name: 'instID', type: 'input', sqlName: 'instID' },
+			{ name: 'crticalSection', type: 'input', sqlName: 'crticalSection' },
+			{ name: 'comm2patien2_Loaded', type: 'input', sqlName: 'comm2patien2_Loaded' },
+			{ name: 'traffic2_Loaded', type: 'input', sqlName: 'traffic2_Loaded' },
+			{ name: 'position2_Loaded', type: 'input', sqlName: 'position2_Loaded' },
+			{ name: 'routefind2_Loaded', type: 'input', sqlName: 'routefind2_Loaded' },
+			{ name: 'stableBalance2_Loaded', type: 'input', sqlName: 'stableBalance2_Loaded' },
+			{ name: 'sideSlip_fallLeaf2_Loaded', type: 'input', sqlName: 'sideSlip_fallLeaf2_Loaded' },
+			{ name: 'snowplow2_Loaded', type: 'input', sqlName: 'snowplow2_Loaded' },
+			{ name: 'brakeRunners2_Loaded', type: 'input', sqlName: 'brakeRunners2_Loaded' },
+			{ name: 'fallLine2_Loaded', type: 'input', sqlName: 'fallLine2_Loaded' },
+			{ name: 'Transitions2_Loaded', type: 'input', sqlName: 'Transitions2_Loaded' },
+			{ name: 'controlSmoothDecent2_Loaded', type: 'input', sqlName: 'controlSmoothDecent2_Loaded' },
+			{ name: 'Direction2_Loaded', type: 'input', sqlName: 'Direction2_Loaded' },
+			{ name: 'compensating2_Loaded', type: 'input', sqlName: 'compensating2_Loaded' }
+		]
+	},
+
+	{
 		name: 'Ski/Ride',
 		fields: [
 			{ name: 'Travel, turn, climb, stop', type: 'checkbox', sqlName: 'travelTurnClimbStop' },
@@ -103,8 +125,14 @@ var form = [
 			{ name: 'Drag is in dominant braking position', type: 'checkbox', sqlName: 'dragBrakePosition2_Loaded' },
 			{ name: 'Front in charge (route, ride, communication)', type: 'checkbox', sqlName: 'FrontCharge2_Loaded' }
 		]
-	}
+	},
 	
+	{
+		name: 'Misc',
+		fields: [
+			{ name: 'notes', type: 'input', sqlName: 'notes' }
+		]
+	}
 
 
 ];

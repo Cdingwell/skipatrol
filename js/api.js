@@ -66,6 +66,18 @@ api.prototype.deletePatroller = function(id, callback) {
 	});
 }
 
+/* ON SNOW */
+
+// add a new onsnow
+
+api.prototype.addOnSnow = function(data, callback) {
+	data.sessionid = this.sessionid;
+	$.post(this.base + 'php/getOnSnow.php?action=add', data, callback);
+}
+
+
+/* PATROLLER */
+
 // add a new patroller
 
 api.prototype.addPatroller = function(data, callback) {

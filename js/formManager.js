@@ -32,7 +32,7 @@ var formManager = {
 
                     // parse an input field
                     if(input.type == 'input')
-                         buffer.push('<input name="' + input.sqlName + '" placeholder="' + input.name + '">');
+                         buffer.push('<input name="' + input.sqlName + '" id="' + input.sqlName + '" placeholder="' + input.name + '">');
 
                     // parse a checkbox
                     else if(input.type == 'checkbox')
@@ -40,7 +40,7 @@ var formManager = {
                     
                     // parse a dropdown
                     else if(input.type == 'dropdown')
-                         buffer.push('<div class="selectDesc">' + input.name + '</div><select name="' + input.sqlName + '"><option>N/A</option><option>' + input.options.join('</option><option>') + '</option></select>');
+                         buffer.push('<div class="selectDesc">' + input.name + '</div><select name="' + input.sqlName + '" id="' + input.sqlName + '"><option>N/A</option><option>' + input.options.join('</option><option>') + '</option></select>');
                     
                     // close the container for the field
                     buffer.push('</div>');
