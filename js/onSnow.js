@@ -23,6 +23,16 @@ var form = [
 	},
 
 	{
+		name: 'Critical Outcome',
+		fields: [
+			{ name: 'Demonstrates safety, control and competency while performing a simulation that includes: Being called to an accident, getting and inspecting a toboggan, bringin an unloaded toboggan to an incident site, securing a toboggan, basic incident site management, loading a patient, and operating a loaded toboggan.', type: 'checkbox', sqlName: 'crticalSection' },
+			{ name: 'Instructor/Patroller', type: 'input', sqlName: 'instID' },
+			{ name: 'Date', type: 'input', sqlName: 'Timestamp' },
+			{ name: 'Notes', type: 'textarea', sqlName: 'notes' }
+		]
+	},
+
+	{
 		name: 'Ski/Ride',
 		fields: [
 			{ name: 'Travel, turn, climb, stop', type: 'checkbox', sqlName: 'travelTurnClimbStop' },
@@ -127,12 +137,26 @@ var form = [
 		]
 	},
 	
+<<<<<<< HEAD
 	{
 		name: 'Misc',
 		fields: [
 			{ name: 'notes', type: 'input', sqlName: 'notes' }
 		]
 	}
+=======
+	
+	{
+		name: 'Critical Outcome',
+		fields: [
+			{ name: 'Demonstrates safety, control and competency while performing a simulation that includes: Being called to an accident, getting and inspecting a toboggan, bringin an unloaded toboggan to an incident site, securing a toboggan, basic incident site management, loading a patient, and operating a loaded toboggan.', type: 'checkbox', sqlName: 'crticalSection' },
+			{ name: 'Instructor/Patroller', type: 'input', sqlName: 'instID' },
+			{ name: 'Date', type: 'input', sqlName: 'Timestamp' },
+			{ name: 'Notes', type: 'textarea', sqlName: 'notes' }
+		]
+	}	
+	
+>>>>>>> 6dfa2ce5d0af3e0a079876651d7e94099ebeecc7
 
 
 ];
