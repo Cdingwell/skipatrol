@@ -19,10 +19,13 @@
 
 .loginContainer .buttonContainer {
 	text-align: center;
+	margin-right: 30px;
 }
 
 .loginContainer .buttonContainer button {
-	margin-left: auto;
+	margin-left: 15px;
 	margin-right: auto;
 	margin-bottom: 14px;
+	margin-top: 10px;
+	width: 100%;
 }

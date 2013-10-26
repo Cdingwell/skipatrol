@@ -1,10 +1,10 @@
 <div id="main" class="loginContainer"> 
     <div class="full_w">
-        <div class="h_title"><i class="icon-briefcase"></i>{{lang 'Patrollers'}}</div>
+        <div class="h_title"><i class="icon-briefcase"></i>{{lang 'On Snow'}}</div>
         <div class="h_content">
 
             <div class="manage">
-                <button class="addNew"><i class="icon-plus-sign-alt"></i>{{lang 'Add Patroller'}}</button>
+                <button class="addNew"><i class="icon-plus-sign-alt"></i>{{lang 'Add Record'}}</button>
                 <div class="filterContainer">
                     <input class="filter" placeholder="{{lang 'Start typing to filter'}}">
                 </div>
@@ -13,13 +13,16 @@
             <div class="table">
                 <div class="row head">
                     <div class="item"></div>
-                    <div class="item">{{lang 'CSP #'}}</div>
+                    <div class="item">{{lang 'Time'}}</div>
                     <div class="item">{{lang 'InstID'}}</div>
-                    <div class="item">{{lang 'Name'}}</div>
-                    <div class="item">{{lang 'E-mail'}}</div>
-                    <div class="item">{{lang 'Phone'}}</div>
+                    <div class="item">{{lang 'SID'}}</div>
+                    <div class="item">{{lang 'Notes'}}</div>
                 </div>
                 {{{table}}}
+            </div>
+
+            <div class='loadMoreContainer'>
+                <button class="loadMore">{{lang 'Show More'}}</button>
             </div>
 
         </div>

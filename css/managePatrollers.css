@@ -1,64 +1,89 @@
-.managePatrollers .manage {
+.standardListView .manage {
 	margin: 10px;
 }
 
-.managePatrollers .filterContainer {
+.standardListView .submit {
+	height: 25px;
+	border: none !important;
+	background: #3a90e0;
+	text-shadow: none;
+	color: white;
+	line-height: 12px;
+	font-weight: normal;
+	outline: none;
+}
+
+.standardListView .submit:hover {
+	background: #409eef;
+	outline: none;
+}
+
+.standardListView .submit:active {
+	background: #3382c6;
+	outline: none;
+}
+
+.standardListView .filterContainer {
 	display: inline-block;
 	width: calc(100% - 129px);
 }
 
-.managePatrollers .filterContainer input:not([type="checkbox"]) {
+.standardListView .filterContainer input:not([type="checkbox"]) {
 	width: 100%;
 	padding: 5px;
 }
 
-.managePatrollers .manage .addNew .icon-plus-sign-alt {
+.standardListView .manage .addNew .icon-plus-sign-alt {
 	margin-right: 7px;
 }
 
-.managePatrollers .table {
+.standardListView .table {
 	margin: 10px;
 }
 
-.managePatrollers .table .row .item {
+.standardListView .table .row .item {
 	display: inline-block;
 	width: 16%;
 	text-align: center;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
-.managePatrollers .table .row {
+.standardListView .table .row {
 	height: 30px;
 	line-height: 30px;
 	background-color: #f9f9f9;
 }
 
-.managePatrollers .table .row.head {
+.standardListView .table .row.head {
 	background-color: rgba(0, 0, 0, 0.2);
 	font-weight: bold;
 	color: black;
 }
 
-.managePatrollers .table .row:nth-child(2n) {
+.standardListView .table .row:nth-child(2n) {
 	background-color: rgba(0, 0, 0, 0.05);
 }
 
-.managePatrollers .table .row:hover {
+.standardListView .table .row:hover {
 	background-color: #d8f4ff;
 	cursor: pointer;
 }
 
-.managePatrollers .table .icon-pencil, .managePatrollers .table .icon-time {
+.standardListView .table .icon-pencil, .standardListView .table .icon-time {
 	margin-left: 10px;
 }
 
 .overlay {
 	background-color: rgba(0, 0, 0, 0.7);
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
 	overflow-y: scroll;
+	z-index: 999999;
 }
 
 .overlay .title {
@@ -80,7 +105,7 @@
 	padding: 5px;
 }
 
-.overlay .node input:not([type="checkbox"]) {
+.overlay .node input:not([type="checkbox"]), .overlay textarea {
 	border: none;
 	padding: 10px;
 	border-radius: 4px;

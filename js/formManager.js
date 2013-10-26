@@ -7,7 +7,12 @@ var formManager = {
      /* take a javascript datastructure (will provide example later)
       * and return an html form cooresponding to the elements of the form */
 
-     objectToHtml: function(form, formName) {
+     objectToHtml: function(data) {
+
+          // pull out settings from what was given to us
+          var form = data.form;
+          var formName = data.formName;
+          var defaults = data.defaults || {};
 
           // this is where the html elements of the form will be stored
           var buffer = [formName ? '<form name="' + formName + '">' : ''];
@@ -30,17 +35,24 @@ var formManager = {
                     // get a pointer to the current field we are iterating over
                     var input = fields[j];
 
+                    // determine the default value
+                    var value = defaults[input.sqlName];
+
                     // parse an input field
                     if(input.type == 'input')
-                         buffer.push('<input name="' + input.sqlName + '" id="' + input.sqlName + '" placeholder="' + input.name + '">');
+                         buffer.push('<input name="' + input.sqlName + '" id="' + input.sqlName + '" placeholder="' + input.name + '" value="' + (typeof value != 'undefined' ? value : '') + '">');
 
                     // parse a checkbox
                     else if(input.type == 'checkbox')
-                         buffer.push('<input type="checkbox" name="' + input.sqlName + '" id="' + input.sqlName + '"><label for="' + input.sqlName + '">' + input.name + '</label>');
+                         buffer.push('<input type="checkbox" name="' + input.sqlName + '" id="' + input.sqlName + '" ' + (value && value != '0' ? 'checked' : '') + '><label for="' + input.sqlName + '">' + input.name + '</label>');
+
+                    // parse using a textarea
+                    else if(input.type == 'textarea')
+                         buffer.push('<textarea placeholder="' + input.name + '" name="' + input.sqlName + '" id="' + input.sqlName + '">' + (typeof value != 'undefined' ? value : '') + '</textarea>');
                     
                     // parse a dropdown
                     else if(input.type == 'dropdown')
-                         buffer.push('<div class="selectDesc">' + input.name + '</div><select name="' + input.sqlName + '" id="' + input.sqlName + '"><option>N/A</option><option>' + input.options.join('</option><option>') + '</option></select>');
+                         buffer.push('<div class="selectDesc">' + input.name + '</div><select name="' + input.sqlName + '" id="' + input.sqlName + '"><option>N/A</option>' + input.options.map(function(d){ return '<option' + (d==value?' selected':'') + '>' + d + '</option>' }) + '</select>');
                     
                     // close the container for the field
                     buffer.push('</div>');

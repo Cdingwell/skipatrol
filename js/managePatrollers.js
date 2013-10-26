@@ -13,7 +13,7 @@ jQuery.expr[':'].Contains = function(a,i,m){
 };
 
 managePatrollers.prototype.init = function() {
-	this.$el.addClass('managePatrollers');
+	this.$el.addClass('managePatrollers').addClass('standardListView');
 	this.render();
 }
 
@@ -45,7 +45,7 @@ managePatrollers.prototype.render = function() {
 
 managePatrollers.prototype.removePatroller = function(e, target) {
 	var id = target.parentNode.parentNode.getAttribute('data-id');
-	var status = confirm("Are you sure you want to delete this user?");
+	var status = confirm(lang('Are you sure you want to delete this record?'));
 	if(status) {
 		api().deletePatroller(id);
 		$(target.parentNode.parentNode).remove();
@@ -121,7 +121,7 @@ managePatrollers.prototype.editPatroller = function(e, target) {
 			editContainer.remove();
 			// update list
 			var container = this.$el.find('[data-id="' + id + '"]');
-		for(var key in prefs) {
+			for(var key in prefs) {
 				container.find('.item.' + key).html(prefs[key]);
 			}
 		}.bind(this));

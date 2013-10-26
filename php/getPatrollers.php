@@ -1,6 +1,5 @@
 <?php
 
-	session_start();
 	include('../config.php');
 	include('functions.php');
 	include('session.class.php');
@@ -19,7 +18,7 @@
 			$query .= " WHERE `id` = '{$_POST['id']}'";
         $result = mysqli_query($con,$query);
         $data = array();
-        while ($row = mysqli_fetch_array($result))
+        while ($row = mysqli_fetch_array($result, MYSQL_ASSOC))
         	$data[] = $row;
 		exitWithJSON($data);
 

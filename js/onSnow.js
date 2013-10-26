@@ -4,8 +4,6 @@ var form = [
 		name: '[WIP] These fields were in the table and were not accounted for in the form!',
 		fields: [
 			{ name: 'SID', type: 'input', sqlName: 'SID' },
-			{ name: 'instID', type: 'input', sqlName: 'instID' },
-			{ name: 'crticalSection', type: 'input', sqlName: 'crticalSection' },
 			{ name: 'comm2patien2_Loaded', type: 'input', sqlName: 'comm2patien2_Loaded' },
 			{ name: 'traffic2_Loaded', type: 'input', sqlName: 'traffic2_Loaded' },
 			{ name: 'position2_Loaded', type: 'input', sqlName: 'position2_Loaded' },
@@ -20,17 +18,7 @@ var form = [
 			{ name: 'Direction2_Loaded', type: 'input', sqlName: 'Direction2_Loaded' },
 			{ name: 'compensating2_Loaded', type: 'input', sqlName: 'compensating2_Loaded' }
 		]
-	},
-
-	{
-		name: 'Critical Outcome',
-		fields: [
-			{ name: 'Demonstrates safety, control and competency while performing a simulation that includes: Being called to an accident, getting and inspecting a toboggan, bringin an unloaded toboggan to an incident site, securing a toboggan, basic incident site management, loading a patient, and operating a loaded toboggan.', type: 'checkbox', sqlName: 'crticalSection' },
-			{ name: 'Instructor/Patroller', type: 'input', sqlName: 'instID' },
-			{ name: 'Date', type: 'input', sqlName: 'Timestamp' },
-			{ name: 'Notes', type: 'textarea', sqlName: 'notes' }
-		]
-	},
+			},
 
 	{
 		name: 'Ski/Ride',
@@ -137,26 +125,17 @@ var form = [
 		]
 	},
 	
-<<<<<<< HEAD
-	{
-		name: 'Misc',
-		fields: [
-			{ name: 'notes', type: 'input', sqlName: 'notes' }
-		]
-	}
-=======
 	
 	{
 		name: 'Critical Outcome',
 		fields: [
 			{ name: 'Demonstrates safety, control and competency while performing a simulation that includes: Being called to an accident, getting and inspecting a toboggan, bringin an unloaded toboggan to an incident site, securing a toboggan, basic incident site management, loading a patient, and operating a loaded toboggan.', type: 'checkbox', sqlName: 'crticalSection' },
 			{ name: 'Instructor/Patroller', type: 'input', sqlName: 'instID' },
-			{ name: 'Date', type: 'input', sqlName: 'Timestamp' },
 			{ name: 'Notes', type: 'textarea', sqlName: 'notes' }
 		]
 	}	
 	
->>>>>>> 6dfa2ce5d0af3e0a079876651d7e94099ebeecc7
+
 
 
 ];

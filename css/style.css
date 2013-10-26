@@ -1,13 +1,13 @@
 @import url(login.css);
+@import url(manageOnSnow.css);
 @import url(managePatrollers.css);
 @import url(global.header.css);
 @import url(global.widgets.css);
 
-
 /* CONTENT MAIN START */
 
 #content{
-	margin-top: 50px;
+	margin-top: 110px;
 }
 #content .b1{
 	background: #ffffff;

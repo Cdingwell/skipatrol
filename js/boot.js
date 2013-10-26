@@ -1,5 +1,9 @@
 $('document').ready(function() {
 
+	// slap in the mobile stylesheet
+	if(navigator.userAgent.match(/Android|iOS/i))
+		$('head').append('<link rel="stylesheet" type="text/css" href="css/mobile.css"/>');
+
 	// this is where we will store le content
 	var content = $('#content');
 

@@ -1,0 +1,9 @@
+.manageOnSnow .loadMoreContainer {
+	margin-right: 20px;
+}
+
+.manageOnSnow .loadMoreContainer .loadMore {
+	margin: 10px;
+	margin-top: 0px;
+	width: 100%;
+}

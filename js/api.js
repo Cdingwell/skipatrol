@@ -57,7 +57,7 @@ api.prototype.logout = function() {
 	delete localStorage.skiSessionID;
 }
 
-// do a logout
+// delete a patroller
 
 api.prototype.deletePatroller = function(id, callback) {
 	$.post(this.base + 'php/getPatrollers.php?action=deletePatroller', { sessionid: this.sessionid, id: id }, function(d) {
@@ -68,11 +68,50 @@ api.prototype.deletePatroller = function(id, callback) {
 
 /* ON SNOW */
 
+// delete a new onsnow
+
+api.prototype.deleteOnSnow = function(id, callback) {
+	$.post(this.base + 'php/getOnSnow.php?action=delete', { sessionid: this.sessionid, id: id }, function(d) {
+		if(typeof callback == 'function')
+			callback(d);
+	});
+}
+
 // add a new onsnow
 
 api.prototype.addOnSnow = function(data, callback) {
 	data.sessionid = this.sessionid;
 	$.post(this.base + 'php/getOnSnow.php?action=add', data, callback);
+}
+
+// get onsnow info
+
+api.prototype.getOnSnow = function(options, callback) {
+	var data = {};
+	if(typeof options == 'function')
+		callback = options;
+	else
+		data = options;
+		data.sessionid = this.sessionid;
+	$.post(this.base + 'php/getOnSnow.php?action=get', data, callback);
+}
+
+// get onsnow info for a specific id
+
+api.prototype.getOnSnowRecord = function(id, callback) {
+	$.post(this.base + 'php/getOnSnow.php?action=get', { sessionid: this.sessionid, id: id }, function(d) {
+		callback(d[0]);
+	});
+}
+
+// edit an onsnow record
+
+api.prototype.editOnSnow = function(data, callback) {
+	data.sessionid = this.sessionid;
+	$.post(this.base + 'php/getOnSnow.php?action=edit', data, function(d) {
+		if(typeof callback == 'function')
+			callback(d);
+	});
 }
 
 

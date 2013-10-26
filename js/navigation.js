@@ -19,9 +19,12 @@ navigation.prototype.render = function() {
 		pages.push({ name: 'Home', 'href': '#/Welcome' });
 
 	if(api().checkPerms( api().perms.admin ))
-		pages.push({ name: 'Manage Patrollers', 'href': '#/managePatrollers' });
+		pages.push({ name: 'Patrollers', 'href': '#/managePatrollers' });
 
 	if(api().checkPerms( api().perms.admin ))
+		pages.push({ name: 'On Snow', 'href': '#/manageOnSnow' });
+
+	if(!api().checkPerms( api().perms.guest ))
 		pages.push({ name: 'Logout', 'href': '#/login' });
 
 	this.el.innerHTML = Handlebars.templates['navigation'](pages);
