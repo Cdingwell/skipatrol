@@ -1,0 +1,68 @@
+.bottomOptions {
+	-webkit-transition: bottom 0.1s;
+	-ms-transition: bottom 0.1s;
+	transition: bottom 0.1s;
+	-webkit-transform: translateZ(0);
+   -moz-transform: translateZ(0);
+   -ms-transform: translateZ(0);
+   -o-transform: translateZ(0);
+   transform: translateZ(0);
+	position: fixed;
+	bottom: -1000px;
+	left: 0px;
+	right: 0px;
+	background: linear-gradient(to bottom, #3a3d42 0%,#2e3034 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3a3d42), color-stop(100%,#2e3034));
+	border-top: 1px solid #25272b;
+	padding-left: 9px;
+	padding-bottom: 9px;
+	z-index: 999999999;
+}
+
+.bottomOptions.show {
+	-webkit-transition: bottom 0.1s;
+	-ms-transition: bottom 0.1s;
+	transition: bottom 0.1s;
+	-webkit-transform: translateZ(0);
+   -moz-transform: translateZ(0);
+   -ms-transform: translateZ(0);
+   -o-transform: translateZ(0);
+   transform: translateZ(0);
+   bottom: 0px;
+}
+
+.bottomOptions.animate {
+    -webkit-transform: translateZ(0);
+    transition: bottom 0.2s;
+    -moz-transition: bottom 0.2s;
+    -webkit-transition: bottom 0.2s;
+    bottom: 0px !important;
+}
+
+.bottomOptions:before {
+	Content: "";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 1px;
+	background-color: #52565d;
+}
+
+.bottomOptions .buttonContainer {
+	padding-right: 35px;
+	padding-top: 10px;
+}
+
+.bottomOptions a.button {
+	width: 100%;
+	text-align: center;
+	height: 25px;
+	line-height: 24px;
+	font-size: 13px;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(235, 235, 235)), to(rgb(209, 209, 209)));
+}
+
+.bottomOptions [class^="icon-"] {
+	margin-right: 5px;
+}

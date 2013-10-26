@@ -36,6 +36,9 @@ var english = {
 	'Cancel': 'Cancel',
 	'Close': 'Close',
 	'Show More': 'Show More',
+	'Delete': 'Delete',
+	'Edit': 'Edit',
+	'History': 'History',
 
 	// phrases
 	'Are you sure you want to delete this record?': 'Are you sure you want to delete this record?'

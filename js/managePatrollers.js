@@ -1,10 +1,11 @@
 var managePatrollers = trick({
 	events: {
-		'click .icon-remove': 'removePatroller',
-		'click .icon-pencil': 'editPatroller',
-		'click .icon-time': 'patrollerHistory',
-		'keyup .filter': 'filterItems',
-		'click .addNew': 'addPatroller'
+		'click .icon-remove': 'removePatroller', // trigger removal of a patroller
+		'click .icon-pencil': 'editPatroller', // open edit menu for a patroller
+		'click .icon-time': 'patrollerHistory', // browse the history of a patroller
+		'keyup .filter': 'filterItems', // begin filtering patrollers
+		'click .addNew': 'addPatroller', // open menu for creating a patroller,
+		'click .row': 'mobileShowOptions' // display mobile options for this row
 	}
 });
 
@@ -44,18 +45,22 @@ managePatrollers.prototype.render = function() {
 // handles removing a patroller
 
 managePatrollers.prototype.removePatroller = function(e, target) {
-	var id = target.parentNode.parentNode.getAttribute('data-id');
+	target = $(target);
+	target = target.hasClass('row') ? target : target.parent().parent();
+	var id = target.attr('data-id');
 	var status = confirm(lang('Are you sure you want to delete this record?'));
 	if(status) {
 		api().deletePatroller(id);
-		$(target.parentNode.parentNode).remove();
+		target.remove();
 	}
 }
 
 // display patroller history
 
 managePatrollers.prototype.patrollerHistory = function(e, target) {
-	var id = target.parentNode.parentNode.getAttribute('data-id');
+	target = $(target);
+	target = target.hasClass('row') ? target : target.parent().parent();
+	var id = target.attr('data-id');
 	api().getPatrollerHistory(id, function(data) {
 		var container = $( Handlebars.templates['managePatrollers.history'](data) ).appendTo('body');
 		container.on('click', '.close', function() {
@@ -68,10 +73,12 @@ managePatrollers.prototype.patrollerHistory = function(e, target) {
 
 managePatrollers.prototype.addPatroller = function(e, target) {
 	// make editing container
+	window.oldScrollY = $('body').scrollTop(); $('#globalContainer').hide();
 	var editContainer = $( Handlebars.templates['managePatrollers.edit']({"Name":"","InstID":"","Email":"","PhoneNum":"","CSPSNum":"","password":""} ) ).appendTo('body');
 	// cancel the edit
 	editContainer.on('click', '.cancel', function(e) {
 		editContainer.remove();
+		$('#globalContainer').show(); $('body').scrollTop(window.oldScrollY);
 	});
 	editContainer.on('keypress', 'input', function(e) {
 		if(e.keyCode == 13)
@@ -90,19 +97,24 @@ managePatrollers.prototype.addPatroller = function(e, target) {
 			$(row).insertAfter(this.$el.find('.table .head'));
 		}.bind(this));
 		editContainer.remove();
+		$('#globalContainer').show(); $('body').scrollTop(window.oldScrollY);
 	}.bind(this));
 }
 
 // handles editing a patroller
 
 managePatrollers.prototype.editPatroller = function(e, target) {
-	var id = target.parentNode.parentNode.getAttribute('data-id');
+	target = $(target);
+	target = target.hasClass('row') ? target : target.parent().parent();
+	var id = target.attr('data-id');
 	api().getPatroller(id, function(data) {
 		// make editing container
+		window.oldScrollY = $('body').scrollTop(); $('#globalContainer').hide();
 		var editContainer = $( Handlebars.templates['managePatrollers.edit'](data) ).appendTo('body');
 		// cancel the edit
 		editContainer.on('click', '.cancel', function(e) {
 			editContainer.remove();
+			$('#globalContainer').show(); $('body').scrollTop(window.oldScrollY);
 		});
 		editContainer.on('keypress', 'input', function(e) {
 			if(e.keyCode == 13)
@@ -119,6 +131,7 @@ managePatrollers.prototype.editPatroller = function(e, target) {
 			// do save and close
 			api().editPatroller(prefs);
 			editContainer.remove();
+			$('#globalContainer').show(); $('body').scrollTop(window.oldScrollY);
 			// update list
 			var container = this.$el.find('[data-id="' + id + '"]');
 			for(var key in prefs) {
@@ -138,4 +151,40 @@ managePatrollers.prototype.filterItems = function(e, target) {
 	}else
 		items.hide();
 	items.filter(':Contains("' + target.value + '")').show();
+}
+
+// display options for this item
+
+managePatrollers.prototype.mobileShowOptions = function(e, target) {
+
+	// do nothing if not in mobile mode
+	if(!window.isMobile)
+		return;
+
+	// dropdown options
+	var options = [ { action: 'delete', name: lang('Delete'), icon: 'icon-remove' }, 
+					{ action: 'edit', name: lang('Edit'), icon: 'icon-pencil' },
+					{ action: 'history', name: lang('History'), icon: 'icon-time' } ];
+
+	// create and insert the options selector
+	var menu = new bottomOptions({ options: options });
+	document.body.appendChild(menu.el);
+
+	// wait for delete
+	menu.on('delete', function() {
+			this.removePatroller(e, target);
+			menu.close();
+	}.bind(this));
+
+	// wait for edit
+	menu.on('edit', function() {
+			this.editPatroller(e, target);
+			menu.close();
+	}.bind(this));
+
+	// wait for history
+	menu.on('history', function() {
+			this.patrollerHistory(e, target);
+			menu.close();
+	}.bind(this));
 }

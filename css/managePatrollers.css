@@ -11,6 +11,7 @@
 	line-height: 12px;
 	font-weight: normal;
 	outline: none;
+	margin-top: 2px;
 }
 
 .standardListView .submit:hover {
@@ -48,6 +49,8 @@
 	overflow-x: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	height: 100%;
+	position: relative;
 }
 
 .standardListView .table .row {
@@ -73,77 +76,4 @@
 
 .standardListView .table .icon-pencil, .standardListView .table .icon-time {
 	margin-left: 10px;
-}
-
-.overlay {
-	background-color: rgba(0, 0, 0, 0.7);
-	position: fixed;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	overflow-y: scroll;
-	z-index: 999999;
-}
-
-.overlay .title {
-	font-size: 16px;
-	font-weight: bold;
-	color: white;
-	margin-bottom: 5px;
-}
-
-.overlay .node {
-	padding: 25px;
-}
-
-.overlay .category {
-	padding: 25px;
-}
-
-.overlay .category .node {
-	padding: 5px;
-}
-
-.overlay .node input:not([type="checkbox"]), .overlay textarea {
-	border: none;
-	padding: 10px;
-	border-radius: 4px;
-	width: calc(100% - 20px);
-	background-color: rgba(255, 255, 255, 0.8);
-}
-
-.overlay .node input[type="checkbox"] {
-	margin-right: 5px;
-}
-
-.overlay .node button i {
-	margin-right: 5px;
-}
-
-.overlay .node.save {
-	float: right;
-}
-
-.overlay .node.cancel {
-	float: left;
-}
-
-.overlay.history .cancel {
-	float: inherit;
-}
-
-.overlay.history .item {
-	font-size: 14px;
-	margin-bottom: 10px;
-	text-align: center;
-}
-
-.overlay.history .header {
-	font-weight: bold;
-}
-
-.overlay.history .item .value {
-	display: inline-block;
-	width: 30%;
 }

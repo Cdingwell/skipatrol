@@ -26,3 +26,23 @@
 	margin-left: 16px;
 	color: white;
 }
+
+#header .nav .openSidebar {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	width: 57px;
+	text-align: center;
+	line-height: 52px;
+	font-size: 35px;
+	cursor: pointer;
+}
+
+#header .nav .openSidebar:hover {
+	background-color: #bc1e35;
+}
+
+#header .nav .openSidebar:active {
+	background-color: #99182b;
+}

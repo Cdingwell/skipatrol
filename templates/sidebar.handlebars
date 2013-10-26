@@ -1,0 +1,9 @@
+<div class='closeSidebar'></div>
+
+<div class='actualSidebar'>
+	{{#each this}}
+		{{#checkPerms perms}}
+			<a href="{{href}}"> <i class='{{icon}}'></i> {{name}}</a>
+		{{/checkPerms}}
+	{{/each}}
+</div>
