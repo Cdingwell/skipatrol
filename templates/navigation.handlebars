@@ -1,3 +1,5 @@
 {{#each this}}
-	<a href="{{href}}">{{name}}</a>
+	{{#checkPerms perms}}
+		<a href="{{href}}">{{name}}</a>
+	{{/checkPerms}}
 {{/each}}
