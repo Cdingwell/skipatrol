@@ -27,7 +27,7 @@
 		// add patroller
 		$con = new mysqli(DBHOST, DBUSER, DBPASS, DB);
 		$sql = $con->prepare("INSERT INTO `Patroller` (`id`, `Name`, `InstID`, `Email`, `PhoneNum`, `CSPSNum`, `password`, `login`) VALUES (NULL, ?, ?, ?, ?, ?, ?, NULL)");
-		$sql->bind_param("ssssss", $_POST['Name'], $_POST['InstID'], $_POST['Email'], $_POST['PhoneNum'], $_POST['CSPSNum'], $_POST['password']);
+		$sql->bind_param("ssssss", $_POST['Name'], $_POST['InstID'], $_POST['Email'], $_POST['PhoneNum'], $_POST['CSPSNum'], encryptPassword($_POST['password']) );
 		$sql->execute();
 		$sql->close();
 		// find patroller's id for output
@@ -67,8 +67,12 @@
 						  'InstID' => @$_POST['InstID'], 
 						  'Email' => @$_POST['Email'], 
 						  'PhoneNum' => @$_POST['PhoneNum'], 
-						  'CSPSNum' => @$_POST['CSPSNum'], 
-						  'password' => @$_POST['password'] );
+						  'CSPSNum' => @$_POST['CSPSNum'] );
+
+		// encrypt the password
+		if(!empty($_POST['password']))
+			$changes['password'] = encryptPassword($_POST['password']);
+
 		// change stuff
 		foreach($changes as $key => $value) {
 			if( !empty($value) ) {
