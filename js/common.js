@@ -14,3 +14,9 @@ function formatDate(stamp) {
 Handlebars.registerHelper('formatDate', function(stamp, options) {
 	return formatDate(stamp);
 });
+
+/* hooks up the check perms method with our api for permissions */
+
+Handlebars.registerHelper('checkPerms', function(perms, options) {
+	return api().checkPerms(perms) ? options.fn(this) : options.inverse(this);
+});

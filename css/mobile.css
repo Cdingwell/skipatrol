@@ -7,17 +7,6 @@
 	margin-top: 55px;
 }
 
-.standardListView .submit {
-	font-size: 14px;
-	position: absolute;
-	top: 5px;
-	bottom: 5px;
-	left: 5px;
-	right: 5px;
-	margin: 0px;
-	height: 40px;
-}
-
 /* Make tables finger friendly */
 
 .standardListView .table .row {

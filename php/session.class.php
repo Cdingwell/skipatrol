@@ -28,6 +28,8 @@
 			return $this->con;
 		}
 
+		// this takes a session ID and removes all other sessions related to the same user of the given session
+
 		function removeAllSessionsForSession($sessionid) {
 
 			$con = $this->connectDB();
@@ -64,6 +66,8 @@
 				$stmt->execute();
 				$stmt->close();
 			}
+			// store the userid
+			$userid = $result;
 			// return if its a legit session
 			return $session_is_legit;
 		}

@@ -4,10 +4,6 @@ var navigation = trick({
 	}
 });
 
-Handlebars.registerHelper('checkPerms', function(perms, options) {
-	return api().checkPerms(perms) ? options.fn(this) : options.inverse(this);
-});
-
 navigation.prototype.init = function() {
 
 	// add something to define this class

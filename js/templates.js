@@ -75,7 +75,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</label>\n                    <input id=\"login\" name=\"login\" class=\"text\" autocapitalize=\"off\" autocorrect=\"off\" />\n                </div>\n                <div class=\"inContainer\">\n                    <label for=\"pass\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Password", options) : helperMissing.call(depth0, "lang", "Password", options)))
-    + "</label>\n                    <input id=\"pass\" name=\"pass\" type=\"password\" class=\"text\" />\n                </div>\n                <div class=\"buttonContainer\">\n                    <button type=\"submit\" class=\"ok\" id=\"loginButton\"><i class=\"icon-ok\"></i>";
+    + "</label>\n                    <input id=\"pass\" name=\"pass\" type=\"password\" class=\"text\" autocapitalize=\"off\" autocorrect=\"off\" />\n                </div>\n                <div class=\"buttonContainer\">\n                    <button type=\"submit\" class=\"ok\" id=\"loginButton\"><i class=\"icon-ok\"></i>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Submit", options) : helperMissing.call(depth0, "lang", "Submit", options)))
     + "</button>\n                </div>\n            </div>\n\n        </div>\n    </div>\n</div>";
@@ -390,16 +390,41 @@ function program1(depth0,data) {
   return " selected";
   }
 
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, options;
+  buffer += "\n\n        	<div class=\"option updatePassword\">\n        		<div class=\"title\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Change Password", options) : helperMissing.call(depth0, "lang", "Change Password", options)))
+    + "</div>\n	            <input placeholder='";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Enter new password", options) : helperMissing.call(depth0, "lang", "Enter new password", options)))
+    + "' type='password' autocapitalize=\"off\" autocorrect=\"off\" id=\"password\">\n	            <input placeholder='";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Confirm new password", options) : helperMissing.call(depth0, "lang", "Confirm new password", options)))
+    + "' type='password' autocapitalize=\"off\" autocorrect=\"off\" id=\"confirm_password\">\n	            <button id=\"go\"><i class=\"icon-lock\"></i>";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Submit", options) : helperMissing.call(depth0, "lang", "Submit", options)))
+    + "</button>\n        	</div>\n\n        	";
+  return buffer;
+  }
+
   buffer += "<div id=\"main\" class=\"loginContainer\"> \n    <div class=\"full_w\">\n        <div class=\"h_title\"><i class=\"icon-briefcase\"></i>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Settings", options) : helperMissing.call(depth0, "lang", "Settings", options)))
-    + "</div>\n        <div class=\"h_content\">\n\n            <select id=\"language\">\n                <option value=\"english\">English</option>\n                <option value=\"french\" ";
+    + "</div>\n        <div class=\"h_content\">\n\n        	<div class=\"option\">\n        		<div class=\"title\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Change Language", options) : helperMissing.call(depth0, "lang", "Change Language", options)))
+    + "</div>\n	            <select id=\"language\">\n	                <option value=\"english\">English</option>\n	                <option value=\"french\" ";
   options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
   if (stack2 = helpers.isFrench) { stack2 = stack2.call(depth0, options); }
   else { stack2 = depth0.isFrench; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   if (!helpers.isFrench) { stack2 = blockHelperMissing.call(depth0, stack2, options); }
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += ">Français</option>\n            </select>\n\n        </div>\n    </div>\n</div>";
+  buffer += ">Français</option>\n	            </select>\n        	</div>\n\n        	";
+  stack2 = helpers['if'].call(depth0, depth0.loggedIn, {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data});
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n\n        </div>\n    </div>\n</div>";
   return buffer;
   });
 templates['sidebar'] = template(function (Handlebars,depth0,helpers,partials,data) {

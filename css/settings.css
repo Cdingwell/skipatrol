@@ -1,8 +1,20 @@
-.Settings .toggleButton {
-	margin-top: 10px;
+.Settings .option {
+	margin: 20px;
+	margin-bottom: 40px;
+}
+
+.Settings .option > *:not(.title) {
+	display: block;
 	margin-bottom: 10px;
 }
 
-.Settings .buttongroup {
-	margin-left: 10px;
+.Settings .option input {
+	width: calc(100% - 16px);
+	width: -webkit-calc(100% - 16px);
+}
+
+.Settings .title {
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 10px;
 }

@@ -10,6 +10,7 @@ var english = {
 	'On Snow': 'On Snow',
 	'Logout': 'Logout',
 	'Login': 'Login',
+	'Settings': 'Settings',
 
 	// keys of tables
 
@@ -40,15 +41,21 @@ var english = {
 	'Delete': 'Delete',
 	'Edit': 'Edit',
 	'History': 'History',
-	'Settings': 'Settings',
 	'Logout of all %@ Sessions': 'Logout of all %@ Sessions',
+	'Change Language': 'Change Language',
 	'Please Login': 'Please Login',
+	'Change Password': 'Change Password',
+	'Enter new password': 'Enter new password',
+	'Confirm new password': 'Confirm new password',
 
 	// phrases
 	'Are you sure you want to delete this record?': 'Are you sure you want to delete this record?',
 	'Welcome': 'Welcome',
 	'You have entered incorrect login information.': 'You have entered incorrect login information.',
-	'WelcomeMessage': 'Hello <strong>%@</strong>. You last logged in at <strong>%@</strong> from <strong>%@</strong>.'
+	'WelcomeMessage': 'Hello <strong>%@</strong>. You last logged in at <strong>%@</strong> from <strong>%@</strong>.',
+	'Both passwords must match.': 'Both passwords must match.',
+	'Password must be longer or equal to 6 characters in length.': 'Password must be longer or equal to 6 characters in length.',
+	'Password Changed!': 'Password Changed!'
 
 };
 
@@ -59,10 +66,14 @@ var french = {
 	"On Snow": "Sur neige",
 	"Logout": "Déconnexion",
 	"Login": "Connexion",
+	'Change Language': 'Changer la langue',
 	"Time": "Heure",
 	"InstID": "InstID",
+	'Change Password': 'Modifier mot de passe',
 	"SID": "SID",
 	"Notes": "Remarques",
+	'Enter new password': 'Entrez le nouveau mot de passe',
+	'Confirm new password': 'Confirmer le nouveau mot de passe',
 	"CSP #": "CSP #",
 	"Name": "Nom",
 	"E-mail": "E-mail",
@@ -89,9 +100,13 @@ var french = {
 	"Are you sure you want to delete this record?": "Etes-vous sûr d'effacer cette entrée?",
 	"Welcome": "Bonjour",
 	'You have entered incorrect login information.': 'Vous avez entré les informations de connexion incorrects.',
-	'WelcomeMessage': 'Salut <strong>%@</strong>. Vous connectez via <strong>%@</strong> sur <strong>%@</strong>.'
+	'WelcomeMessage': 'Salut <strong>%@</strong>. Vous connectez via <strong>%@</strong> sur <strong>%@</strong>.',
+	'Both passwords must match.': 'Les mots de passe doivent correspondre.',
+	'Password must be longer or equal to 6 characters in length.': 'Mot de passe doit être supérieur ou égal à 6 caractères de longueur.',
+	'Password Changed!': 'Mot de passe changé!'
 
 };
+
 
 /* Do not change anything below - this is for detecting the currently set language and for fetching phrases */
 

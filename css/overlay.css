@@ -61,6 +61,7 @@
 
 .overlay.history .header {
 	font-weight: bold;
+	padding-top: 20px;
 }
 
 .overlay.history .item .value {

@@ -6,7 +6,7 @@
 
 	// validate user
 	$session = new sessionManager();
-	if( empty($_POST['sessionid']) || !$session->validateSession($_POST['sessionid']) ) {
+	if( empty($_POST['sessionid']) || !$session->validateSession($_POST['sessionid'], $userid) ) {
 		exitWithJSON( array( 'error' => true, 'type' => 'invalid_session', 'message' => 'You must login to use this feature.' ) );
 	}
 
@@ -64,12 +64,18 @@
 
 	// edit a patroller
 	}else if($_GET['action'] == 'editPatroller' && !empty($_POST['id'])) {
+
+		// if updating own password use our own id
+		if($_POST['id'] == 'self')
+			$_POST['id'] = $userid;
 		$con = new mysqli(DBHOST, DBUSER, DBPASS, DB);
-		// UPDATE  `skipatrol`.`Patroller` SET  `Email` =  'emily@email3.com' WHERE  `patroller`.`id` =8 AND  `patroller`.`InstID` =  '5555';
+
+		// determine what items are allowed to be changed and what they map out to
 		$changes = array( 'Name' => @$_POST['Name'], 
 						  'InstID' => @$_POST['InstID'], 
 						  'Email' => @$_POST['Email'], 
 						  'PhoneNum' => @$_POST['PhoneNum'], 
+						  'password' => @$_POST['password'], 
 						  'CSPSNum' => @$_POST['CSPSNum'] );
 
 		// encrypt the password

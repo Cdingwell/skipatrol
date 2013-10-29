@@ -3,10 +3,24 @@
         <div class="h_title"><i class="icon-briefcase"></i>{{lang 'Settings'}}</div>
         <div class="h_content">
 
-            <select id="language">
-                <option value="english">English</option>
-                <option value="french" {{#isFrench}} selected{{/isFrench}}>Français</option>
-            </select>
+        	<div class="option">
+        		<div class="title">{{lang 'Change Language'}}</div>
+	            <select id="language">
+	                <option value="english">English</option>
+	                <option value="french" {{#isFrench}} selected{{/isFrench}}>Français</option>
+	            </select>
+        	</div>
+
+        	{{#if loggedIn}}
+
+        	<div class="option updatePassword">
+        		<div class="title">{{lang 'Change Password'}}</div>
+	            <input placeholder='{{lang 'Enter new password'}}' type='password' autocapitalize="off" autocorrect="off" id="password">
+	            <input placeholder='{{lang 'Confirm new password'}}' type='password' autocapitalize="off" autocorrect="off" id="confirm_password">
+	            <button id="go"><i class="icon-lock"></i>{{lang 'Submit'}}</button>
+        	</div>
+
+        	{{/if}}
 
         </div>
     </div>
