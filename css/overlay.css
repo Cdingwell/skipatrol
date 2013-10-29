@@ -5,6 +5,12 @@
 	padding-bottom: 80px;
 }
 
+.overlay .selectDesc {
+	font-size: 12px;
+	margin: 10px;
+	margin-left: 0px;
+}
+
 .overlay .title {
 	font-size: 16px;
 	font-weight: bold;

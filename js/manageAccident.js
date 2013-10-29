@@ -1,4 +1,4 @@
-var manageOnSnow = trick({
+var manageAccident = trick({
 	events: {
 		'click .icon-remove': 'removeRecord', // remove a form
 		'click .icon-pencil': 'editRecord', // open form up in edit mode
@@ -13,20 +13,20 @@ var manageOnSnow = trick({
 	}
 });
 
-Handlebars.registerHelper('onSnowRecordSubmitted', function(timestamp, options) {
+Handlebars.registerHelper('accidentRecordSubmitted', function(timestamp, options) {
 	return timestamp ? options.fn(this) : options.inverse(this);
 });
 
-manageOnSnow.prototype.init = function() {
+manageAccident.prototype.init = function() {
 
 	// slap some identifiers on the view
-	this.$el.addClass('manageOnSnow').addClass('standardListView');
+	this.$el.addClass('manageAccident').addClass('standardListView');
 
 	// page changes should trigger loading more content in
 	this.on('change:page', function(page) {
 		var button = this.$el.find('.loadMore').html('<i class="icon-spinner icon-spin"></i>').addClass('loading');
-		api().getOnSnow({ page: page }, function(data) {
-			this.$el.find('.table').append( Handlebars.templates['manageOnSnow.list'](data) );
+		api().getAccident({ page: page }, function(data) {
+			this.$el.find('.table').append( Handlebars.templates['manageAccident.list'](data) );
 			button.removeClass('loading').html(lang('Show More'));
 			if(data.length < 25)
 				button.remove();
@@ -37,28 +37,28 @@ manageOnSnow.prototype.init = function() {
 	this.render();
 }
 
-manageOnSnow.prototype.localStoragePrefix = 'manageOnSnow_';
+manageAccident.prototype.localStoragePrefix = 'manageAccident_';
 
-manageOnSnow.prototype.render = function() {
+manageAccident.prototype.render = function() {
 
 	// create page layout
-	this.el.innerHTML = Handlebars.templates['manageOnSnow']({ table: '' });
+	this.el.innerHTML = Handlebars.templates['manageAccident']({ table: '' });
 
 	var localRecords = storage.get(this.localStoragePrefix + 'records');
 	if(localRecords)
-		this.$el.find('.table').append( Handlebars.templates['manageOnSnow.list']($.map(localRecords, function(value, key){ return value })) );
+		this.$el.find('.table').append( Handlebars.templates['manageAccident.list']($.map(localRecords, function(value, key){ return value })) );
 
 	// fetch list of all patrollers
-	api().getOnSnow({ page: 1 }, function(data) {
+	api().getAccident({ page: 1 }, function(data) {
 
 		// if the API rejected our request if not logged in, show an errr instead
 		if(data.error && data.type == 'invalid_session') {
-			this.el.innerHTML = Handlebars.templates.manageOnSnow( Handlebars.templates.error(data) );
+			this.el.innerHTML = Handlebars.templates.manageAccident( Handlebars.templates.error(data) );
 			return;
 		}
 
 		// turn the list of records into html for the table
-		var buffer = Handlebars.templates['manageOnSnow.list'](data);
+		var buffer = Handlebars.templates['manageAccident.list'](data);
 
 		// insert the buffer
 		this.$el.find('.table').append(buffer);
@@ -69,7 +69,7 @@ manageOnSnow.prototype.render = function() {
 
 // take a record and attempt to submit it to the server
 
-manageOnSnow.prototype.submitToServer = function(e, target) {
+manageAccident.prototype.submitToServer = function(e, target) {
 	e.preventDefault();
 	e.stopPropagation();
 	// pull data to send to server
@@ -81,7 +81,7 @@ manageOnSnow.prototype.submitToServer = function(e, target) {
 	target.addClass('loading');
 	target.html('<i class="icon-spin icon-spinner"></i>');
 	// submit data to server
-	api().addOnSnow(data[id], function(server) {
+	api().addAccident(data[id], function(server) {
 		// handle errors
 		if(!server || !server.success) {
 			target.html( lang('Try Again') );
@@ -100,7 +100,7 @@ manageOnSnow.prototype.submitToServer = function(e, target) {
 
 // handles removing a record
 
-manageOnSnow.prototype.removeRecord = function(e, target) {
+manageAccident.prototype.removeRecord = function(e, target) {
 	e.preventDefault();
 	e.stopPropagation();
 	target = $(target);
@@ -114,14 +114,14 @@ manageOnSnow.prototype.removeRecord = function(e, target) {
 			delete data[id];
 			storage.set(this.localStoragePrefix + 'records', data);
 		}else
-			api().deleteOnSnow(id);
+			api().deleteAccident(id);
 		target.remove();
 	}
 }
 
 // create a new record
 
-manageOnSnow.prototype.addRecord = function(e, target) {
+manageAccident.prototype.addRecord = function(e, target) {
 	e.preventDefault();
 	e.stopPropagation();
 	// make editing container
@@ -130,7 +130,7 @@ manageOnSnow.prototype.addRecord = function(e, target) {
 	editContainer.on('click','.saveChanges', function() {
 		editContainer.addClass('loading');
 		var data = {};
-		editContainer.find('input, textarea').each(function() {
+		editContainer.find('input, textarea, select').each(function() {
 		     if(this.getAttribute('type') == 'checkbox')
 		          data[this.name] = this.checked ? 1 : 0;
 		     else
@@ -140,20 +140,20 @@ manageOnSnow.prototype.addRecord = function(e, target) {
 		data.instID = api().userid;
 		// store this record in the user's local Storage
 		var records = storage.get(this.localStoragePrefix + 'records') || {};
-		data.snowID = Date.now();
-		records[data.snowID] = data;
+		data.id = Date.now();
+		records[data.id] = data;
 		storage.set(this.localStoragePrefix + 'records', records);
 		// keep ui consistent
 		editContainer.remove();
 		$('#globalContainer').show(); $('body').scrollTop(window.oldScrollY);
-		var row = Handlebars.templates['manageOnSnow.list']([data]);
+		var row = Handlebars.templates['manageAccident.list']([data]);
 		$(row).insertAfter(this.$el.find('.head'));
 	}.bind(this));
 }
 
 // handles editing a record
 
-manageOnSnow.prototype.editRecord = function(e, target, edit) {
+manageAccident.prototype.editRecord = function(e, target, edit) {
 
 	e.preventDefault();
 		e.stopPropagation();
@@ -197,7 +197,7 @@ manageOnSnow.prototype.editRecord = function(e, target, edit) {
 			// save this structure remotely
 			}else{
 				submittedData.id = id;
-				api().editOnSnow(submittedData, finishedSaving);
+				api().editAccident(submittedData, finishedSaving);
 			}
 		}.bind(this));
 	}.bind(this);
@@ -207,13 +207,13 @@ manageOnSnow.prototype.editRecord = function(e, target, edit) {
 	if(records[id])
 		showEditor(records[id], true);
 	else
-		api().getOnSnowRecord(id, showEditor);
+		api().getAccidentRecord(id, showEditor);
 
 }
 
 // filter things
 
-manageOnSnow.prototype.filterItems = function(e, target) {
+manageAccident.prototype.filterItems = function(e, target) {
 	var items = this.$el.find('.row:not(.head)');
 	if(target.value == '') {
 		items.show();
@@ -225,10 +225,10 @@ manageOnSnow.prototype.filterItems = function(e, target) {
 
 // generate an html form based off a javascript data structure
 
-manageOnSnow.prototype.showForm = function(defaultValues) {
+manageAccident.prototype.showForm = function(defaultValues) {
 	this.$el.find('.overlay').remove();
 	window.oldScrollY = $('body').scrollTop(); $('#globalContainer').hide();
-	var overlay = $('<div class="overlay">' + formManager.objectToHtml({ form: form, name: 'onSnow', defaults: defaultValues }) + ' <div class="bottomBar"><div class="node cancel"><button class="cancel"><i class="icon-remove-sign"></i> Cancel</button> </div> <div class="node save"><button class="saveChanges"><i class="icon-check-sign"></i> Save</button> </div> <div style="clear:both"></div> </div> </div>').appendTo('body');
+	var overlay = $('<div class="overlay">' + formManager.objectToHtml({ form: accidentForm, name: 'accident', defaults: defaultValues }) + ' <div class="bottomBar"><div class="node cancel"><button class="cancel"><i class="icon-remove-sign"></i> Cancel</button> </div> <div class="node save"><button class="saveChanges"><i class="icon-check-sign"></i> Save</button> </div> <div style="clear:both"></div> </div> </div>').appendTo('body');
 	// cancel the edit
 	overlay.on('click', '.cancel', function(e) {
 		overlay.remove();
@@ -238,10 +238,14 @@ manageOnSnow.prototype.showForm = function(defaultValues) {
 		if(e.keyCode == 13)
 				overlay.find('.saveChanges').click();
 	});
+	overlay.find('select').each(function() {
+		if($(this).find('option').length <= 4)
+			$(this).toggleSwitch();
+	});
 	return overlay;
 }
 
-manageOnSnow.prototype.mobileShowOptions = function(e, target) {
+manageAccident.prototype.mobileShowOptions = function(e, target) {
 
 	// do nothing if not in mobile mode
 	if(!window.isMobile)

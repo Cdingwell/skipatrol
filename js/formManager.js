@@ -20,11 +20,15 @@ var formManager = {
           // we must parse every different category of the form
           for(var i = 0; i < form.length; i++) {
 
+               // grab a pointer to the category we are parsing
+               var category = form[i];
+
                // add opening container for this category
-               buffer.push('<div class="category"><div class="title">' + form[i].name + '</div>');
+               var style = category.style ? 'style="' + category.style + '"' : '';
+               buffer.push('<div ' + style + ' class="category"><div class="title">' + category.name + '</div>');
 
                // point to the fields in this category
-               var fields = form[i].fields;
+               var fields = category.fields;
 
                // insert each field of the category into the form
                for(var j = 0; j < fields.length; j++) {

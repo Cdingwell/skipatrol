@@ -11,6 +11,7 @@ var english = {
 	'Logout': 'Logout',
 	'Login': 'Login',
 	'Settings': 'Settings',
+	'Accidents': 'Accidents',
 
 	// keys of tables
 
@@ -28,6 +29,9 @@ var english = {
 	'IP': 'IP',
 	'Username': 'Username',
 	'Logged In At': 'Logged In At',
+	'ID': 'ID',
+	'Gender': 'Gender',
+	'DOB': 'DOB',
 
 	// actions
 
@@ -100,7 +104,7 @@ var french = {
 	"Are you sure you want to delete this record?": "Etes-vous sûr d'effacer cette entrée?",
 	"Welcome": "Bonjour",
 	'You have entered incorrect login information.': 'Vous avez entré les informations de connexion incorrects.',
-	'WelcomeMessage': 'Salut <strong>%@</strong>. Vous connectez via <strong>%@</strong> sur <strong>%@</strong>.',
+	'WelcomeMessage': 'Bonjour <strong>%@</strong>. Ta/Votre dernière connexion était le <strong>%@</strong> via <strong>%@</strong>..',
 	'Both passwords must match.': 'Les mots de passe doivent correspondre.',
 	'Password must be longer or equal to 6 characters in length.': 'Mot de passe doit être supérieur ou égal à 6 caractères de longueur.',
 	'Password Changed!': 'Mot de passe changé!'

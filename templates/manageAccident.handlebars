@@ -1,0 +1,28 @@
+<div id="main" class="loginContainer"> 
+    <div class="full_w">
+        <div class="h_title"><i class="icon-briefcase"></i>{{lang 'Accidents'}}</div>
+        <div class="h_content">
+
+            <div class="manage">
+                <button class="addNew"><i class="icon-plus-sign-alt"></i>{{lang 'Add Record'}}</button>
+                <input class="filter" placeholder="{{lang 'Start typing to filter'}}">
+            </div>
+
+            <div class="table">
+                <div class="row head">
+                    <div class="item options"></div>
+                    <div class="item Timestamp">{{lang 'Time'}}</div>
+                    <div class="item id">{{lang 'ID'}}</div>
+                    <div class="item gender">{{lang 'Gender'}}</div>
+                    <div class="item DOB">{{lang 'DOB'}}</div>
+                </div>
+                {{{table}}}
+            </div>
+
+            <div class='loadMoreContainer'>
+                <button class="loadMore">{{lang 'Show More'}}</button>
+            </div>
+
+        </div>
+    </div>
+</div>

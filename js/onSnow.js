@@ -2,8 +2,8 @@ var form = [
 
 	{
 		name: '[WIP] These fields were in the table and were not accounted for in the form!',
+		style: 'display: none',
 		fields: [
-			{ name: 'SID', type: 'input', sqlName: 'SID' },
 			{ name: 'comm2patien2_Loaded', type: 'input', sqlName: 'comm2patien2_Loaded' },
 			{ name: 'traffic2_Loaded', type: 'input', sqlName: 'traffic2_Loaded' },
 			{ name: 'position2_Loaded', type: 'input', sqlName: 'position2_Loaded' },
@@ -18,7 +18,14 @@ var form = [
 			{ name: 'Direction2_Loaded', type: 'input', sqlName: 'Direction2_Loaded' },
 			{ name: 'compensating2_Loaded', type: 'input', sqlName: 'compensating2_Loaded' }
 		]
-			},
+	},
+
+	{
+		name: 'SID Information',
+		fields: [
+			{ name: 'SID', type: 'input', sqlName: 'SID' }
+		]
+	},
 
 	{
 		name: 'Ski/Ride',

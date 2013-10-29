@@ -9,10 +9,6 @@ var managePatrollers = trick({
 	}
 });
 
-jQuery.expr[':'].Contains = function(a,i,m){
-     return jQuery(a).text().toUpperCase().indexOf(m[3].toUpperCase())>=0;
-};
-
 managePatrollers.prototype.init = function() {
 	this.$el.addClass('managePatrollers').addClass('standardListView');
 	this.render();

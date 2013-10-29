@@ -94,6 +94,58 @@ api.prototype.deletePatroller = function(id, callback) {
 	});
 }
 
+/* ACCIDENT REPORTS */
+
+
+
+// delete a new Accident
+
+api.prototype.deleteAccident = function(id, callback) {
+	$.post(this.base + 'php/getAccident.php?action=delete', { sessionid: this.sessionid, id: id }, function(d) {
+		if(typeof callback == 'function')
+			callback(d);
+	});
+}
+
+// add a new Accident
+
+api.prototype.addAccident = function(data, callback) {
+	data.sessionid = this.sessionid;
+	$.post(this.base + 'php/getAccident.php?action=add', data, callback);
+}
+
+// get Accident info
+
+api.prototype.getAccident = function(options, callback) {
+	var data = {};
+	if(typeof options == 'function')
+		callback = options;
+	else
+		data = options;
+		data.sessionid = this.sessionid;
+	$.post(this.base + 'php/getAccident.php?action=get', data, callback);
+}
+
+// get Accident info for a specific id
+
+api.prototype.getAccidentRecord = function(id, callback) {
+	$.post(this.base + 'php/getAccident.php?action=get', { sessionid: this.sessionid, id: id }, function(d) {
+		callback(d[0]);
+	});
+}
+
+// edit an Accident record
+
+api.prototype.editAccident = function(data, callback) {
+	data.sessionid = this.sessionid;
+	$.post(this.base + 'php/getAccident.php?action=edit', data, function(d) {
+		if(typeof callback == 'function')
+			callback(d);
+	});
+}
+
+
+
 /* ON SNOW */
 
 // delete a new onsnow

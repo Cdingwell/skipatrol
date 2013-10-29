@@ -1,4 +1,4 @@
-var accident = [
+var accidentForm = [
 	
 	{
 		name: 'Basic Information',

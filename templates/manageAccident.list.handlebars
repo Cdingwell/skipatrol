@@ -1,0 +1,11 @@
+{{#each this}}
+
+	<div class="row" data-id="{{id}}">
+		<div class="item options"> <i class="icon-remove"></i> <i class="icon-pencil"></i></div>
+		<div class="item Timestamp"> {{#accidentRecordSubmitted Timestamp}} {{formatDate Timestamp}}  {{else}} <button class="submit">{{lang 'Submit'}}</button> {{/accidentRecordSubmitted}}</div>
+		<div class="item id">{{id}}</div>
+		<div class="item gender">{{gender}}</div>
+		<div class="item DOB">{{DOB}}</div>
+	</div>
+
+{{/each}}
