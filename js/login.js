@@ -55,7 +55,7 @@ login.prototype.loginAttempt = function(e, target) {
 			window.location.hash = '#/Welcome';
 			$('body').trigger('permChange');
 		}else{
-			alert('You have entered invalid login details.');
+			alert( lang('You have entered incorrect login information.') );
 		}
 	}.bind(this));
 }

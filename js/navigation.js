@@ -28,11 +28,12 @@ navigation.prototype.render = function() {
 	var perms = api().perms;
 
 	// structure representing pages
-	var pages = [ { name: 'Login', href: '#/login', perms: perms.guest, icon: 'icon-lock' },
-				  { name: 'Home', href: '#/Welcome', perms: perms.admin, icon: 'icon-home' },
-				  { name: 'Patrollers', href: '#/managePatrollers', perms: perms.admin, icon: 'icon-suitcase' },
-				  { name: 'On Snow', href: '#/manageOnSnow', perms: perms.admin, icon: 'icon-suitcase' },
-				  { name: 'Logout', href: '#/login', perms: perms.admin, icon: 'icon-signout' } ];
+	var pages = [ { name: lang('Login'), href: '#/login', perms: perms.guest, icon: 'icon-lock' },
+				  { name: lang('Home'), href: '#/Welcome', perms: perms.admin, icon: 'icon-home' },
+				  { name: lang('Patrollers'), href: '#/managePatrollers', perms: perms.admin, icon: 'icon-suitcase' },
+				  { name: lang('On Snow'), href: '#/manageOnSnow', perms: perms.admin, icon: 'icon-suitcase' },
+				  { name: lang('Settings'), href: '#/Settings', perms: perms.all, icon: 'icon-cog' },
+				  { name: lang('Logout'), href: '#/login', perms: perms.admin, icon: 'icon-signout' } ];
 
 	// handle render for mobile
 	if(window.isMobile) {

@@ -28,6 +28,16 @@
 			return $this->con;
 		}
 
+		function removeAllSessionsForSession($sessionid) {
+
+			$con = $this->connectDB();
+			$sql = $con->prepare("DELETE `b` FROM `sessions` JOIN `sessions` AS `b` ON sessions.userid = b.userid WHERE sessions.session = ?");
+			$sql->bind_param("s", $sessionid);
+			$sql->execute();
+			$sql->close();
+
+		}
+
 		// this method checks to see that a session is legit, returns true or false
 
 		function validateSession($sessionid, &$userid = 0) {

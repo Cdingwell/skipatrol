@@ -41,6 +41,10 @@
 	margin: 10px;
 }
 
+.standardListView .manage input {
+	margin-left: 6px;
+}
+
 .standardListView .table .row .item {
 	display: inline-block;
 	width: 16%;

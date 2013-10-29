@@ -13,11 +13,18 @@ function api() {
 
 api.prototype.base = '';
 
+// determine the session id of the user
+
 api.prototype.sessionid = localStorage.skiSessionID ? localStorage.skiSessionID : false;
+
+// store the id of the user
+
+api.prototype.userid = localStorage.userid ? localStorage.userid : undefined;
 
 // table of permissions for bitperms
 
 api.prototype.perms = {
+	'all': 0,
 	'guest': 1,
 	'admin': 2,
 	'student': 4,
@@ -27,14 +34,17 @@ api.prototype.perms = {
 	'national_education_leader': 64
 };
 
-// checks to see if user has given permissions
-api.prototype.checkPerms = function(perms) {
-	return perms & this.userPermissions;
-}
-
 // store which permissions the user has here
 
 api.prototype.userPermissions = localStorage.userPermissions ? localStorage.userPermissions : api.prototype.perms.guest;
+
+// checks to see if user has given permissions
+api.prototype.checkPerms = function(perms) {
+	if(perms == 0)
+		return true;
+	else
+		return perms & this.userPermissions;
+}
 
 // attempt a login
 
@@ -43,6 +53,7 @@ api.prototype.login = function(username, password, callback) {
 		if(data.success)
 			this.sessionid = localStorage.skiSessionID = data.sessionid;
 			this.userPermissions = localStorage.userPermissions = data.login;
+			this.userid = localStorage.userid = data.userid;
 		callback(data.success == "true");
 	}.bind(this));
 
@@ -52,9 +63,20 @@ api.prototype.login = function(username, password, callback) {
 
 api.prototype.logout = function() {
 	this.sessionid = false;
+	this.userid = false;
 	this.userPermissions = this.perms.guest;
 	delete localStorage.userPermissions;
 	delete localStorage.skiSessionID;
+	delete localStorage.userid;
+}
+
+// mechanism to remove sessions
+
+api.prototype.removeAllSessions = function(id, callback) {
+	$.post(this.base + 'php/getPatrollers.php?action=removeAllSessions', { sessionid: this.sessionid }, function(d) {
+		if(typeof callback == 'function')
+			callback(d);
+	});
 }
 
 // delete a patroller

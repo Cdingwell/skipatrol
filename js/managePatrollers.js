@@ -62,9 +62,11 @@ managePatrollers.prototype.patrollerHistory = function(e, target) {
 	target = target.hasClass('row') ? target : target.parent().parent();
 	var id = target.attr('data-id');
 	api().getPatrollerHistory(id, function(data) {
+		window.oldScrollY = $('body').scrollTop(); $('#globalContainer').hide();
 		var container = $( Handlebars.templates['managePatrollers.history'](data) ).appendTo('body');
 		container.on('click', '.close', function() {
 			container.remove();
+			$('#globalContainer').show(); $('body').scrollTop(window.oldScrollY);
 		});
 	});
 }

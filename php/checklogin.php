@@ -23,6 +23,6 @@ if(empty($userid))
 // if login worked make a session
 $session = new sessionManager();
 $sessionid = $session->createSessionForUserid($userid);
-exitWithJSON(array( 'success' => 'true', 'sessionid' => $sessionid, 'login' => $login ));
+exitWithJSON(array( 'success' => 'true', 'sessionid' => $sessionid, 'login' => $login, 'userid' => $userid ));
 
 ?>

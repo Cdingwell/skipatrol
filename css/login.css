@@ -3,8 +3,8 @@
 }
 
 .loginContainer .inContainer input {
-	width: calc(100% - 10px);
-	width: -webkit-calc(100% - 10px);
+	width: calc(100% - 26px);
+	width: -webkit-calc(100% - 26px);
 	padding: 5px;
 	border: 1px solid #c6c6c6;
 	border-radius: 5px;
@@ -28,4 +28,9 @@
 	margin-bottom: 14px;
 	margin-top: 10px;
 	width: 100%;
+}
+
+.loginContainer #form {
+	margin-top: 10px;
+	margin-bottom: 10px;
 }

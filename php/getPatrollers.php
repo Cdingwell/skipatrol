@@ -22,6 +22,9 @@
         	$data[] = $row;
 		exitWithJSON($data);
 
+	}else if($_GET['action'] == 'removeAllSessions') {
+		$session->removeAllSessionsForSession($_POST['sessionid']);
+
 	// add a patroller
 	}else if($_GET['action'] == 'addPatroller') {
 		// add patroller
@@ -42,7 +45,7 @@
 	// delete a patroller
 	}else if($_GET['action'] == 'getPatrollerHistory') {
 		$con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB);
-		$query = "select * from sessions WHERE userid = " . intval($_POST['id']) . " ORDER BY id DESC";
+		$query = "SELECT sessions.*, Patroller.name FROM `sessions` JOIN `Patroller` ON sessions.userid = Patroller.id WHERE sessions.userid = " . intval($_POST['id']) . " ORDER BY id DESC";
         $result = mysqli_query($con,$query);
         $data = array();
         while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
