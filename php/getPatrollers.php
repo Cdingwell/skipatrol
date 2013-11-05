@@ -6,6 +6,7 @@
 
 	// validate user
 	$session = new sessionManager();
+	$_POST['sessionid'] = empty($_POST['sessionid']) ? $_GET['sessionid'] : $_POST['sessionid'];
 	if( empty($_POST['sessionid']) || !$session->validateSession($_POST['sessionid'], $userid) ) {
 		exitWithJSON( array( 'error' => true, 'type' => 'invalid_session', 'message' => 'You must login to use this feature.' ) );
 	}
@@ -24,6 +25,54 @@
 
 	}else if($_GET['action'] == 'removeAllSessions') {
 		$session->removeAllSessionsForSession($_POST['sessionid']);
+		
+	// SQL Dump of accidents
+	} else if($_GET['action'] == 'dump') { 
+		$con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB);
+		// base query
+		$query = 'select * FROM Patroller';
+		// limit by key
+		if(!empty($_GET['id']) && is_numeric($_GET['id']))
+			$query .= " WHERE `id` = '{$_GET['id']}'";
+			
+        $result = mysqli_query($con,$query);
+		
+		//get column names
+		$query = 'SHOW COLUMNS FROM Patroller'; 
+		$result2 = mysqli_query($con, $query);
+
+        $data = array();
+		$data2 = array();
+		
+		//get the column names only from the array and throw them into data2
+		while ($row = mysqli_fetch_array($result2, MYSQL_ASSOC))
+			$data2[] = $row['Field'];
+
+        while ($row = mysqli_fetch_array($result, MYSQL_ASSOC))
+        	$data[] = $row;
+			
+		//make a name for the file with the table name and a datestamp	
+		$name = 'PatrollerTable'. date('Y-m-d') . '.csv'; 
+		
+		header('Content-Type: text/csv');
+    	header('Content-Disposition: attachment; filename=' . $name);
+    	header('Pragma: no-cache');
+    	header("Expires: 0");
+			
+		$fp = fopen("php://output", "w");
+		
+		//put the column names first
+		fputcsv($fp, $data2);
+		
+		//for each row, fputcsv. 
+		foreach ($data as $fields)
+		{
+    		fputcsv($fp, $fields);
+		}
+
+		fclose($fp);
+		
+		exit();
 
 	// add a patroller
 	}else if($_GET['action'] == 'addPatroller') {
