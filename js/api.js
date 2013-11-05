@@ -24,7 +24,6 @@ api.prototype.userid = localStorage.userid ? localStorage.userid : undefined;
 // table of permissions for bitperms
 
 api.prototype.perms = {
-	'all': 0,
 	'guest': 1,
 	'admin': 2,
 	'student': 4,

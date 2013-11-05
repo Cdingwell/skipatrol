@@ -1,3 +1,10 @@
+/*
+
+var perms = 0;
+$('.permissions input').each(function(){ if(this.getAttribute('checked')) perms |= this.name });
+
+*/
+
 var managePatrollers = trick({
 	events: {
 		'click .icon-remove': 'removePatroller', // trigger removal of a patroller
@@ -72,7 +79,7 @@ managePatrollers.prototype.patrollerHistory = function(e, target) {
 managePatrollers.prototype.addPatroller = function(e, target) {
 	// make editing container
 	window.oldScrollY = $('body').scrollTop(); $('#globalContainer').hide();
-	var editContainer = $( Handlebars.templates['managePatrollers.edit']({"Name":"","InstID":"","Email":"","PhoneNum":"","CSPSNum":"","password":""} ) ).appendTo('body');
+	var editContainer = $( Handlebars.templates['managePatrollers.edit']({"Name":"","InstID":"","Email":"","PhoneNum":"","CSPSNum":"","password":"","login":"2","perms":api().perms} ) ).appendTo('body');
 	// cancel the edit
 	editContainer.on('click', '.cancel', function(e) {
 		editContainer.remove();
@@ -108,6 +115,7 @@ managePatrollers.prototype.editPatroller = function(e, target) {
 	api().getPatroller(id, function(data) {
 		// make editing container
 		window.oldScrollY = $('body').scrollTop(); $('#globalContainer').hide();
+		data.perms = api().perms;
 		var editContainer = $( Handlebars.templates['managePatrollers.edit'](data) ).appendTo('body');
 		// cancel the edit
 		editContainer.on('click', '.cancel', function(e) {

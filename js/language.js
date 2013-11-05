@@ -31,6 +31,7 @@ var english = {
 	'Logged In At': 'Logged In At',
 	'ID': 'ID',
 	'Gender': 'Gender',
+	'Permissions': 'Permissions',
 	'DOB': 'DOB',
 
 	// actions
@@ -51,6 +52,15 @@ var english = {
 	'Change Password': 'Change Password',
 	'Enter new password': 'Enter new password',
 	'Confirm new password': 'Confirm new password',
+
+	// permissions
+	'guest': 'Guest',
+	'admin': 'Administrator',
+	'student': 'Student',
+	'instructor': 'Instructor',
+	'zone_education_leader': 'Zone Education Leader',
+	'divisional_education_leader': 'Divisional Education Leader',
+	'national_education_leader': 'National Education Leader',
 
 	// phrases
 	'Are you sure you want to delete this record?': 'Are you sure you want to delete this record?',
@@ -97,6 +107,7 @@ var french = {
 	"Cancel": "Résilier",
 	"Close": "Fermer",
 	"Show More": "Voir plus",
+	'Permissions': 'Autorisations',
 	"Delete": "Supprimer",
 	"Edit": "Modifier",
 	"History": "Histoire",

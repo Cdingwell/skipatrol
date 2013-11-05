@@ -268,8 +268,32 @@ function program4(depth0,data) {
 templates['managePatrollers.edit'] = template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, stack2, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, functionType="function";
+  var buffer = "", stack1, stack2, options, self=this, helperMissing=helpers.helperMissing, functionType="function", escapeExpression=this.escapeExpression;
 
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n			<div><input ";
+  options = {hash:{},inverse:self.noop,fn:self.program(2, program2, data),data:data};
+  stack2 = ((stack1 = helpers.checkPerms || depth0.checkPerms),stack1 ? stack1.call(depth0, depth0, options) : helperMissing.call(depth0, "checkPerms", depth0, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += " type=\"checkbox\" name=\""
+    + escapeExpression((typeof depth0 === functionType ? depth0.apply(depth0) : depth0))
+    + "\" id=\""
+    + escapeExpression((typeof depth0 === functionType ? depth0.apply(depth0) : depth0))
+    + "\"><label for=\""
+    + escapeExpression((typeof depth0 === functionType ? depth0.apply(depth0) : depth0))
+    + "\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, ((stack1 = data),stack1 == null || stack1 === false ? stack1 : stack1.key), options) : helperMissing.call(depth0, "lang", ((stack1 = data),stack1 == null || stack1 === false ? stack1 : stack1.key), options)))
+    + "</label></div>\n		";
+  return buffer;
+  }
+function program2(depth0,data) {
+  
+  
+  return "checked=true";
+  }
 
   buffer += "<div class=\"overlay\">\n\n	<div class=\"node\">\n		<div class=\"title\">";
   options = {hash:{},data:data};
@@ -278,7 +302,13 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (stack2 = helpers.CSPSNum) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.CSPSNum; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "\">\n	</div>\n\n	<div class=\"node\">\n		<div class=\"title\">";
+    + "\">\n	</div>\n\n	<div class=\"node permissions\">\n		<div class=\"title\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Permissions", options) : helperMissing.call(depth0, "lang", "Permissions", options)))
+    + "</div>\n		";
+  stack2 = helpers.each.call(depth0, depth0.perms, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n	</div>\n\n	<div class=\"node\">\n		<div class=\"title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Instructor ID", options) : helperMissing.call(depth0, "lang", "Instructor ID", options)))
     + "</div>\n		<input class=\"InstID\" value=\"";
