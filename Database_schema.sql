@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 29, 2013 at 03:52 AM
--- Server version: 5.5.31
--- PHP Version: 5.4.16
+-- Generation Time: Nov 05, 2013 at 04:58 PM
+-- Server version: 5.6.12
+-- PHP Version: 5.5.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -38,35 +38,79 @@ CREATE TABLE IF NOT EXISTS `Accident` (
   `DOB` varchar(75) DEFAULT NULL,
   `age` int(11) DEFAULT NULL,
   `gender` varchar(200) DEFAULT NULL,
-  `complaints` varchar(255) DEFAULT NULL,
-  `treatmentProtocol` varchar(255) DEFAULT NULL,
-  `incidentLocation` int(11) DEFAULT NULL,
-  `runClassification` int(11) DEFAULT NULL,
-  `activity` int(11) DEFAULT NULL,
-  `involvement` int(11) DEFAULT NULL,
-  `weather` int(11) DEFAULT NULL,
-  `light` int(11) DEFAULT NULL,
-  `temp` int(11) DEFAULT NULL,
-  `snow` int(11) DEFAULT NULL,
-  `surface` int(11) DEFAULT NULL,
-  `equipment` int(11) DEFAULT NULL,
-  `helmet` int(11) DEFAULT NULL,
-  `ability` int(11) DEFAULT NULL,
-  `firstAid` int(11) DEFAULT NULL,
-  `fromBase` int(11) DEFAULT NULL,
-  `collision` int(11) DEFAULT NULL,
-  `nonCollision` int(11) DEFAULT NULL,
+  `foot` varchar(255) DEFAULT NULL,
+  `ankle` varchar(255) DEFAULT NULL,
+  `lowerLeg` varchar(255) DEFAULT NULL,
+  `knee` varchar(255) DEFAULT NULL,
+  `thigh` varchar(255) DEFAULT NULL,
+  `hip` varchar(255) DEFAULT NULL,
+  `lowerAb` varchar(255) DEFAULT NULL,
+  `upperAb` varchar(255) DEFAULT NULL,
+  `chest` varchar(255) DEFAULT NULL,
+  `clavicle` varchar(255) DEFAULT NULL,
+  `shoulder` varchar(255) DEFAULT NULL,
+  `upperArm` varchar(255) DEFAULT NULL,
+  `elbow` varchar(255) DEFAULT NULL,
+  `lowerArm` varchar(255) DEFAULT NULL,
+  `wrist` varchar(255) DEFAULT NULL,
+  `hand` varchar(255) DEFAULT NULL,
+  `thumb` varchar(255) DEFAULT NULL,
+  `finger` varchar(255) DEFAULT NULL,
+  `upperBack` varchar(255) DEFAULT NULL,
+  `lowerBack` varchar(255) DEFAULT NULL,
+  `tailbone` varchar(255) DEFAULT NULL,
+  `head` varchar(255) DEFAULT NULL,
+  `face` varchar(255) DEFAULT NULL,
+  `medical` varchar(255) DEFAULT NULL,
+  `noInjury` varchar(255) DEFAULT NULL,
+  `fracture` int(11) DEFAULT NULL,
+  `sprain` int(11) DEFAULT NULL,
+  `strain` int(11) DEFAULT NULL,
+  `bruise` int(11) DEFAULT NULL,
+  `laceration` int(11) DEFAULT NULL,
+  `dislocation` int(11) DEFAULT NULL,
+  `cardiac` int(11) DEFAULT NULL,
+  `stroke` int(11) DEFAULT NULL,
+  `concussion` int(11) DEFAULT NULL,
+  `hypothermia` int(11) DEFAULT NULL,
+  `frostbite` int(11) DEFAULT NULL,
+  `internal` int(11) DEFAULT NULL,
+  `illness` int(11) DEFAULT NULL,
+  `deceased` int(11) DEFAULT NULL,
+  `unknown` int(11) DEFAULT NULL,
+  `incidentLocation` varchar(255) DEFAULT NULL,
+  `runClassification` varchar(255) DEFAULT NULL,
+  `activity` varchar(255) DEFAULT NULL,
+  `involvement` varchar(255) DEFAULT NULL,
+  `weather` varchar(255) DEFAULT NULL,
+  `light` varchar(255) DEFAULT NULL,
+  `temp` varchar(255) DEFAULT NULL,
+  `snow` varchar(255) DEFAULT NULL,
+  `surface` varchar(255) DEFAULT NULL,
+  `equipment` varchar(255) DEFAULT NULL,
+  `helmet` varchar(255) DEFAULT NULL,
+  `ability` varchar(255) DEFAULT NULL,
+  `firstAid` varchar(255) DEFAULT NULL,
+  `fromBase` varchar(255) DEFAULT NULL,
+  `collision` varchar(255) DEFAULT NULL,
+  `nonCollision` varchar(255) DEFAULT NULL,
+  `liftRelated` varchar(255) DEFAULT NULL,
+  `nonSkiingRelated` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`,`reportNum`),
   KEY `Timestamp` (`Timestamp`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `Accident`
 --
 
-INSERT INTO `Accident` (`id`, `Timestamp`, `reportNum`, `CSPSNum1`, `CSPSNum2`, `CSPSNum3`, `DOB`, `age`, `gender`, `complaints`, `treatmentProtocol`, `incidentLocation`, `runClassification`, `activity`, `involvement`, `weather`, `light`, `temp`, `snow`, `surface`, `equipment`, `helmet`, `ability`, `firstAid`, `fromBase`, `collision`, `nonCollision`) VALUES
-(2, '2013-07-25', '145623', '01049887', '01039884', '01038293', '1993-02-04', 20, 'Male', 'Shoulder-R', 'Dislocation', 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1),
-(3, '2013-06-19', '87482', '02031111', '02031112', '02031113', '1991-03-06', 22, 'Male', 'Thumb-R', 'Sprain', 1, 3, 2, 3, 2, 1, 3, 2, 3, 1, 1, 2, 3, 1, 2, 3);
+INSERT INTO `Accident` (`id`, `Timestamp`, `reportNum`, `CSPSNum1`, `CSPSNum2`, `CSPSNum3`, `DOB`, `age`, `gender`, `foot`, `ankle`, `lowerLeg`, `knee`, `thigh`, `hip`, `lowerAb`, `upperAb`, `chest`, `clavicle`, `shoulder`, `upperArm`, `elbow`, `lowerArm`, `wrist`, `hand`, `thumb`, `finger`, `upperBack`, `lowerBack`, `tailbone`, `head`, `face`, `medical`, `noInjury`, `fracture`, `sprain`, `strain`, `bruise`, `laceration`, `dislocation`, `cardiac`, `stroke`, `concussion`, `hypothermia`, `frostbite`, `internal`, `illness`, `deceased`, `unknown`, `incidentLocation`, `runClassification`, `activity`, `involvement`, `weather`, `light`, `temp`, `snow`, `surface`, `equipment`, `helmet`, `ability`, `firstAid`, `fromBase`, `collision`, `nonCollision`, `liftRelated`, `nonSkiingRelated`) VALUES
+(2, '2013-07-25', '145623', '01049887', '01039884', '01038293', '1993-02-04', 20, 'Male', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '2', '1', '2', '2', '1', '2', '1', '2', '1', '2', '1', '2', '1', '2', '1', NULL, NULL),
+(3, '2013-06-19', '87482', '02031111', '02031112', '02031113', '1991-03-06', 22, 'Male', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '3', '2', '3', '2', '1', '3', '2', '3', '1', '1', '2', '3', '1', '2', '3', NULL, NULL),
+(5, '2013-07-25', '12345', '11220001', '11220002', '11220003', '1992-08-13', 20, 'Male', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', NULL, NULL),
+(6, '2013-10-29', '9', '8', '8', '8', '3', 3, '6', '4', '5', '8', '4', '5', '3', '7', '7', '5', '8', '8', '8', '5', '8', '5', '4', '5', '6', '9', '9', '8', '4', '4', '7', '8', 8, 6, 6, 6, 10, 11, 7, 6, 10, 11, 9, 8, 7, 8, 7, '16', '17', '8', '11', '7', '5', '4', '4', '7', '9', '6', '7', '8', '8', '9', '12', '11', '16'),
+(7, '2013-10-29', 'a', 'a', 'a', 'b', 'a', 0, 'Female', 'right', 'left', 'both', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', '0', '0', '0', '0', '0', '0', '0', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', '0', 'N/A', 'N/A', '0'),
+(8, '2013-10-29', 'a', 'b', 'b', '', '', 0, 'Female', 'left', 'right', 'both', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', '0', '0', '0', '0', '0', '0', '0', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', '0', 'N/A', 'N/A', '0');
 
 -- --------------------------------------------------------
 
@@ -230,7 +274,7 @@ CREATE TABLE IF NOT EXISTS `OnSnow` (
   `FrontCharge2_Loaded` tinyint(1) DEFAULT NULL,
   `notes` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`snowID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=154 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=159 ;
 
 --
 -- Dumping data for table `OnSnow`
@@ -377,7 +421,12 @@ INSERT INTO `OnSnow` (`Timestamp`, `SID`, `snowID`, `instID`, `crticalSection`, 
 ('2013-10-29 02:41:49', 0, 150, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
 ('2013-10-29 02:45:11', 0, 151, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
 ('2013-10-29 02:47:53', 0, 152, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-('2013-10-29 02:48:16', 555, 153, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+('2013-10-29 02:48:16', 555, 153, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+('2013-10-29 13:38:23', 0, 154, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+('2013-10-29 13:41:08', 0, 155, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+('2013-10-29 13:42:54', 234234, 156, 8, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+('2013-10-29 13:44:50', 0, 157, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+('2013-10-29 15:31:43', 456, 158, 8, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -395,19 +444,20 @@ CREATE TABLE IF NOT EXISTS `Patroller` (
   `password` varchar(41) DEFAULT NULL,
   `login` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`,`InstID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
 
 --
 -- Dumping data for table `Patroller`
 --
 
 INSERT INTO `Patroller` (`id`, `Name`, `InstID`, `Email`, `PhoneNum`, `CSPSNum`, `password`, `login`) VALUES
-(8, 'David', '5555', 'c', '1239876', '134', '741766c2898d2212f004952eebb2a2ed', 2),
+(8, 'David', '5555', 'c', '1239876', '134', 'fe4ae3496385aac43f717badc3038330', 2),
 (13, 'c236666', 'b', 'd23', 'e23', 'a23', '123', NULL),
 (16, 'c', 'b', 'd', 'e', 'a', 'f', NULL),
 (17, '3', '2', '4', '5', '1', '6', NULL),
 (18, '33', '22', '44', '55', '11', '66', NULL),
-(20, '', '', '', '', 'Test', '9ec4cc5f70521abae5c775a9d799e430', NULL);
+(21, 'c666', 'b', 's', 'e', 'a876', '409d03d4ce2940eef7236b87aeb49e24', NULL),
+(23, '', '', '', '', 'sdfsdf', '9ec4cc5f70521abae5c775a9d799e430', NULL);
 
 -- --------------------------------------------------------
 
@@ -424,7 +474,7 @@ CREATE TABLE IF NOT EXISTS `sessions` (
   `created` int(11) NOT NULL,
   `lastactive` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=64 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=75 ;
 
 --
 -- Dumping data for table `sessions`
@@ -432,11 +482,10 @@ CREATE TABLE IF NOT EXISTS `sessions` (
 
 INSERT INTO `sessions` (`id`, `userid`, `session`, `useragent`, `ip`, `created`, `lastactive`) VALUES
 (45, 7, '@526efe095270c', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1683.2 Safari/537.36', '127.0.0.1', 1383005705, 1383005722),
-(59, 8, '526f1bd07bff9', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1683.2 Safari/537.36', '127.0.0.1', 1383013328, 1383013328),
-(60, 8, '526f1ddb273c4', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1683.2 Safari/537.36', '127.0.0.1', 1383013851, 1383013851),
-(61, 8, '526f1e4bef07f', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1683.2 Safari/537.36', '127.0.0.1', 1383013963, 1383015129),
-(62, 8, '526f203931762', 'Mozilla/5.0 (iPhone; CPU iPhone OS 6_1_2 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10B146 Safari/8536.25', '192.168.2.15', 1383014457, 1383014911),
-(63, 8, '526f20b9c5bd9', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9) AppleWebKit/537.71 (KHTML, like Gecko) Version/7.0 Safari/537.71', '127.0.0.1', 1383014585, 1383014847);
+(71, 8, '526fd57186c84', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36', '134.190.170.250', 1383060849, 1383060953),
+(72, 8, '526fd5e4750bb', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36', '134.190.170.250', 1383060964, 1383061395),
+(73, 8, '5272796769c53', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1686.0 Safari/537.36', '127.0.0.1', 1383233895, 1383233980),
+(74, 8, '527912713ccbe', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9) AppleWebKit/537.71 (KHTML, like Gecko) Version/7.0 Safari/537.71', '127.0.0.1', 1383666289, 1383666319);
 
 -- --------------------------------------------------------
 
