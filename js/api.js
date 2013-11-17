@@ -61,7 +61,7 @@ api.prototype.login = function(username, password, callback) {
 // determine if logged in
 
 api.prototype.isLoggedIn = function() {
-	return typeof this.sessionid != 'undefined';
+	return typeof this.sessionid != 'undefined' && this.sessionid != false;
 }
 
 // mechanism to logout

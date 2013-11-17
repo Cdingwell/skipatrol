@@ -3,11 +3,18 @@
 	include('../config.php');
 	include('functions.php');
 	include('session.class.php');
+	include('permissions.class.php');
 
 	// validate user
 	$session = new sessionManager();
 	if( empty($_POST['sessionid']) || !$session->validateSession($_POST['sessionid'], $userid) ) {
 		exitWithJSON( array( 'error' => true, 'type' => 'invalid_session', 'message' => 'You must login to use this feature.' ) );
+	}
+
+	// make sure user has permisison
+	$perms = new permissions();
+	if(!$perms->checkPerms($userid, $perms->perms->admin)) {
+		exitWithJSON( array( 'error' => true, 'type' => 'invalid_perms', 'message' => 'You must be an admin to use this feature.' ) );
 	}
 
 	// show patrollers
@@ -71,22 +78,22 @@
 		$con = new mysqli(DBHOST, DBUSER, DBPASS, DB);
 
 		// determine what items are allowed to be changed and what they map out to
-		$changes = array( 'Name' => @$_POST['Name'], 
-						  'InstID' => @$_POST['InstID'], 
-						  'Email' => @$_POST['Email'], 
-						  'PhoneNum' => @$_POST['PhoneNum'], 
-						  'password' => @$_POST['password'], 
-						  'CSPSNum' => @$_POST['CSPSNum'] );
+		$changes = array( 'Name' => array( @$_POST['Name'], 's' ), 
+						  'InstID' => array( @$_POST['InstID'], 's' ), 
+						  'Email' => array( @$_POST['Email'], 's' ), 
+						  'PhoneNum' => array( @$_POST['PhoneNum'], 's' ), 
+						  'CSPSNum' => array( @$_POST['CSPSNum'], 's' ), 
+						  'login' => array( @$_POST['login'], 'i' ) );
 
 		// encrypt the password
-		if(!empty($_POST['password']))
-			$changes['password'] = encryptPassword($_POST['password']);
+		if(!empty($_POST['password']) && !empty($_POST['password']))
+			$changes['password'] = array( encryptPassword($_POST['password']), 's' );
 
 		// change stuff
 		foreach($changes as $key => $value) {
 			if( !empty($value) ) {
 				$sql = $con->prepare('UPDATE `Patroller` SET ' . preg_replace("/[^A-Za-z0-9 ]/", '', $key) . ' = ? WHERE `id` = ?');
-				$sql->bind_param('si', $value, $_POST['id']);
+				$sql->bind_param($value[1] . 'i', $value[0], $_POST['id']);
 				$sql->execute();
 				$sql->close();
 			}

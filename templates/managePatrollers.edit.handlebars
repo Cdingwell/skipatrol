@@ -8,7 +8,7 @@
 	<div class="node permissions">
 		<div class="title">{{lang 'Permissions'}}</div>
 		{{#each perms}}
-			<div><input {{#checkPerms this}}checked=true{{/checkPerms}} type="checkbox" name="{{this}}" id="{{this}}"><label for="{{this}}">{{lang @key}}</label></div>
+			<div><input {{#bitAND ../login this}}checked=true{{/bitAND}} type="checkbox" name="{{this}}" id="{{this}}"><label for="{{this}}">{{lang @key}}</label></div>
 		{{/each}}
 	</div>
 

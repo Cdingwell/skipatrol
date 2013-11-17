@@ -1,10 +1,3 @@
-/*
-
-var perms = 0;
-$('.permissions input').each(function(){ if(this.getAttribute('checked')) perms |= this.name });
-
-*/
-
 var managePatrollers = trick({
 	events: {
 		'click .icon-remove': 'removePatroller', // trigger removal of a patroller
@@ -79,7 +72,7 @@ managePatrollers.prototype.patrollerHistory = function(e, target) {
 managePatrollers.prototype.addPatroller = function(e, target) {
 	// make editing container
 	window.oldScrollY = $('body').scrollTop(); $('#globalContainer').hide();
-	var editContainer = $( Handlebars.templates['managePatrollers.edit']({"Name":"","InstID":"","Email":"","PhoneNum":"","CSPSNum":"","password":"","login":"2","perms":api().perms} ) ).appendTo('body');
+	var editContainer = $( Handlebars.templates['managePatrollers.edit']({"Name":"","InstID":"","Email":"","PhoneNum":"","CSPSNum":"","password":"","login":"4","perms":api().perms} ) ).appendTo('body');
 	// cancel the edit
 	editContainer.on('click', '.cancel', function(e) {
 		editContainer.remove();
@@ -91,8 +84,11 @@ managePatrollers.prototype.addPatroller = function(e, target) {
 	});
 	// save the edit
 	editContainer.on('click', '.save', function(e) {
+		var perms = 0;
+		editContainer.find('.permissions input').each(function(){ if(this.checked) perms |= this.name });
+		editContainer.find('.permissions').remove();
 		// build prefs
-		var prefs = {};
+		var prefs = { login: perms };
 		$('.overlay input').each(function(key, value){ prefs[value.getAttribute('class')] = value.value });
 		// do save and close
 		api().addPatroller(prefs, function(data) {
@@ -128,9 +124,13 @@ managePatrollers.prototype.editPatroller = function(e, target) {
 		});
 		// save the edit
 		editContainer.on('click', '.save', function(e) {
+			// fix permissions
+			var perms = 0;
+			editContainer.find('.permissions input').each(function(){ if(this.checked) perms |= this.name });
+			editContainer.find('.permissions').remove();
 			// build prefs
-			var prefs = {};
-			$('.overlay input').each(function(key, value){ prefs[value.getAttribute('class')] = value.value });
+			var prefs = { login: perms };
+			editContainer.find(' input').each(function(key, value){ prefs[value.getAttribute('class')] = value.value });
 			if(prefs.password == '')
 				delete prefs.password;
 			prefs.id = data.id;

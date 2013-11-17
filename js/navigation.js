@@ -29,7 +29,7 @@ navigation.prototype.render = function() {
 				  { name: lang('Patrollers'), href: '#/managePatrollers', perms: perms.admin, icon: 'icon-suitcase' },
 				  { name: lang('On Snow'), href: '#/manageOnSnow', perms: perms.admin, icon: 'icon-suitcase' },
 				  { name: lang('Accidents'), href: '#/manageAccident', perms: perms.admin, icon: 'icon-suitcase' },
-				  { name: lang('Settings'), href: '#/Settings', perms: perms.all, icon: 'icon-cog' },
+				  { name: lang('Settings'), href: '#/Settings', perms: 'all', icon: 'icon-cog' },
 				  { name: lang('Logout'), href: '#/login', perms: perms.admin, icon: 'icon-signout' } ];
 
 	// handle render for mobile
