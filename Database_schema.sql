@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 05, 2013 at 04:58 PM
+-- Generation Time: Nov 17, 2013 at 11:16 PM
 -- Server version: 5.6.12
 -- PHP Version: 5.5.0
 
@@ -442,7 +442,7 @@ CREATE TABLE IF NOT EXISTS `Patroller` (
   `PhoneNum` varchar(15) DEFAULT NULL,
   `CSPSNum` varchar(20) DEFAULT NULL,
   `password` varchar(41) DEFAULT NULL,
-  `login` tinyint(1) DEFAULT NULL,
+  `login` tinyint(1) DEFAULT '4',
   PRIMARY KEY (`id`,`InstID`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
 
@@ -451,13 +451,13 @@ CREATE TABLE IF NOT EXISTS `Patroller` (
 --
 
 INSERT INTO `Patroller` (`id`, `Name`, `InstID`, `Email`, `PhoneNum`, `CSPSNum`, `password`, `login`) VALUES
-(8, 'David', '5555', 'c', '1239876', '134', 'fe4ae3496385aac43f717badc3038330', 2),
-(13, 'c236666', 'b', 'd23', 'e23', 'a23', '123', NULL),
-(16, 'c', 'b', 'd', 'e', 'a', 'f', NULL),
-(17, '3', '2', '4', '5', '1', '6', NULL),
-(18, '33', '22', '44', '55', '11', '66', NULL),
-(21, 'c666', 'b', 's', 'e', 'a876', '409d03d4ce2940eef7236b87aeb49e24', NULL),
-(23, '', '', '', '', 'sdfsdf', '9ec4cc5f70521abae5c775a9d799e430', NULL);
+(8, 'David', '555578', 'c@c.com', '1239876555', '134', 'fe4ae3496385aac43f717badc3038330', 2),
+(13, 'c236666', 'b', 'd23', 'e23', 'a23', '123', 101),
+(16, 'c', 'b', 'd', 'e', 'a', 'f', 4),
+(17, '3', '2', '4', '5', '1', '6', 4),
+(18, '33', '22', '44', '55', '11', '66', 4),
+(21, 'c666', 'b', 's', 'e', 'a876', '409d03d4ce2940eef7236b87aeb49e24', 4),
+(23, '', '', '', '', 'sdfsdf', '9ec4cc5f70521abae5c775a9d799e430', 4);
 
 -- --------------------------------------------------------
 
@@ -474,7 +474,7 @@ CREATE TABLE IF NOT EXISTS `sessions` (
   `created` int(11) NOT NULL,
   `lastactive` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=75 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=76 ;
 
 --
 -- Dumping data for table `sessions`
@@ -485,7 +485,8 @@ INSERT INTO `sessions` (`id`, `userid`, `session`, `useragent`, `ip`, `created`,
 (71, 8, '526fd57186c84', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36', '134.190.170.250', 1383060849, 1383060953),
 (72, 8, '526fd5e4750bb', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36', '134.190.170.250', 1383060964, 1383061395),
 (73, 8, '5272796769c53', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1686.0 Safari/537.36', '127.0.0.1', 1383233895, 1383233980),
-(74, 8, '527912713ccbe', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9) AppleWebKit/537.71 (KHTML, like Gecko) Version/7.0 Safari/537.71', '127.0.0.1', 1383666289, 1383666319);
+(74, 8, '527912713ccbe', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9) AppleWebKit/537.71 (KHTML, like Gecko) Version/7.0 Safari/537.71', '127.0.0.1', 1383666289, 1383669815),
+(75, 8, '5284eef22ca1a', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1702.0 Safari/537.36', '127.0.0.1', 1384443634, 1384522601);
 
 -- --------------------------------------------------------
 
