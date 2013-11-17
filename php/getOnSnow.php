@@ -6,6 +6,7 @@
 
 	// validate user
 	$session = new sessionManager();
+	$_POST['sessionid'] = empty($_POST['sessionid']) ? $_GET['sessionid'] : $_POST['sessionid'];
 	if( empty($_POST['sessionid']) || !$session->validateSession($_POST['sessionid'], $userid) ) {
 		exitWithJSON( array( 'error' => true, 'type' => 'invalid_session', 'message' => 'You must login to use this feature.' ) );
 	}
@@ -30,8 +31,56 @@
         	$data[] = $row;
 		exitWithJSON($data);
 
+	// SQL Dump of accidents
+	} else if($_GET['action'] == 'dump') {
+		$con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB);
+		// base query
+		$query = 'select * FROM OnSnow';
+		// limit by key
+		if(!empty($_GET['id']) && is_numeric($_GET['id']))
+			$query .= " WHERE `snowID` = '{$_GET['id']}'";
+		// order by timestamp
+		$query .= ' ORDER BY Timestamp DESC';
+        $result = mysqli_query($con,$query);
+		//get column names
+		$query = 'SHOW COLUMNS FROM OnSnow';
+		$result2 = mysqli_query($con, $query);
+
+        $data = array();
+		$data2 = array();
+		
+		//get the column names only from the array and throw them into data2
+		while ($row = mysqli_fetch_array($result2, MYSQL_ASSOC))
+			$data2[] = $row['Field'];
+
+        while ($row = mysqli_fetch_array($result, MYSQL_ASSOC))
+        	$data[] = $row;
+			
+		//make a name for the file with the table name and a datestamp
+		$name = 'OnSnowTable'. date('Y-m-d') . '.csv';
+		
+		header('Content-Type: text/csv');
+    	header('Content-Disposition: attachment; filename=' . $name);
+    	header('Pragma: no-cache');
+    	header("Expires: 0");
+			
+		$fp = fopen("php://output", "w");
+		
+		//put the column names first
+		fputcsv($fp, $data2);
+		
+		//for each row, fputcsv.
+		foreach ($data as $fields)
+		{
+    		fputcsv($fp, $fields);
+		}
+
+		fclose($fp);
+		
+		exit();
+
 	// add a patroller
-	}else if($_GET['action'] == 'add') {
+	} else if($_GET['action'] == 'add') {
 		// add patroller
 		$con = new mysqli(DBHOST, DBUSER, DBPASS, DB);
 		$sql = $con->prepare("INSERT INTO `OnSnow` (`Timestamp`, `SID`, `snowID`, `instID`, `crticalSection`, `travelTurnClimbStop`, `stableBalancedPosition`, `controlSpeedDirection`, `sideslipFallingLeaf`, `traversing`, `edgingPivotPressure`, `rhythmCoordination`, `46TurnsModerateTerrain`, `46TurnsDifficultTerrain`, `carryingEquipment`, `fitnessFlexibilityStrength`, `appliesResponsibilityCode`, `safeInControl`, `fullRun`, `tobogganCheck`, `packCheckUniformCheck`, `tobogganSetUpOp`, `tombogganTransportLifts`, `considerApproach`, `Communication_Incid`, `TeamRoleCompSafety`, `MarkIncident`, `locationkeyEquip`, `secureTobbgEquip`, `LocatDirMed`, `followupSiteClean`, `TansportBackEquip`, `LoadPatient`, `patientUpbase`, `communicationWhistle_Empty`, `checkTraffic_Empty`, `routeFinding_Empty`, `positionHandles_Empty`, `stableBalanced_Empty`, `useBrakeRunners_Empty`, `sideslipFalllingLeaf_Empty`, `snowplow_Empty`, `traversing_Empty`, `directionChange_Empty`, `controlledSmoothSafeDecent_Empty`, `shortRadiusTurn_Empty`, `useFallLine_Empty`, `compensating_Empty`, `stoppingUpOutAccident_Empty`, `comm2patien1_Loaded`, `comm2patien2_Loaded`, `traffic1_Loaded`, `traffic2_Loaded`, `position1_Loaded`, `position2_Loaded`, `routefind1_Loaded`, `routefind2_Loaded`, `stableBalance1_Loaded`, `stableBalance2_Loaded`, `sideSlip_fallLeaf1_Loaded`, `sideSlip_fallLeaf2_Loaded`, `snowplow1_Loaded`, `snowplow2_Loaded`, `brakeRunners1_Loaded`, `brakeRunners2_Loaded`, `fallLine1_Loaded`, `fallLine2_Loaded`, `Transitions1_Loaded`, `Transitions2_Loaded`, `controlSmoothDecent1_Loaded`, `controlSmoothDecent2_Loaded`, `Direction1_Loaded`, `Direction2_Loaded`, `compensating1_Loaded`, `compensating2_Loaded`, `ropeSecured2_Loaded`, `changeEfficientSafe2_Loaded`, `commWithPatroller2_Loaded`, `dragBrakePosition2_Loaded`, `FrontCharge2_Loaded`, `notes`) VALUES (CURRENT_TIMESTAMP, ?, '', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
