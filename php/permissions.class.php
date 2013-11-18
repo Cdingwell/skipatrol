@@ -24,7 +24,7 @@
 		// $id = userid
 		// $p = permissions to do something
 
-		function checkPerms($id, $p) { echo $p . ' ';
+		function checkPerms($id, $p) {
 			$con = $this->connectDB();
 			$sql = $con->prepare("SELECT login FROM Patroller WHERE id=?");
 			$sql->bind_param("i", $id);
@@ -33,6 +33,11 @@
 			$sql->fetch();
 			$sql->close();
 			return $result & $p;
+		}
+
+		function requirePerms($id, $p) {
+			if(!$this->checkPerms($id, $p))
+				exitWithJSON( array( 'error' => true, 'type' => 'invalid_perms', 'message' => 'You must be an admin to use this feature.' ) );
 		}
 
 	}

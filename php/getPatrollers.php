@@ -14,12 +14,10 @@
 
 	// make sure user has permisison
 	$perms = new permissions();
-	if(!$perms->checkPerms($userid, $perms->perms->admin)) {
-		exitWithJSON( array( 'error' => true, 'type' => 'invalid_perms', 'message' => 'You must be an admin to use this feature.' ) );
-	}
 
 	// show patrollers
 	if($_GET['action'] == 'getPatrollers') {
+		$perms->requirePerms($userid, $perms->perms['admin']);
 		$con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB);
 		$query = "select * from Patroller";
 		if(!empty($_POST['id']) && is_numeric($_POST['id']))
@@ -35,6 +33,7 @@
 		
 	// SQL Dump of accidents
 	} else if($_GET['action'] == 'dump') { 
+		$perms->requirePerms($userid, $perms->perms['admin']);
 		$con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB);
 		// base query
 		$query = 'select * FROM Patroller';
@@ -83,6 +82,7 @@
 
 	// add a patroller
 	}else if($_GET['action'] == 'addPatroller') {
+		$perms->requirePerms($userid, $perms->perms['admin']);
 		// add patroller
 		$con = new mysqli(DBHOST, DBUSER, DBPASS, DB);
 		$sql = $con->prepare("INSERT INTO `Patroller` (`id`, `Name`, `InstID`, `Email`, `PhoneNum`, `CSPSNum`, `password`, `login`) VALUES (NULL, ?, ?, ?, ?, ?, ?, NULL)");
@@ -100,6 +100,8 @@
 
 	// delete a patroller
 	}else if($_GET['action'] == 'getPatrollerHistory') {
+		if(!$perms->checkPerms($userid, $perms->perms['admin']))
+			$_POST['id'] = $userid;
 		$con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB);
 		$query = "SELECT sessions.*, Patroller.name FROM `sessions` JOIN `Patroller` ON sessions.userid = Patroller.id WHERE sessions.userid = " . intval($_POST['id']) . " ORDER BY id DESC";
         $result = mysqli_query($con,$query);
@@ -113,6 +115,7 @@
 
 	// delete a patroller
 	}else if($_GET['action'] == 'deletePatroller') {
+		$perms->requirePerms($userid, $perms->perms['admin']);
 		$con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB);
 		$query = 'DELETE FROM `Patroller` WHERE id = ' . intval($_POST['id']);
         mysqli_query($con,$query);
@@ -120,7 +123,7 @@
 
 	// edit a patroller
 	}else if($_GET['action'] == 'editPatroller' && !empty($_POST['id'])) {
-
+		$perms->requirePerms($userid, $perms->perms['admin']);
 		// if updating own password use our own id
 		if($_POST['id'] == 'self')
 			$_POST['id'] = $userid;
