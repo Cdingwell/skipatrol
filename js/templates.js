@@ -173,6 +173,91 @@ function program4(depth0,data) {
   if(stack1 || stack1 === 0) { return stack1; }
   else { return ''; }
   });
+templates['manageFirstAid'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, stack2, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, functionType="function";
+
+
+  buffer += "<div id=\"main\" class=\"loginContainer\"> \n    <div class=\"full_w\">\n        <div class=\"h_title\"><i class=\"icon-briefcase\"></i>";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "On Snow", options) : helperMissing.call(depth0, "lang", "On Snow", options)))
+    + "</div>\n        <div class=\"h_content\">\n\n            <div class=\"manage\">\n                <button class=\"addNew\"><i class=\"icon-plus-sign-alt\"></i>";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Add Record", options) : helperMissing.call(depth0, "lang", "Add Record", options)))
+    + "</button>\n                <input class=\"filter\" placeholder=\"";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Start typing to filter", options) : helperMissing.call(depth0, "lang", "Start typing to filter", options)))
+    + "\">\n            </div>\n\n            <div class=\"table\">\n                <div class=\"row head\">\n                    <div class=\"item options\"></div>\n                    <div class=\"item Time\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Time", options) : helperMissing.call(depth0, "lang", "Time", options)))
+    + "</div>\n                    <div class=\"item InstID\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Creator", options) : helperMissing.call(depth0, "lang", "Creator", options)))
+    + "</div>\n                    <div class=\"item SID\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Student", options) : helperMissing.call(depth0, "lang", "Student", options)))
+    + "</div>\n                </div>\n                ";
+  if (stack2 = helpers.table) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.table; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n            </div>\n\n            <div class='loadMoreContainer'>\n                <button class=\"loadMore\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Show More", options) : helperMissing.call(depth0, "lang", "Show More", options)))
+    + "</button>\n            </div>\n\n        </div>\n    </div>\n</div>";
+  return buffer;
+  });
+templates['manageFirstAid.list'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var stack1, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, functionType="function", self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n\n	<div class=\"row\" data-id=\"";
+  if (stack1 = helpers.FAID) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.FAID; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n		<div class=\"item options\"> <i class=\"icon-remove\"></i> <i class=\"icon-pencil\"></i></div>\n		<div class=\"item Timestamp\"> ";
+  options = {hash:{},inverse:self.program(4, program4, data),fn:self.program(2, program2, data),data:data};
+  stack2 = ((stack1 = helpers.onSnowRecordSubmitted || depth0.onSnowRecordSubmitted),stack1 ? stack1.call(depth0, depth0.Timestamp, options) : helperMissing.call(depth0, "onSnowRecordSubmitted", depth0.Timestamp, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "</div>\n		<div class=\"item Name\">";
+  if (stack2 = helpers.Name) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.Name; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += escapeExpression(stack2)
+    + "</div>\n		<div class=\"item studentName\">";
+  if (stack2 = helpers.studentName) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.studentName; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += escapeExpression(stack2)
+    + "</div>\n	</div>\n\n";
+  return buffer;
+  }
+function program2(depth0,data) {
+  
+  var buffer = "", stack1, options;
+  buffer += " ";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.formatDate || depth0.formatDate),stack1 ? stack1.call(depth0, depth0.Timestamp, options) : helperMissing.call(depth0, "formatDate", depth0.Timestamp, options)))
+    + "  ";
+  return buffer;
+  }
+
+function program4(depth0,data) {
+  
+  var buffer = "", stack1, options;
+  buffer += " <button class=\"submit\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Submit", options) : helperMissing.call(depth0, "lang", "Submit", options)))
+    + "</button> ";
+  return buffer;
+  }
+
+  stack1 = helpers.each.call(depth0, depth0, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { return stack1; }
+  else { return ''; }
+  });
 templates['manageOnSnow'] = template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};

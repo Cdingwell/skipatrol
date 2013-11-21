@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 17, 2013 at 11:16 PM
+-- Generation Time: Nov 21, 2013 at 05:49 PM
 -- Server version: 5.6.12
 -- PHP Version: 5.5.0
 
@@ -120,46 +120,51 @@ INSERT INTO `Accident` (`id`, `Timestamp`, `reportNum`, `CSPSNum1`, `CSPSNum2`, 
 
 CREATE TABLE IF NOT EXISTS `FirstAid` (
   `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `IID` bigint(20) NOT NULL,
   `SID` int(11) DEFAULT NULL,
-  `FAID` int(11) NOT NULL,
-  `prioritySurvey` varchar(10) DEFAULT NULL,
-  `secondarySurvey` varchar(10) DEFAULT NULL,
-  `vitalSigns` varchar(10) DEFAULT NULL,
-  `cervicalCollar` varchar(10) DEFAULT NULL,
-  `spinal` varchar(10) DEFAULT NULL,
-  `pelvis` varchar(10) DEFAULT NULL,
-  `femur` varchar(10) DEFAULT NULL,
-  `clavicle` varchar(10) DEFAULT NULL,
-  `scapula` varchar(10) DEFAULT NULL,
-  `lowerArm` varchar(10) DEFAULT NULL,
-  `humerus` varchar(10) DEFAULT NULL,
-  `bentKnee` varchar(10) DEFAULT NULL,
-  `lowerLeg` varchar(10) DEFAULT NULL,
-  `shoulderDislocation` varchar(10) DEFAULT NULL,
-  `smallArmSling` varchar(10) DEFAULT NULL,
-  `largeArmSling` varchar(10) DEFAULT NULL,
-  `bodySling` varchar(10) DEFAULT NULL,
-  `head` varchar(10) DEFAULT NULL,
-  `shoulder` varchar(10) DEFAULT NULL,
-  `chestBack` varchar(10) DEFAULT NULL,
-  `elbow` varchar(10) DEFAULT NULL,
-  `openHandFoot` varchar(10) DEFAULT NULL,
-  `pressureHand` varchar(10) DEFAULT NULL,
-  `eyeCheekEar` varchar(10) DEFAULT NULL,
-  `pressure` varchar(10) DEFAULT NULL,
-  `openFracture` varchar(10) DEFAULT NULL,
-  `stirrup` varchar(10) DEFAULT NULL,
-  `modifiedStirrup` varchar(10) DEFAULT NULL,
-  `knee` varchar(10) DEFAULT NULL,
+  `FAID` int(11) NOT NULL AUTO_INCREMENT,
+  `prioritySurvey` varchar(100) DEFAULT NULL,
+  `secondarySurvey` varchar(100) DEFAULT NULL,
+  `vitalSigns` varchar(100) DEFAULT NULL,
+  `cervicalCollar` varchar(100) DEFAULT NULL,
+  `spinal` varchar(100) DEFAULT NULL,
+  `pelvis` varchar(100) DEFAULT NULL,
+  `femur` varchar(100) DEFAULT NULL,
+  `clavicle` varchar(100) DEFAULT NULL,
+  `scapula` varchar(100) DEFAULT NULL,
+  `lowerArm` varchar(100) DEFAULT NULL,
+  `humerus` varchar(100) DEFAULT NULL,
+  `bentKnee` varchar(100) DEFAULT NULL,
+  `lowerLeg` varchar(100) DEFAULT NULL,
+  `shoulderDislocation` varchar(100) DEFAULT NULL,
+  `smallArmSling` varchar(100) DEFAULT NULL,
+  `largeArmSling` varchar(100) DEFAULT NULL,
+  `bodySling` varchar(100) DEFAULT NULL,
+  `head` varchar(100) DEFAULT NULL,
+  `shoulder` varchar(100) DEFAULT NULL,
+  `chestBack` varchar(100) DEFAULT NULL,
+  `elbow` varchar(100) DEFAULT NULL,
+  `openHandFoot` varchar(100) DEFAULT NULL,
+  `pressureHand` varchar(100) DEFAULT NULL,
+  `eyeCheekEar` varchar(100) DEFAULT NULL,
+  `pressure` varchar(100) DEFAULT NULL,
+  `openFracture` varchar(100) DEFAULT NULL,
+  `stirrup` varchar(100) DEFAULT NULL,
+  `modifiedStirrup` varchar(100) DEFAULT NULL,
+  `knee` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`FAID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `FirstAid`
 --
 
-INSERT INTO `FirstAid` (`Timestamp`, `SID`, `FAID`, `prioritySurvey`, `secondarySurvey`, `vitalSigns`, `cervicalCollar`, `spinal`, `pelvis`, `femur`, `clavicle`, `scapula`, `lowerArm`, `humerus`, `bentKnee`, `lowerLeg`, `shoulderDislocation`, `smallArmSling`, `largeArmSling`, `bodySling`, `head`, `shoulder`, `chestBack`, `elbow`, `openHandFoot`, `pressureHand`, `eyeCheekEar`, `pressure`, `openFracture`, `stirrup`, `modifiedStirrup`, `knee`) VALUES
-('2013-07-25 15:55:20', 12321, 1, '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777', '77777');
+INSERT INTO `FirstAid` (`Timestamp`, `IID`, `SID`, `FAID`, `prioritySurvey`, `secondarySurvey`, `vitalSigns`, `cervicalCollar`, `spinal`, `pelvis`, `femur`, `clavicle`, `scapula`, `lowerArm`, `humerus`, `bentKnee`, `lowerLeg`, `shoulderDislocation`, `smallArmSling`, `largeArmSling`, `bodySling`, `head`, `shoulder`, `chestBack`, `elbow`, `openHandFoot`, `pressureHand`, `eyeCheekEar`, `pressure`, `openFracture`, `stirrup`, `modifiedStirrup`, `knee`) VALUES
+('2013-11-21 16:16:48', 8, 13, 1, 'First Initial', 'Third Initial', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA'),
+('2013-11-19 15:57:58', 0, NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('2013-11-21 16:47:53', 8, 865, 5, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'),
+('2013-11-21 16:11:38', 8, 8, 4, 'First Init', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA'),
+('2013-11-21 16:48:22', 8, 13, 6, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A');
 
 -- --------------------------------------------------------
 
@@ -474,7 +479,7 @@ CREATE TABLE IF NOT EXISTS `sessions` (
   `created` int(11) NOT NULL,
   `lastactive` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=76 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=79 ;
 
 --
 -- Dumping data for table `sessions`
@@ -486,7 +491,10 @@ INSERT INTO `sessions` (`id`, `userid`, `session`, `useragent`, `ip`, `created`,
 (72, 8, '526fd5e4750bb', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36', '134.190.170.250', 1383060964, 1383061395),
 (73, 8, '5272796769c53', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1686.0 Safari/537.36', '127.0.0.1', 1383233895, 1383233980),
 (74, 8, '527912713ccbe', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9) AppleWebKit/537.71 (KHTML, like Gecko) Version/7.0 Safari/537.71', '127.0.0.1', 1383666289, 1383669815),
-(75, 8, '5284eef22ca1a', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1702.0 Safari/537.36', '127.0.0.1', 1384443634, 1384522601);
+(75, 8, '5284eef22ca1a', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1702.0 Safari/537.36', '127.0.0.1', 1384443634, 1384522601),
+(76, 8, '528b88f44854e', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9) AppleWebKit/537.71 (KHTML, like Gecko) Version/7.0 Safari/537.71', '127.0.0.1', 1384876276, 1384879254),
+(77, 8, '528e22a079b4a', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1714.0 Safari/537.36', '127.0.0.1', 1385046688, 1385046688),
+(78, 8, '528e22fbc0420', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1714.0 Safari/537.36', '127.0.0.1', 1385046779, 1385052509);
 
 -- --------------------------------------------------------
 

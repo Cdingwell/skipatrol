@@ -27,6 +27,7 @@ navigation.prototype.render = function() {
 	var pages = [ { name: lang('Login'), href: '#/login', perms: perms.guest, icon: 'icon-lock' },
 				  { name: lang('Home'), href: '#/Welcome', perms: perms.admin, icon: 'icon-home' },
 				  { name: lang('Patrollers'), href: '#/managePatrollers', perms: perms.admin, icon: 'icon-suitcase' },
+				  { name: lang('First Aid'), href: '#/manageFirstAid', perms: perms.admin, icon: 'icon-cog' },
 				  { name: lang('On Snow'), href: '#/manageOnSnow', perms: perms.admin, icon: 'icon-suitcase' },
 				  { name: lang('Accidents'), href: '#/manageAccident', perms: perms.admin, icon: 'icon-suitcase' },
 				  { name: lang('Settings'), href: '#/Settings', perms: 'all', icon: 'icon-cog' },

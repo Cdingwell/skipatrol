@@ -233,3 +233,49 @@ api.prototype.editPatroller = function(data, callback) {
 			callback(d);
 	});
 }
+
+/* FIRST AID */
+
+api.prototype.deleteFirstAid = function(id, callback) {
+	$.post(this.base + 'php/getFirstAid.php?action=delete', { sessionid: this.sessionid, id: id }, function(d) {
+		if(typeof callback == 'function')
+			callback(d);
+	});
+}
+
+// add a new onsnow
+
+api.prototype.addFirstAid = function(data, callback) {
+	data.sessionid = this.sessionid;
+	$.post(this.base + 'php/getFirstAid.php?action=add', data, callback);
+}
+
+// get onsnow info
+
+api.prototype.getFirstAid = function(options, callback) {
+	var data = {};
+	if(typeof options == 'function')
+		callback = options;
+	else
+		data = options;
+		data.sessionid = this.sessionid;
+	$.post(this.base + 'php/getFirstAid.php?action=get', data, callback);
+}
+
+// get onsnow info for a specific id
+
+api.prototype.getFirstAidRecord = function(id, callback) {
+	$.post(this.base + 'php/getFirstAid.php?action=get', { sessionid: this.sessionid, id: id }, function(d) {
+		callback(d[0]);
+	});
+}
+
+// edit an onsnow record
+
+api.prototype.editFirstAid = function(data, callback) {
+	data.sessionid = this.sessionid;
+	$.post(this.base + 'php/getFirstAid.php?action=edit', data, function(d) {
+		if(typeof callback == 'function')
+			callback(d);
+	});
+}
