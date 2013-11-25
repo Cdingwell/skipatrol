@@ -209,6 +209,15 @@ api.prototype.getPatrollers = function(callback) {
 	$.post(this.base + 'php/getPatrollers.php?action=getPatrollers', { sessionid: this.sessionid }, callback);
 }
 
+// list patrollers
+
+api.prototype.listPatrollers = function(type, callback) {
+	var data = { sessionid: this.sessionid };
+	if(type && type != 'all')
+		data.sortBy = type;
+	$.post(this.base + 'php/getPatrollers.php?action=listPatrollers', data, callback);
+}
+
 // get single patroller when given the patroller's id
 
 api.prototype.getPatroller = function(id, callback) {

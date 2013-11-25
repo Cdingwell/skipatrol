@@ -16,7 +16,20 @@
 	$perms = new permissions();
 
 	// show patrollers
-	if($_GET['action'] == 'getPatrollers') {
+	if($_GET['action'] == 'listPatrollers') {
+		$con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB);
+		$query = "SELECT Name, Id FROM Patroller";
+		if(!empty($_POST['sortBy']) && strlen($_POST['sortBy']) == 1)
+			$query .= " WHERE `Name` LIKE '" . $_POST['sortBy'] . "%'";
+		$query .= ' ORDER BY Name ASC';
+        $result = mysqli_query($con,$query);
+        $data = array();
+        while ($row = mysqli_fetch_array($result, MYSQL_ASSOC))
+        	$data[] = $row;
+		exitWithJSON($data);
+
+	// show patrollers
+	}else if($_GET['action'] == 'getPatrollers') {
 		$perms->requirePerms($userid, $perms->perms['admin']);
 		$con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB);
 		$query = "select * from Patroller";

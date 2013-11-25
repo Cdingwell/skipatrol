@@ -10,6 +10,7 @@
 @import url(toggleSwitch.css);
 @import url(settings.css);
 @import url(Welcome.css);
+@import url(userPicker.css);
 
 body, html {
 	height: 100%;

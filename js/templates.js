@@ -674,4 +674,36 @@ function program2(depth0,data) {
   buffer += "\n</div>";
   return buffer;
   });
+templates['userPicker.base'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div class='top'>\n	<div class='close'>\n		<div class='icon-remove'></div>\n	</div>\n	<div class='title'>\n		Choose a User\n	</div>\n	<div class='filter'>\n		<select id='filter'>\n			<OPTION value='all'>A-Z</OPTION><OPTION>A</OPTION><OPTION>B</OPTION><OPTION>C</OPTION><OPTION>D</OPTION><OPTION>E</OPTION><OPTION>F</OPTION><OPTION>G</OPTION><OPTION>H</OPTION><OPTION>I</OPTION><OPTION>J</OPTION><OPTION>K</OPTION><OPTION>L</OPTION><OPTION>M</OPTION><OPTION>N</OPTION><OPTION>O</OPTION><OPTION>P</OPTION><OPTION>Q</OPTION><OPTION>R</OPTION><OPTION>S</OPTION><OPTION>T</OPTION><OPTION>U</OPTION><OPTION>V</OPTION><OPTION>W</OPTION><OPTION>X</OPTION><OPTION>Y</OPTION><OPTION>Z</OPTION>\n		</select>\n	</div>\n</div>\n<div class='list'>\n	<div class='loadingContainer'>\n		<div class='icon-spinner icon-spin'></div>\n	</div>\n</div>";
+  });
+templates['userPicker.list'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var stack1, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n	<div class='node' data-id='";
+  if (stack1 = helpers.Id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.Id; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "'>";
+  if (stack1 = helpers.Name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.Name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n";
+  return buffer;
+  }
+
+  stack1 = helpers.each.call(depth0, depth0, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { return stack1; }
+  else { return ''; }
+  });
 })();
