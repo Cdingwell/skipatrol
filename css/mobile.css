@@ -31,7 +31,7 @@
 
 /* hide table items on on snow */
 
-.manageOnSnow.standardListView .SID, .manageOnSnow.standardListView .Notes {
+.manageOnSnow.standardListView .studentName, .manageOnSnow.standardListView .Notes {
 	display: none !important;
 }
 

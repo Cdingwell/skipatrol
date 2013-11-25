@@ -18,7 +18,16 @@ Handlebars.registerHelper('formatDate', function(stamp, options) {
 /* hooks up the check perms method with our api for permissions */
 
 Handlebars.registerHelper('checkPerms', function(perms, options) {
-	return api().checkPerms(perms) || perms == 'all' ? options.fn(this) : options.inverse(this);
+	var negate = false;
+	if(perms >=1000) {
+		negate = true;
+		perms -= 1000;
+	}
+	var permCheck = api().checkPerms(perms) || perms == 'all';
+	if(negate)
+		return !permCheck ? options.fn(this) : options.inverse(this);
+	else
+		return permCheck ? options.fn(this) : options.inverse(this);
 });
 
 /* same as A & B */

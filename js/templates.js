@@ -191,10 +191,10 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "\">\n            </div>\n\n            <div class=\"table\">\n                <div class=\"row head\">\n                    <div class=\"item options\"></div>\n                    <div class=\"item Time\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Time", options) : helperMissing.call(depth0, "lang", "Time", options)))
-    + "</div>\n                    <div class=\"item InstID\">";
+    + "</div>\n                    <div class=\"item Name\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Creator", options) : helperMissing.call(depth0, "lang", "Creator", options)))
-    + "</div>\n                    <div class=\"item SID\">";
+    + "</div>\n                    <div class=\"item studentName\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Student", options) : helperMissing.call(depth0, "lang", "Student", options)))
     + "</div>\n                </div>\n                ";
@@ -276,12 +276,12 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "\">\n            </div>\n\n            <div class=\"table\">\n                <div class=\"row head\">\n                    <div class=\"item options\"></div>\n                    <div class=\"item Time\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Time", options) : helperMissing.call(depth0, "lang", "Time", options)))
-    + "</div>\n                    <div class=\"item InstID\">";
+    + "</div>\n                    <div class=\"item Name\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "InstID", options) : helperMissing.call(depth0, "lang", "InstID", options)))
-    + "</div>\n                    <div class=\"item SID\">";
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Creator", options) : helperMissing.call(depth0, "lang", "Creator", options)))
+    + "</div>\n                    <div class=\"item studentName\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "SID", options) : helperMissing.call(depth0, "lang", "SID", options)))
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Student", options) : helperMissing.call(depth0, "lang", "Student", options)))
     + "</div>\n                    <div class=\"item Notes\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Notes", options) : helperMissing.call(depth0, "lang", "Notes", options)))
@@ -311,13 +311,13 @@ function program1(depth0,data) {
   options = {hash:{},inverse:self.program(4, program4, data),fn:self.program(2, program2, data),data:data};
   stack2 = ((stack1 = helpers.onSnowRecordSubmitted || depth0.onSnowRecordSubmitted),stack1 ? stack1.call(depth0, depth0.Timestamp, options) : helperMissing.call(depth0, "onSnowRecordSubmitted", depth0.Timestamp, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "</div>\n		<div class=\"item InstID\">";
-  if (stack2 = helpers.instID) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
-  else { stack2 = depth0.instID; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += "</div>\n		<div class=\"item Name\">";
+  if (stack2 = helpers.Name) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.Name; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "</div>\n		<div class=\"item SID\">";
-  if (stack2 = helpers.SID) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
-  else { stack2 = depth0.SID; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+    + "</div>\n		<div class=\"item studentName\">";
+  if (stack2 = helpers.studentName) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.studentName; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
     + "</div>\n		<div class=\"item Notes\">";
   if (stack2 = helpers.notes) { stack2 = stack2.call(depth0, {hash:{},data:data}); }

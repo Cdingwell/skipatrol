@@ -164,11 +164,6 @@ manageFirstAid.prototype.submitToServer = function(e, target) {
 	// update DOM to show we are submitting
 	target.addClass('loading');
 	target.html('<i class="icon-spin icon-spinner"></i>');
-	// woah, we will need an SID first
-	if(!data[id].SID || data[id].SID == '') {
-		new userPicker({ callback: function(d){ data[id].SID = d; next() } })
-	}else
-		next();
 	// submit data to server
 	var next = function() {
 		api().addFirstAid(data[id], function(server) {
@@ -188,6 +183,11 @@ manageFirstAid.prototype.submitToServer = function(e, target) {
 
 		}.bind(this));
 	}.bind(this);
+	// woah, we will need an SID first
+	if(!data[id].SID || data[id].SID == '') {
+		new userPicker({ callback: function(d){ data[id].SID = d; next() } })
+	}else
+		next();
 
 }
 

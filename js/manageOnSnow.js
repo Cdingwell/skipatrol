@@ -81,20 +81,28 @@ manageOnSnow.prototype.submitToServer = function(e, target) {
 	target.addClass('loading');
 	target.html('<i class="icon-spin icon-spinner"></i>');
 	// submit data to server
-	api().addOnSnow(data[id], function(server) {
-		// handle errors
-		if(!server || !server.success) {
-			target.html( lang('Try Again') );
-			target.addClass('red').removeClass('loading');
-			return;
-		}
-		// update dom indicating that it worked!
-		node.attr('data-id', server.id);
-		target.replaceWith(formatDate(server.timestamp));
-		delete data[id];
-		storage.set(this.localStoragePrefix + 'records', data);
+	var next = function() {
+		api().addOnSnow(data[id], function(server) {
+			// handle errors
+			if(!server || !server.success) {
+				target.html( lang('Try Again') );
+				target.addClass('red').removeClass('loading');
+				return;
+			}
+			// update dom indicating that it worked!
+			node.attr('data-id', server.id);
+			node.find('.studentName').html(server.studentName);
+			node.find('.Name').html(server.Name);
+			target.replaceWith(formatDate(server.timestamp));
+			delete data[id];
+			storage.set(this.localStoragePrefix + 'records', data);
 
-	}.bind(this));
+		}.bind(this));
+	}.bind(this);
+	if(!data[id].SID || data[id].SID == '') {
+		new userPicker({ callback: function(d){ data[id].SID = d; next() } })
+	}else
+		next();
 
 }
 
@@ -141,6 +149,8 @@ manageOnSnow.prototype.addRecord = function(e, target) {
 		// store this record in the user's local Storage
 		var records = storage.get(this.localStoragePrefix + 'records') || {};
 		data.snowID = Date.now();
+		data.studentName = 'ID: ' + data.SID;
+		data.Name = 'Me (Unsubmitted)';
 		records[data.snowID] = data;
 		storage.set(this.localStoragePrefix + 'records', records);
 		// keep ui consistent
