@@ -98,8 +98,8 @@
 		$perms->requirePerms($userid, $perms->perms['admin']);
 		// add patroller
 		$con = new mysqli(DBHOST, DBUSER, DBPASS, DB);
-		$sql = $con->prepare("INSERT INTO `Patroller` (`id`, `Name`, `InstID`, `Email`, `PhoneNum`, `CSPSNum`, `password`, `login`) VALUES (NULL, ?, ?, ?, ?, ?, ?, NULL)");
-		$sql->bind_param("ssssss", $_POST['Name'], $_POST['InstID'], $_POST['Email'], $_POST['PhoneNum'], $_POST['CSPSNum'], encryptPassword($_POST['password']) );
+		$sql = $con->prepare("INSERT INTO `Patroller` (`id`, `Name`, `InstID`, `Email`, `PhoneNum`, `CSPSNum`, `password`, `login`) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?)");
+		$sql->bind_param("ssssssi", $_POST['Name'], $_POST['InstID'], $_POST['Email'], $_POST['PhoneNum'], $_POST['CSPSNum'], encryptPassword($_POST['password']), $_POST['login'] );
 		$sql->execute();
 		$sql->close();
 		// find patroller's id for output

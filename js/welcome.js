@@ -16,7 +16,10 @@ Welcome.prototype.init = function() {
 
 Welcome.prototype.render = function() {
 
+	startLoading();
+
 	api().getPatrollerHistory(api().userid, function(data) {
+		stopLoading();
      	this.el.innerHTML = Handlebars.templates.Welcome({ session: data.length > 1 ? data[1] : data[0], session_count: data.length });
 	}.bind(this));
 

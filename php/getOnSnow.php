@@ -3,6 +3,7 @@
 	include('../config.php');
 	include('functions.php');
 	include('session.class.php');
+	include('permissions.class.php');
 
 	// validate user
 	$session = new sessionManager();
@@ -11,14 +12,26 @@
 		exitWithJSON( array( 'error' => true, 'type' => 'invalid_session', 'message' => 'You must login to use this feature.' ) );
 	}
 
+	// do a perm check
+	$perms = new permissions();
+	$perms->requirePerms($userid, $perms->perms['admin'] | $perms->perms['instructor'] | $perms->perms['zone_education_leader'] | $perms->perms['divisional_education_leader'] | $perms->perms['national_education_leader']);
+	$godMode = $perms->checkPerms($userid, $perms->perms['admin']);
+
 	// show patrollers
 	if($_GET['action'] == 'get') {
 		$con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB);
 		// base query
 		$query = 'SELECT OnSnow.*, Patroller.Name, p2.Name AS studentName FROM OnSnow INNER JOIN Patroller ON OnSnow.instID = Patroller.id INNER JOIN Patroller AS p2 ON OnSnow.SID = p2.id';
+		//if(!$godMode)
+		//	$query .= ' WHERE OnSnow.InstID = \'' . $userid . '\'';
 		// limit by key
-		if(!empty($_POST['id']) && is_numeric($_POST['id']))
-			$query .= " WHERE `snowID` = '{$_POST['id']}'";
+		if(!empty($_POST['id']) && is_numeric($_POST['id'])) {
+			//if($godMode)
+				$query .= ' WHERE';
+			//else
+			//	$query .= ' AND';
+			$query .= " `snowID` = '{$_POST['id']}'";
+		}
 		// order by timestamp
 		$query .= ' ORDER BY Timestamp DESC';
 		// pagenation
@@ -39,6 +52,13 @@
 		// limit by key
 		if(!empty($_GET['id']) && is_numeric($_GET['id']))
 			$query .= " WHERE `snowID` = '{$_GET['id']}'";
+		if(!$godMode) {
+			if(!strstr($query, ' WHERE '))
+				$query .= ' WHERE';
+			else
+				$query .= ' AND';
+			$query .= ' InstID = \'' . $userid . '\'';
+		}
 		// order by timestamp
 		$query .= ' ORDER BY Timestamp DESC';
         $result = mysqli_query($con,$query);
@@ -101,6 +121,8 @@
 	}else if($_GET['action'] == 'delete') {
 		$con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB);
 		$query = 'DELETE FROM `OnSnow` WHERE snowID = ' . intval($_POST['id']);
+		if(!$godMode)
+			$query .= ' AND InstID = \'' . $userid . '\'';
         mysqli_query($con,$query);
         exitWithJSON( array( 'success' => true ) );
 
@@ -111,7 +133,10 @@
 		// change stuff
 		foreach($changes as $key => $value) {
 			if( !empty($value) ) {
-				$sql = $con->prepare('UPDATE `OnSnow` SET ' . preg_replace("/[^A-Za-z0-9_ ]/", '', $key) . ' = "' . preg_replace("/[^A-Za-z0-9 ;:\-_ \n\t]/", '', $value) . '" WHERE `snowID` = ?'); if(!$sql) echo $con->error;
+				$query = 'UPDATE `OnSnow` SET ' . preg_replace("/[^A-Za-z0-9_ ]/", '', $key) . ' = "' . preg_replace("/[^A-Za-z0-9 ;:\-_ \n\t]/", '', $value) . '" WHERE `snowID` = ?';
+				if(!$godMode)
+					$query .= ' AND InstID = \'' . $userid . '\'';
+				$sql = $con->prepare($query);
 				$sql->bind_param('i', $_POST['id']);
 				$sql->execute();
 				$sql->close();

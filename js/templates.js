@@ -319,7 +319,7 @@ function program1(depth0,data) {
   if (stack2 = helpers.studentName) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.studentName; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "</div>\n		<div class=\"item Notes\">";
+    + "</div>\n		<div class=\"item Notes notes\">";
   if (stack2 = helpers.notes) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.notes; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)

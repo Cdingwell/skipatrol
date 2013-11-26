@@ -48,7 +48,9 @@ login.prototype.loginAttempt = function(e, target) {
 	// tell the model we're loading
 	this.set('loading', true);
 	// attempt a login
+	startLoading();
 	api().login(username, password, function(status) {
+		stopLoading();
 		// tell model we're done loading
 		this.set('loading', false);
 		if(status) {

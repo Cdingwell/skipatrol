@@ -2,7 +2,7 @@ var manageAccident = trick({
 	events: {
 		'click .icon-remove': 'removeRecord', // remove a form
 		'click .icon-pencil': 'editRecord', // open form up in edit mode
-		'click .row': (window.isMobile ? 'mobileShowOptions' : 'editRecord'), // open form up in edit mode
+		'click .row:not(.head)': (window.isMobile ? 'mobileShowOptions' : 'editRecord'), // open form up in edit mode
 		'keyup .filter': 'filterItems', // filter the forms in the table
 		'click .addNew': 'addRecord', // open up a form to fill out
 		'click .row .submit:not(.loading)': 'submitToServer', // fire off singal to submit a report to the server
@@ -42,7 +42,7 @@ manageAccident.prototype.localStoragePrefix = 'manageAccident_';
 manageAccident.prototype.render = function() {
 
 	// create page layout
-	this.el.innerHTML = Handlebars.templates['manageAccident']({ table: '' });
+	this.el.innerHTML = Handlebars.templates['manageAccident']({ table: '<div class="tableLoadingIcon"><div class="icon-spin icon-spinner"></div></div>' });
 
 	var localRecords = storage.get(this.localStoragePrefix + 'records');
 	if(localRecords)
@@ -62,6 +62,8 @@ manageAccident.prototype.render = function() {
 
 		// insert the buffer
 		this.$el.find('.table').append(buffer);
+		this.$el.find('.tableLoadingIcon').remove();
+
 
 	}.bind(this));
 

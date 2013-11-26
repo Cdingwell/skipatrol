@@ -5,7 +5,7 @@ var managePatrollers = trick({
 		'click .icon-time': 'patrollerHistory', // browse the history of a patroller
 		'keyup .filter': 'filterItems', // begin filtering patrollers
 		'click .addNew': 'addPatroller', // open menu for creating a patroller,
-		'click .row': 'mobileShowOptions' // display mobile options for this row
+		'click .row:not(.head)': 'mobileShowOptions' // display mobile options for this row
 	}
 });
 
@@ -15,6 +15,8 @@ managePatrollers.prototype.init = function() {
 }
 
 managePatrollers.prototype.render = function() {
+
+	this.el.innerHTML = Handlebars.templates['managePatrollers']({ table: '<div class="tableLoadingIcon"><div class="icon-spin icon-spinner"></div></div>' });
 
 	// fetch list of all patrollers
 	api().getPatrollers(function(data) {

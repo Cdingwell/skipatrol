@@ -3,7 +3,6 @@ var accidentForm = [
 	{
 		name: 'Basic Information',
 		fields: [
-			{ name: 'ID', type: 'input', sqlName: 'id'},
 			{ name: 'Report Number', type: 'input', sqlName: 'reportNum' },
 			{ name: 'CSPS Number', type: 'input', sqlName: 'CSPSNum1'},
 			{ name: 'CSPS Number', type: 'input', sqlName: 'CSPSNum2'},
@@ -11,8 +10,7 @@ var accidentForm = [
 			{ name: 'Date of Birth', type: 'input', sqlName: 'DOB' },
 			{ name: 'Age', type: 'input', sqlName: 'age'},
 			{ name: 'Gender', type: 'dropdown', sqlName: 'gender', options: ['Male', 'Female', 'Other'] }
-			
-			]
+		]
 	},
 
 			
@@ -37,7 +35,7 @@ var accidentForm = [
 			{ name: 'Hand', type: 'dropdown', sqlName: 'hand', options: ['left', 'right', 'both'] },
 			{ name: 'Thumb', type: 'dropdown', sqlName: 'thumb', options: ['left', 'right', 'both'] },
 			{ name: 'Finger', type: 'dropdown', sqlName: 'finger', options: ['left', 'right', 'both'] }
-			]
+		]
 	},
 	
 	{
@@ -50,7 +48,7 @@ var accidentForm = [
 			{ name: 'Face', type: 'checkbox', sqlName: 'face'},
 			{ name: 'Medical', type: 'checkbox', sqlName: 'medical' },
 			{ name: 'No Injury', type: 'checkbox', sqlName: 'noInjury' }
-			]
+		]
 	},
 			
 	{

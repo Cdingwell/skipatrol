@@ -16,6 +16,22 @@ body, html {
 	height: 100%;
 }
 
+/* APP LOADING STATE */
+
+#globalContainer.loading:before {
+	z-index: 999;
+	background-color: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-image: url(../img/loader.gif);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	content: "";
+}
+
 /* CONTENT MAIN START */
 
 #content{

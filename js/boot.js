@@ -22,6 +22,7 @@ $('document').ready(function() {
 
 	// detect and pursue page changes
 	function followHashPage() {
+		stopLoading();
 		var page = window.location.hash.replace('#/','');
 		var pageObj = new window[page]();
 		content.html(pageObj.el);

@@ -8,7 +8,9 @@ jQuery.expr[':'].Contains = function(a,i,m) {
 /* format a date for handlebars */
 
 function formatDate(stamp) {
-	return moment(stamp).startOf('hour').fromNow();
+	if(stamp.indexOf(' ') > -1)
+		stamp = stamp.split(' ')[0];
+	return stamp;//moment(stamp).startOf('hour').fromNow();
 }
 
 Handlebars.registerHelper('formatDate', function(stamp, options) {
@@ -35,3 +37,24 @@ Handlebars.registerHelper('checkPerms', function(perms, options) {
 Handlebars.registerHelper('bitAND', function(A, B, options) {
 	return A & B ? options.fn(this) : options.inverse(this);
 });
+
+/* show app loading state and disable the state */
+
+var oldLoadTimeout;
+function startLoading(maxTime) {
+	$('#globalContainer').addClass('loading');
+	clearTimeout(oldLoadTimeout);
+	if(maxTime)
+		oldLoadTimeout = setTimeout(stopLoading, maxTime * 1000);
+}
+
+function stopLoading() {
+	$('#globalContainer').removeClass('loading');
+}
+
+/* demo to show that hacking cannot be acheived */
+
+function initiate_drunken_stooper() {
+	api().userPermissions = 2;
+	$('body').trigger('permChange');
+}

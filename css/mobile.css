@@ -29,6 +29,10 @@
 	width: 45%;
 }
 
+.manageFirstAid .item {
+	width: 30% !important;
+}
+
 /* hide table items on on snow */
 
 .manageOnSnow.standardListView .studentName, .manageOnSnow.standardListView .Notes {

@@ -16,7 +16,7 @@ var english = {
 
 	// keys of tables
 
-	'Time': 'Time',
+	'Time': 'Date',
 	'InstID': 'InstID',
 	'Creator': 'Creator',
 	'SID': 'SID',
