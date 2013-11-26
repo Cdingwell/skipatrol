@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 26, 2013 at 04:06 AM
--- Server version: 5.5.31
--- PHP Version: 5.4.16
+-- Generation Time: Nov 26, 2013 at 04:15 PM
+-- Server version: 5.6.12
+-- PHP Version: 5.5.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -108,9 +108,9 @@ INSERT INTO `Accident` (`id`, `Timestamp`, `reportNum`, `CSPSNum1`, `CSPSNum2`, 
 (2, '2013-07-25', '145623', '01049887', '01039884', '01038293', '1993-02-04', 20, 'Male', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '2', '1', '2', '2', '1', '2', '1', '2', '1', '2', '1', '2', '1', '2', '1', NULL, NULL),
 (3, '2013-06-19', '87482', '02031111', '02031112', '02031113', '1991-03-06', 22, 'Male', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '3', '2', '3', '2', '1', '3', '2', '3', '1', '1', '2', '3', '1', '2', '3', NULL, NULL),
 (5, '2013-07-25', '12345', '11220001', '11220002', '11220003', '1992-08-13', 20, 'Male', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', NULL, NULL),
-(6, '2013-10-29', '9', '8', '8', '8', '3', 3, '6', '4', '5', '8', '4', '5', '3', '7', '7', '5', '8', '8', '8', '5', '8', '5', '4', '5', '6', '9', '9', '8', '4', '4', '7', '8', 8, 6, 6, 6, 10, 11, 7, 6, 10, 11, 9, 8, 7, 8, 7, '16', '17', '8', '11', '7', '5', '4', '4', '7', '9', '6', '7', '8', '8', '9', '12', '11', '16'),
-(7, '2013-10-29', 'a', 'a', 'a', 'b', 'a', 0, 'Female', 'right', 'left', 'both', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', '0', '0', '0', '0', '0', '0', '0', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', '0', 'N/A', 'N/A', '0'),
-(8, '2013-10-29', 'a', 'b', 'b', '', '', 0, 'Female', 'left', 'right', 'both', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', '0', '0', '0', '0', '0', '0', '0', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', '0', 'N/A', 'N/A', '0');
+(6, '2013-10-29', '9', '8', '8', '8', '1992-08-13', 3, 'Other', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', '1', '1', '1', '1', '1', '1', '1', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', '1', 'NA', 'NA', '1'),
+(7, '2013-10-29', 'a', 'a', 'a', 'b', '1992-08-16', 0, 'Female', 'right', 'left', 'both', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', '0', '0', '0', '0', '0', '0', '0', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', '0', 'N/A', 'N/A', '0'),
+(8, '2013-10-29', 'a', 'b', 'b', '', '1992-08-17', 0, 'Female', 'left', 'right', 'both', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', '0', '0', '0', '0', '0', '0', '0', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', '0', 'N/A', 'N/A', '0');
 
 -- --------------------------------------------------------
 
@@ -153,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `FirstAid` (
   `modifiedStirrup` varchar(100) DEFAULT NULL,
   `knee` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`FAID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `FirstAid`
@@ -166,7 +166,11 @@ INSERT INTO `FirstAid` (`Timestamp`, `IID`, `SID`, `FAID`, `prioritySurvey`, `se
 ('2013-11-21 16:11:38', 8, 8, 4, 'First Init', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA', 'NA'),
 ('2013-11-21 16:48:22', 8, 13, 6, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'),
 ('2013-11-25 00:29:39', 8, 0, 7, 'Second Initial', 'First Initial', 'Third Initial', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'),
-('2013-11-25 00:31:10', 8, 8, 8, 'Second Initial', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A');
+('2013-11-25 00:31:10', 8, 8, 8, 'Second Initial', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'),
+('2013-11-26 03:59:59', 8, 27, 10, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'),
+('2013-11-26 04:00:05', 8, 26, 11, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'),
+('2013-11-26 04:00:13', 8, 21, 12, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'),
+('2013-11-26 04:02:28', 8, 27, 13, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A');
 
 -- --------------------------------------------------------
 
@@ -281,7 +285,7 @@ CREATE TABLE IF NOT EXISTS `OnSnow` (
   `FrontCharge2_Loaded` tinyint(1) DEFAULT NULL,
   `notes` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`snowID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=160 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=165 ;
 
 --
 -- Dumping data for table `OnSnow`
@@ -433,7 +437,11 @@ INSERT INTO `OnSnow` (`Timestamp`, `SID`, `snowID`, `instID`, `crticalSection`, 
 ('2013-11-25 20:37:01', 13, 156, 8, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
 ('2013-11-25 20:37:01', 13, 157, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
 ('2013-11-25 20:37:01', 13, 158, 8, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-('2013-11-25 22:33:04', 21, 159, 8, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+('2013-11-26 04:02:45', 21, 159, 8, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Excellent'),
+('2013-11-26 04:08:10', 26, 160, 8, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Superb'),
+('2013-11-26 04:03:11', 27, 161, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Amazing'),
+('2013-11-26 04:03:27', 21, 162, 8, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Wonderful'),
+('2013-11-26 14:58:44', 31, 164, 8, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Wow');
 
 -- --------------------------------------------------------
 
@@ -451,20 +459,19 @@ CREATE TABLE IF NOT EXISTS `Patroller` (
   `password` varchar(41) DEFAULT NULL,
   `login` tinyint(1) DEFAULT '4',
   PRIMARY KEY (`id`,`InstID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=32 ;
 
 --
 -- Dumping data for table `Patroller`
 --
 
 INSERT INTO `Patroller` (`id`, `Name`, `InstID`, `Email`, `PhoneNum`, `CSPSNum`, `password`, `login`) VALUES
-(8, 'David', '555578', 'c@c.com', '1239876555', '134', 'fe4ae3496385aac43f717badc3038330', 2),
-(13, 'weLoveCommunityOutreach', 'b', 'd23', 'e23', 'a23', '123', 101),
-(16, 'c', 'b', 'd', 'e', 'a', 'f', 4),
-(17, '3', '2', '4', '5', '1', '6', 4),
-(18, '33', '22', '44', '55', '11', '66', 4),
-(21, 'c666', 'b', 's', 'e', 'a876', '409d03d4ce2940eef7236b87aeb49e24', 4),
-(26, 'RobFord', 'Test', '', '', '', 'fe4ae3496385aac43f717badc3038330', 4);
+(8, 'David', 'B-17', 'c@c.com', '1 902 666 6666', '134', 'fe4ae3496385aac43f717badc3038330', 2),
+(27, 'BillyBob', 'C-99', 'a@b.com', '1 444 321 3321', '3', '184aed8375e064f0ab6ffccb78d804ba', 12),
+(21, 'SkiKing', 'Q-22', 'joe@reditr.com', '1 505 222 5505', '23', '409d03d4ce2940eef7236b87aeb49e24', 4),
+(26, 'RobFord', 'E-43', 'karl@web.com', '1 894 929 4434', '42', 'fe4ae3496385aac43f717badc3038330', 4),
+(30, 'instructor6', 'J-05', 'instructor@gmail.com', '1 209 222 2929', '32', 'fe4ae3496385aac43f717badc3038330', 8),
+(31, 'Tish', 'B-66', 'best@instructorNA.com', '1 833 424 4333', '43', 'fe4ae3496385aac43f717badc3038330', 28);
 
 -- --------------------------------------------------------
 
@@ -481,7 +488,7 @@ CREATE TABLE IF NOT EXISTS `sessions` (
   `created` int(11) NOT NULL,
   `lastactive` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=83 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=92 ;
 
 --
 -- Dumping data for table `sessions`
@@ -500,7 +507,16 @@ INSERT INTO `sessions` (`id`, `userid`, `session`, `useragent`, `ip`, `created`,
 (79, 8, '5291727738504', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1712.3 Safari/537.36', '127.0.0.1', 1385263735, 1385418294),
 (80, 26, '5293ce478aa15', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9) AppleWebKit/537.71 (KHTML, like Gecko) Version/7.0 Safari/537.71', '127.0.0.1', 1385418311, 1385418604),
 (81, 26, '5293cf8257bc9', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1712.3 Safari/537.36', '127.0.0.1', 1385418626, 1385418662),
-(82, 8, '5293cffed648c', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1712.3 Safari/537.36', '127.0.0.1', 1385418750, 1385425562);
+(82, 8, '5293cffed648c', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1712.3 Safari/537.36', '127.0.0.1', 1385418750, 1385425562),
+(83, 8, '52941be7e9184', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1719.0 Safari/537.36', '127.0.0.1', 1385438183, 1385438190),
+(84, 8, '52941c0c25839', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1719.0 Safari/537.36', '127.0.0.1', 1385438220, 1385438901),
+(85, 26, '52941ecb411ac', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1719.0 Safari/537.36', '127.0.0.1', 1385438923, 1385439009),
+(86, 8, '52941f4cb383f', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1719.0 Safari/537.36', '127.0.0.1', 1385439052, 1385439104),
+(87, 30, '52941f8a83e51', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1719.0 Safari/537.36', '127.0.0.1', 1385439114, 1385439397),
+(88, 8, '529420ae8cf48', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1719.0 Safari/537.36', '127.0.0.1', 1385439406, 1385439426),
+(89, 30, '529420ce91087', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1719.0 Safari/537.36', '127.0.0.1', 1385439438, 1385439440),
+(90, 8, '5294a9a9518e5', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1719.0 Safari/537.36', '127.0.0.1', 1385474473, 1385477940),
+(91, 30, '5294b49c8f563', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9) AppleWebKit/537.71 (KHTML, like Gecko) Version/7.0 Safari/537.71', '127.0.0.1', 1385477276, 1385477294);
 
 -- --------------------------------------------------------
 
