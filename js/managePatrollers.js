@@ -1,6 +1,7 @@
 var managePatrollers = trick({
 	events: {
 		'click .icon-remove': 'removePatroller', // trigger removal of a patroller
+		'click .download': 'doDownload',
 		'click .icon-pencil': 'editPatroller', // open edit menu for a patroller
 		'click .icon-time': 'patrollerHistory', // browse the history of a patroller
 		'keyup .filter': 'filterItems', // begin filtering patrollers
@@ -12,6 +13,10 @@ var managePatrollers = trick({
 managePatrollers.prototype.init = function() {
 	this.$el.addClass('managePatrollers').addClass('standardListView');
 	this.render();
+}
+
+managePatrollers.prototype.doDownload = function() {
+	window.location.href = api().base + 'php/getPatrollers.php?action=dump&sessionid=' + api().sessionid;
 }
 
 managePatrollers.prototype.render = function() {

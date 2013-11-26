@@ -1,6 +1,8 @@
 var manageOnSnow = trick({
 	events: {
 		'click .icon-remove': 'removeRecord', // remove a form
+		'click .download': 'showDownload',
+		'click .downloadPicker button': 'doDownload',
 		'click .icon-pencil': 'editRecord', // open form up in edit mode
 		'click .row:not(.head)': (window.isMobile ? 'mobileShowOptions' : 'editRecord'), // open form up in edit mode
 		'keyup .filter': 'filterItems', // filter the forms in the table
@@ -16,6 +18,23 @@ var manageOnSnow = trick({
 Handlebars.registerHelper('onSnowRecordSubmitted', function(timestamp, options) {
 	return timestamp ? options.fn(this) : options.inverse(this);
 });
+
+manageOnSnow.prototype.showDownload = function() {
+	var dp = this.$el.find('.downloadPicker');
+	dp.show();
+	var monthAgo = new Date(Date.now() - (86400000*31));
+	dp.find('#start').val(monthAgo.yyyymmdd());
+	var now = new Date();
+	dp.find('#stop').val(now.yyyymmdd());
+}
+
+manageOnSnow.prototype.doDownload = function() {
+	var start = this.$el.find('.downloadPicker #start').val();
+	start = (new Date(start)).getTime() / 1000;
+	var stop = this.$el.find('.downloadPicker #stop').val();
+	stop = (new Date(stop)).getTime() / 1000;
+	window.location.href = api().base + 'php/getOnSnow.php?action=dump&sessionid=' + api().sessionid + '&start=' + start + '&stop=' + stop;
+}
 
 manageOnSnow.prototype.init = function() {
 
@@ -139,7 +158,7 @@ manageOnSnow.prototype.addRecord = function(e, target) {
 	editContainer.on('click','.saveChanges', function() {
 		editContainer.addClass('loading');
 		var data = {};
-		editContainer.find('input, textarea').each(function() {
+		editContainer.find('input, textarea, select').each(function() {
 		     if(this.getAttribute('type') == 'checkbox')
 		          data[this.name] = this.checked ? 1 : 0;
 		     else
@@ -193,7 +212,7 @@ manageOnSnow.prototype.editRecord = function(e, target, edit) {
 			editContainer.addClass('loading');
 			// scrape the data into a structure
 			submittedData = {};
-			editContainer.find('input, textarea').each(function() {
+			editContainer.find('input, textarea, select').each(function() {
 			     if(this.getAttribute('type') == 'checkbox')
 			          submittedData[this.name] = this.checked ? 1 : 0;
 			     else

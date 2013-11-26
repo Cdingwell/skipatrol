@@ -3,9 +3,15 @@
         <div class="h_title"><i class="icon-briefcase"></i>{{lang 'Accidents'}}</div>
         <div class="h_content">
 
+            <div class="downloadPicker">
+                FROM: <input type="date" id="start"> TO <input type="date" id="stop">
+                <button>GO</button>
+            </div>
+
             <div class="manage">
                 <button class="addNew"><i class="icon-plus-sign-alt"></i>{{lang 'Add Record'}}</button>
-                <input class="filter" placeholder="{{lang 'Start typing to filter'}}">
+                <button class="download"><i class="icon-download-alt" style="margin-right: 0"></i></button>
+                <input class="filter" placeholder="{{lang 'Start typing to filter'}}" style="margin-left: 0">
             </div>
 
             <div class="table">

@@ -7,3 +7,12 @@
 	margin-top: 0px;
 	width: 100%;
 }
+
+.downloadPicker {
+	background-color: #d9f5fc;
+	border: 1px solid #bee1ea;
+	margin: 10px;
+	border-radius: 3px;
+	padding: 7px;
+	display: none;
+}

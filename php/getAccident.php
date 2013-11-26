@@ -37,8 +37,8 @@
 		// base query
 		$query = 'select * FROM Accident';
 		// limit by key
-		if(!empty($_GET['id']) && is_numeric($_GET['id']))
-			$query .= " WHERE `id` = '{$_GET['id']}'";
+		if(!empty($_GET['start']) && is_numeric($_GET['start']) && is_numeric($_GET['stop']))
+			$query .= " WHERE UNIX_TIMESTAMP(`Timestamp`) > {$_GET['start']} && UNIX_TIMESTAMP(`Timestamp`) < {$_GET['stop']}";
 		// order by timestamp
 		$query .= ' ORDER BY id DESC';
         $result = mysqli_query($con,$query);

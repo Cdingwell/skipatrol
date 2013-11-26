@@ -13,6 +13,13 @@ function formatDate(stamp) {
 	return stamp;//moment(stamp).startOf('hour').fromNow();
 }
 
+Date.prototype.yyyymmdd = function() {
+	var yyyy = this.getFullYear().toString();
+	var mm = (this.getMonth()+1).toString(); // getMonth() is zero-based
+	var dd  = this.getDate().toString();
+	return yyyy + '-' + (mm[1]?mm:"0"+mm[0]) + '-' + (dd[1]?dd:"0"+dd[0]); // padding
+};
+
 Handlebars.registerHelper('formatDate', function(stamp, options) {
 	return formatDate(stamp);
 });

@@ -50,8 +50,8 @@
 		// base query
 		$query = 'select * FROM OnSnow';
 		// limit by key
-		if(!empty($_GET['id']) && is_numeric($_GET['id']))
-			$query .= " WHERE `snowID` = '{$_GET['id']}'";
+		if(!empty($_GET['start']) && is_numeric($_GET['start']) && is_numeric($_GET['stop']))
+			$query .= " WHERE UNIX_TIMESTAMP(`Timestamp`) > {$_GET['start']} && UNIX_TIMESTAMP(`Timestamp`) < {$_GET['stop']}";
 		if(!$godMode) {
 			if(!strstr($query, ' WHERE '))
 				$query .= ' WHERE';

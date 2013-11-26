@@ -90,13 +90,13 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += "<div id=\"main\" class=\"loginContainer\"> \n    <div class=\"full_w\">\n        <div class=\"h_title\"><i class=\"icon-briefcase\"></i>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Accidents", options) : helperMissing.call(depth0, "lang", "Accidents", options)))
-    + "</div>\n        <div class=\"h_content\">\n\n            <div class=\"manage\">\n                <button class=\"addNew\"><i class=\"icon-plus-sign-alt\"></i>";
+    + "</div>\n        <div class=\"h_content\">\n\n            <div class=\"downloadPicker\">\n                FROM: <input type=\"date\" id=\"start\"> TO <input type=\"date\" id=\"stop\">\n                <button>GO</button>\n            </div>\n\n            <div class=\"manage\">\n                <button class=\"addNew\"><i class=\"icon-plus-sign-alt\"></i>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Add Record", options) : helperMissing.call(depth0, "lang", "Add Record", options)))
-    + "</button>\n                <input class=\"filter\" placeholder=\"";
+    + "</button>\n                <button class=\"download\"><i class=\"icon-download-alt\" style=\"margin-right: 0\"></i></button>\n                <input class=\"filter\" placeholder=\"";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Start typing to filter", options) : helperMissing.call(depth0, "lang", "Start typing to filter", options)))
-    + "\">\n            </div>\n\n            <div class=\"table\">\n                <div class=\"row head\">\n                    <div class=\"item options\"></div>\n                    <div class=\"item Timestamp\">";
+    + "\" style=\"margin-left: 0\">\n            </div>\n\n            <div class=\"table\">\n                <div class=\"row head\">\n                    <div class=\"item options\"></div>\n                    <div class=\"item Timestamp\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Time", options) : helperMissing.call(depth0, "lang", "Time", options)))
     + "</div>\n                    <div class=\"item id\">";
@@ -182,13 +182,13 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += "<div id=\"main\" class=\"loginContainer\"> \n    <div class=\"full_w\">\n        <div class=\"h_title\"><i class=\"icon-briefcase\"></i>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "First Aid", options) : helperMissing.call(depth0, "lang", "First Aid", options)))
-    + "</div>\n        <div class=\"h_content\">\n\n            <div class=\"manage\">\n                <button class=\"addNew\"><i class=\"icon-plus-sign-alt\"></i>";
+    + "</div>\n        <div class=\"h_content\">\n\n            <div class=\"downloadPicker\">\n                FROM: <input type=\"date\" id=\"start\"> TO <input type=\"date\" id=\"stop\">\n                <button>GO</button>\n            </div>\n\n            <div class=\"manage\">\n                <button class=\"addNew\"><i class=\"icon-plus-sign-alt\"></i>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Add Record", options) : helperMissing.call(depth0, "lang", "Add Record", options)))
-    + "</button>\n                <input class=\"filter\" placeholder=\"";
+    + "</button>\n                <button class=\"download\"><i class=\"icon-download-alt\" style=\"margin-right: 0\"></i></button>\n                <input class=\"filter\" placeholder=\"";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Start typing to filter", options) : helperMissing.call(depth0, "lang", "Start typing to filter", options)))
-    + "\">\n            </div>\n\n            <div class=\"table\">\n                <div class=\"row head\">\n                    <div class=\"item options\"></div>\n                    <div class=\"item Time\">";
+    + "\" style=\"margin-left: 0\">\n            </div>\n\n            <div class=\"table\">\n                <div class=\"row head\">\n                    <div class=\"item options\"></div>\n                    <div class=\"item Time\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Time", options) : helperMissing.call(depth0, "lang", "Time", options)))
     + "</div>\n                    <div class=\"item Name\">";
@@ -267,10 +267,10 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += "<div id=\"main\" class=\"loginContainer\"> \n    <div class=\"full_w\">\n        <div class=\"h_title\"><i class=\"icon-briefcase\"></i>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "On Snow", options) : helperMissing.call(depth0, "lang", "On Snow", options)))
-    + "</div>\n        <div class=\"h_content\">\n\n            <div class=\"manage\">\n                <button class=\"addNew\"><i class=\"icon-plus-sign-alt\"></i>";
+    + "</div>\n        <div class=\"h_content\">\n\n            <div class=\"downloadPicker\">\n                FROM: <input type=\"date\" id=\"start\"> TO <input type=\"date\" id=\"stop\">\n                <button>GO</button>\n            </div>\n\n            <div class=\"manage\">\n                <button class=\"addNew\"><i class=\"icon-plus-sign-alt\"></i>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Add Record", options) : helperMissing.call(depth0, "lang", "Add Record", options)))
-    + "</button>\n                <input class=\"filter\" placeholder=\"";
+    + "</button>\n                <button class=\"download\"><i class=\"icon-download-alt\" style=\"margin-right: 0\"></i></button>\n                <input style=\"margin-left: 0\" class=\"filter\" placeholder=\"";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Start typing to filter", options) : helperMissing.call(depth0, "lang", "Start typing to filter", options)))
     + "\">\n            </div>\n\n            <div class=\"table\">\n                <div class=\"row head\">\n                    <div class=\"item options\"></div>\n                    <div class=\"item Time\">";
@@ -445,7 +445,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</div>\n        <div class=\"h_content\">\n\n            <div class=\"manage\">\n                <button class=\"addNew\"><i class=\"icon-plus-sign-alt\"></i>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Add Patroller", options) : helperMissing.call(depth0, "lang", "Add Patroller", options)))
-    + "</button>\n                <input class=\"filter\" placeholder=\"";
+    + "</button>\n                <button class=\"download\"><i class=\"icon-download-alt\" style=\"margin-right: 0\"></i></button>\n                <input style=\"margin-left: 0\" class=\"filter\" placeholder=\"";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Start typing to filter", options) : helperMissing.call(depth0, "lang", "Start typing to filter", options)))
     + "\">\n            </div>\n\n            <div class=\"table\">\n                <div class=\"row head\">\n                    <div class=\"item options\"></div>\n                    <div class=\"item CSPSNum\">";
