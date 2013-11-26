@@ -22,14 +22,14 @@
 		$con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB);
 		// base query
 		$query = 'SELECT OnSnow.*, Patroller.Name, p2.Name AS studentName FROM OnSnow INNER JOIN Patroller ON OnSnow.instID = Patroller.id INNER JOIN Patroller AS p2 ON OnSnow.SID = p2.id';
-		//if(!$godMode)
-		//	$query .= ' WHERE OnSnow.InstID = \'' . $userid . '\'';
+		if(!$godMode)
+			$query .= ' WHERE OnSnow.InstID = \'' . $userid . '\'';
 		// limit by key
 		if(!empty($_POST['id']) && is_numeric($_POST['id'])) {
-			//if($godMode)
+			if($godMode)
 				$query .= ' WHERE';
-			//else
-			//	$query .= ' AND';
+			else
+				$query .= ' AND';
 			$query .= " `snowID` = '{$_POST['id']}'";
 		}
 		// order by timestamp
