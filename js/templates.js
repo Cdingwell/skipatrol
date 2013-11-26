@@ -181,7 +181,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 
   buffer += "<div id=\"main\" class=\"loginContainer\"> \n    <div class=\"full_w\">\n        <div class=\"h_title\"><i class=\"icon-briefcase\"></i>";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "On Snow", options) : helperMissing.call(depth0, "lang", "On Snow", options)))
+  buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "First Aid", options) : helperMissing.call(depth0, "lang", "First Aid", options)))
     + "</div>\n        <div class=\"h_content\">\n\n            <div class=\"manage\">\n                <button class=\"addNew\"><i class=\"icon-plus-sign-alt\"></i>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.lang || depth0.lang),stack1 ? stack1.call(depth0, "Add Record", options) : helperMissing.call(depth0, "lang", "Add Record", options)))
