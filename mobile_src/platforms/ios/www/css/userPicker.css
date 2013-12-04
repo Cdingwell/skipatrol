@@ -1,0 +1,84 @@
+.userPicker {
+	width: 100%;
+	height: 100%;
+	background-color: #f8f8f8;
+}
+
+.userPicker .title {
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color: #3d3d3d;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.userPicker .top {
+	border-bottom: 1px solid #c8c8c8;
+	height: 40px;
+	position: fixed;
+	background-color: #f8f8f8;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.userPicker .loadingContainer {
+	height: 200px;
+	text-align: center;
+	line-height: 199px;
+}
+
+.userPicker .loadingContainer .icon-spinner {
+	font-size: 40px;
+}
+
+.userPicker .top .close {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	width: 40px;
+	font-weight: lighter;
+	font-size: 30px;
+	line-height: 36px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.userPicker .top .close:hover {
+	background-color: #e5e5e5;
+}
+
+.userPicker .top .close:active {
+	background-color: #c8c8c8;
+}
+
+.userPicker .top .filter {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 8px;
+	line-height: 40px;
+}
+
+.userPicker .list {
+	background-color: white;
+	margin-top: 42px;
+}
+
+.userPicker .list .node {
+	border-bottom: 1px solid #e5e5eb;
+	height: 60px;
+	line-height: 60px;
+	color: #2a2a2a;
+	padding-left: 17px;
+	font-weight: lighter;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.userPicker .list .node:active {
+	background-color: #2087fc;
+	color: white;
+}

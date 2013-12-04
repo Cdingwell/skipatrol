@@ -1,0 +1,66 @@
+#content #main {
+	width: auto;
+	padding: 10px;
+}
+
+#content {
+	margin-top: 55px;
+}
+
+/* Make tables finger friendly */
+
+.standardListView .table .row {
+	height: 50px;
+	line-height: 49px;
+	font-size: 14px;
+}
+
+.standardListView .table .options {
+	display: none !important;
+}
+
+/* Hide table items on manage patroller view */
+
+.managePatrollers.standardListView .CSPSNum, .managePatrollers.standardListView .InstID, .managePatrollers.standardListView .Email, .managePatrollers.standardListView .Phone {
+	display: none !important;
+}
+
+.managePatrollers.standardListView .table .row .item {
+	width: 45%;
+}
+
+.manageFirstAid .item {
+	width: 30% !important;
+}
+
+/* hide table items on on snow */
+
+.manageOnSnow.standardListView .studentName, .manageOnSnow.standardListView .Notes {
+	display: none !important;
+}
+
+.manageOnSnow.standardListView .table .row .item {
+	width: 45%;
+}
+
+input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:30px;
+    height:30px;
+    background:white;
+    display: inline-block;
+    border-radius:5px;
+    border:2px solid #555;
+    cursor: pointer;
+    color: white;
+    outline: none !important;
+}
+
+input[type='checkbox']:before {
+	content: "\f00c";
+	font-family: "FontAwesome";
+}
+
+input[type='checkbox']:checked {
+	color: black;
+}

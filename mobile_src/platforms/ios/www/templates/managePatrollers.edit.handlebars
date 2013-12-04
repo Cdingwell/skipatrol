@@ -1,0 +1,52 @@
+<div class="overlay">
+
+	<div class="node">
+		<div class="title">{{lang 'CSP #'}}</div>
+		<input class="CSPSNum" value="{{CSPSNum}}">
+	</div>
+
+	<div class="node permissions">
+		<div class="title">{{lang 'Permissions'}}</div>
+		{{#each perms}}
+			<div><input {{#bitAND ../login this}}checked=true{{/bitAND}} type="checkbox" name="{{this}}" id="{{this}}"><label for="{{this}}">{{lang @key}}</label></div>
+		{{/each}}
+	</div>
+
+	<div class="node">
+		<div class="title">{{lang 'Instructor ID'}}</div>
+		<input class="InstID" value="{{InstID}}">
+	</div>
+
+	<div class="node">
+		<div class="title">{{lang 'Name'}}</div>
+		<input class="Name" value="{{Name}}">
+	</div>
+
+	<div class="node">
+		<div class="title">{{lang 'E-mail'}}</div>
+		<input class="Email" value="{{Email}}">
+	</div>
+
+	<div class="node">
+		<div class="title">{{lang 'Phone'}}</div>
+		<input class="PhoneNum" value="{{PhoneNum}}">
+	</div>
+
+	<div class="node">
+		<div class="title">{{lang 'Password'}}</div>
+		<input class="password" type="password" value="">
+	</div>
+
+	<div class="bottomBar">
+
+		<div class="node cancel">
+			<button class="saveChanges"><i class="icon-remove-sign"></i> {{lang 'Cancel'}}</button> 
+		</div>
+
+		<div class="node save">
+			<button class="saveChanges"><i class="icon-check-sign"></i> {{lang 'Submit'}}</button> 
+		</div>
+
+	</div>
+
+</div>

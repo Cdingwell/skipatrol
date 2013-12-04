@@ -1,0 +1,36 @@
+.loginContainer .inContainer {
+	padding: 10px;
+}
+
+.loginContainer .inContainer input {
+	width: calc(100% - 26px);
+	width: -webkit-calc(100% - 26px);
+	padding: 5px;
+	border: 1px solid #c6c6c6;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+.loginContainer .inContainer label {
+	margin: 5px;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.loginContainer .buttonContainer {
+	text-align: center;
+	margin-right: 30px;
+}
+
+.loginContainer .buttonContainer button {
+	margin-left: 15px;
+	margin-right: auto;
+	margin-bottom: 14px;
+	margin-top: 10px;
+	width: 100%;
+}
+
+.loginContainer #form {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

@@ -1,0 +1,191 @@
+@import url(login.css);
+@import url(manageOnSnow.css);
+@import url(managePatrollers.css);
+@import url(manageFirstAid.css);
+@import url(global.header.css);
+@import url(global.widgets.css);
+@import url(bottomOptions.css);
+@import url(sidebar.css);
+@import url(overlay.css);
+@import url(toggleSwitch.css);
+@import url(settings.css);
+@import url(Welcome.css);
+@import url(userPicker.css);
+
+body, html {
+	height: 100%;
+}
+
+/* APP LOADING STATE */
+
+#globalContainer.loading:before {
+	z-index: 999;
+	background-color: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-image: url(../img/loader.gif);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	content: "";
+}
+
+/* CONTENT MAIN START */
+
+#content{
+	margin-top: 110px;
+}
+#content .b1{
+	background: #ffffff;
+}
+#content .b2{
+	background: #f7f7f7;
+}
+
+#content tr:nth-child(even){
+	background: #ffffff;
+}
+#content tr:nth-child(odd){
+	background: #f7f7f7;
+}
+
+#content #main{
+	margin-left: auto;
+	margin-right: auto;
+	width: 860px;
+    padding-left: 20px;
+}
+
+#content #main ul, #content #main ol{
+	list-style-position: inside;
+	margin: 0 0 0 35px;
+}
+
+#main .full_w{
+	background: #ffffff;
+	border: 1px solid #DCDDE1;
+	color: #848484;
+	margin: 0 0 20px 0;
+}
+#main .full_w .h_title, #main .half_w .h_title {
+	border-bottom: 1px dashed #c6c6c6;
+	background-color: #f7f7f7;
+	color: #a8a8a8;
+	font-size: 11px;
+	font-weight: normal;
+	height: 22px;
+	padding: 7px 0 0 10px;
+}
+
+#main .h_title [class^="icon-"] {
+	margin-right: 5px;
+}
+
+#main .full_w .list{
+	list-style: none;
+}
+#main .full_w h1, #main .full_w h2, #main .full_w h3{
+	margin: 15px 15px 5px 15px;
+}
+#main .full_w p{
+	line-height: 16px;
+	margin: 5px 15px;
+}
+
+#main .half_w{
+	background: #ffffff;
+	border: 1px solid #DCDDE1;
+	color: #848484;
+	margin: 0 0 20px 0;
+	width: 330px;
+	float: left;
+}
+#main .half_left{
+	margin-right: 10px;
+}
+#main .half_right{
+	margin-left: 4px;
+}
+
+/* STATS BLOCK */
+
+#main .stats .today, #main .stats .week{
+	float: left;
+	margin: 10px auto;
+	text-align: center;
+	text-shadow: #fff 1px 1px 0px;
+	width: 49%;
+}
+#main .stats .today{
+	border-right: 1px dashed #c0c0c0;
+}
+#main .stats h3{
+	color: #797777;
+	font-size: 12px;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+}
+#main .stats .count{
+	color: #444444;
+	font-size: 23px;
+	font-weight: bold;
+}
+#main .stats .type{
+	font-size: 10px;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+}
+
+/* CONTENT MAIN FORM */
+#main form{
+	margin: 15px;
+}
+#main form .element{
+	clear: both;
+	border-bottom: 1px dashed #ededed;
+	display: block;
+	margin: 0;
+	padding: 10px 10px;
+}
+#main form label{
+	color: #575757;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+	padding: 0 0 0 3px;
+}
+#main form label span{
+	color: #b8b8b8;
+	font-size: 11px;
+	font-weight: normal;
+}
+#main form input, #main form select, #main form textarea{
+	background: #FFFFFF;
+	border: 1px solid #DDDDDD;
+	border-radius: 3px;
+	font-size: 11px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	padding: 5px 3px;
+}
+#main form input:focus, #main form select:focus, #main form textarea:focus{	border: 1px solid #b3b3b3;}
+
+#main form select{
+	border: 1px solid #DDDDDD;
+	border-radius: 3px;
+
+}
+#main form .text{
+	width: 100%;
+}
+#main form .textarea{
+	width: 100%;
+}
+#main form .err{
+	border: 1px solid #FF5252;
+}
+#main form .red{
+	color: #FF5252;
+}

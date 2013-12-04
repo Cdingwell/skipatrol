@@ -1,0 +1,26 @@
+<div id="main" class="loginContainer"> 
+    <div class="full_w">
+        <div class="h_title"><i class="icon-briefcase"></i>{{lang 'Patrollers'}}</div>
+        <div class="h_content">
+
+            <div class="manage">
+                <button class="addNew"><i class="icon-plus-sign-alt"></i>{{lang 'Add Patroller'}}</button>
+                <button class="download"><i class="icon-download-alt" style="margin-right: 0"></i></button>
+                <input style="margin-left: 0" class="filter" placeholder="{{lang 'Start typing to filter'}}">
+            </div>
+
+            <div class="table">
+                <div class="row head">
+                    <div class="item options"></div>
+                    <div class="item CSPSNum">{{lang 'CSP #'}}</div>
+                    <div class="item InstID">{{lang 'InstID'}}</div>
+                    <div class="item Name">{{lang 'Name'}}</div>
+                    <div class="item Email">{{lang 'E-mail'}}</div>
+                    <div class="item PhoneNum">{{lang 'Phone'}}</div>
+                </div>
+                {{{table}}}
+            </div>
+
+        </div>
+    </div>
+</div>

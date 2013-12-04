@@ -1,0 +1,36 @@
+<div class="overlay history">
+
+	<div class="list">
+		<div class="item header">
+			<div class="value">
+				{{lang 'Last Active'}}
+			</div>
+			<div class="value">
+				{{lang 'IP'}}
+			</div>
+			<div class="value">
+			{{lang 'Logged In At'}}
+			</div>
+		</div>
+		{{#each this}}
+		<div class="item">
+			<div class="value">
+				{{lastactive}}
+			</div>
+			<div class="value">
+				{{ip}} 
+			</div>
+			<div class="value">
+				{{created}}
+			</div>
+		</div>
+		{{/each}}
+	</div>
+
+	<div class="bottomBar">
+		<div class="node cancel">
+			<button class="close"><i class="icon-remove-sign"></i> {{lang 'Close'}}</button> 
+		</div>
+	</div>
+
+</div>

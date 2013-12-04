@@ -1,0 +1,100 @@
+.overlay {
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	min-height: 100%;
+	padding-bottom: 80px;
+}
+
+.overlay .selectDesc {
+	font-size: 12px;
+	margin: 10px;
+	margin-left: 0px;
+}
+
+.overlay .title {
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	margin-bottom: 5px;
+}
+
+.overlay .node {
+	padding: 25px;
+}
+
+.overlay .category {
+	padding: 25px;
+}
+
+.overlay .category .node {
+	padding: 5px;
+}
+
+.overlay .node input:not([type="checkbox"]), .overlay textarea {
+	border: none;
+	padding: 10px;
+	border-radius: 4px;
+	width: calc(100% - 20px);
+	width: -webkit-ncalc(100% - 20px);
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.overlay .node input[type="checkbox"] {
+	margin-right: 5px;
+}
+
+.overlay .node button i {
+	margin-right: 5px;
+}
+
+.overlay .node.save {
+	float: right;
+}
+
+.overlay .node.cancel {
+	float: left;
+}
+
+.overlay.history .cancel {
+	float: inherit;
+}
+
+.overlay.history .item {
+	font-size: 14px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.overlay.history .header {
+	font-weight: bold;
+	padding-top: 20px;
+}
+
+.overlay.history .item .value {
+	display: inline-block;
+	width: 30%;
+}
+
+.overlay .bottomBar {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	border-top: 1px solid #262626;
+	height: 50px;
+	background: #3a3a3a; /* Old browsers */
+	background: -moz-linear-gradient(top,  #3a3a3a 0%, #111111 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3a3a3a), color-stop(100%,#111111)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #3a3a3a 0%,#111111 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #3a3a3a 0%,#111111 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #3a3a3a 0%,#111111 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #3a3a3a 0%,#111111 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a3a3a', endColorstr='#111111',GradientType=0 ); /* IE6-9 */
+
+}
+
+.overlay .bottomBar .node {
+	padding: 0px;
+	margin: 10px;
+	margin-top: 10px;
+}

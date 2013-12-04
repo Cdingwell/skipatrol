@@ -1,0 +1,93 @@
+.standardListView .manage {
+	margin: 10px;
+}
+
+.standardListView .submit {
+	height: 25px;
+	border: none !important;
+	background: #3a90e0;
+	text-shadow: none;
+	color: white;
+	line-height: 12px;
+	font-weight: normal;
+	outline: none;
+	margin-top: 2px;
+}
+
+.tableLoadingIcon {
+	text-align: center;
+	margin: 20px;
+	font-size: 15px;
+}
+
+.tableLoading > div {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.standardListView .submit:hover {
+	background: #409eef;
+	outline: none;
+}
+
+.standardListView .submit:active {
+	background: #3382c6;
+	outline: none;
+}
+
+.standardListView .filterContainer {
+	display: inline-block;
+	width: calc(100% - 129px);
+}
+
+.standardListView .filterContainer input:not([type="checkbox"]) {
+	padding: 5px;
+}
+
+.standardListView .manage .addNew .icon-plus-sign-alt {
+	margin-right: 7px;
+}
+
+.standardListView .table {
+	margin: 10px;
+}
+
+.standardListView .manage input {
+	margin-left: 6px;
+}
+
+.standardListView .table .row .item {
+	display: inline-block;
+	width: 16%;
+	text-align: center;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	position: relative;
+}
+
+.standardListView .table .row {
+	height: 30px;
+	line-height: 30px;
+	background-color: #f9f9f9;
+}
+
+.standardListView .table .row.head {
+	background-color: rgba(0, 0, 0, 0.2);
+	font-weight: bold;
+	color: black;
+}
+
+.standardListView .table .row:nth-child(2n) {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.standardListView .table .row:hover {
+	background-color: #d8f4ff;
+	cursor: pointer;
+}
+
+.standardListView .table .icon-pencil, .standardListView .table .icon-time {
+	margin-left: 10px;
+}

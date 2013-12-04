@@ -1,0 +1,48 @@
+#header {
+	background-color: #ac1a30;
+	background-image: url(../img/logo.png);
+	background-position: 7px 5px;
+	background-size: auto 40px;
+	background-repeat: no-repeat;
+	height: 10px;
+	line-height: 10px;
+	color: white;
+	font-size: 14px;
+	padding: 20px;
+	border-bottom: 3px solid #75121f;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 99999;
+}
+
+#header .nav {
+	text-align: right;
+}
+
+#header .nav a {
+	display: inline-block;
+	margin-left: 16px;
+	color: white;
+}
+
+#header .nav .openSidebar {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	width: 57px;
+	text-align: center;
+	line-height: 52px;
+	font-size: 35px;
+	cursor: pointer;
+}
+
+#header .nav .openSidebar:hover {
+	background-color: #bc1e35;
+}
+
+#header .nav .openSidebar:active {
+	background-color: #99182b;
+}

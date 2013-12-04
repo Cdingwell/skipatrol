@@ -1,0 +1,16 @@
+<div id="main" class="loginContainer"> 
+    <div class="full_w">
+        <div class="h_title"><i class="icon-briefcase"></i>{{lang 'Welcome'}}</div>
+        <div class="h_content">
+
+            <div class="welcome">
+                {{{lang 'WelcomeMessage' session.name session.created session.ip}}}
+            </div>
+
+            <div class="everywhereLogout">
+                <button id='logoutEverywhere'><i class="icon-signout"></i>{{lang 'Logout of all %@ Sessions' session_count}}</button>
+            </div>
+
+        </div>
+    </div>
+</div>

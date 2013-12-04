@@ -1,0 +1,69 @@
+.sidebar {
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 999999999999999;
+}
+
+.sidebar .actualSidebar {
+	background-color: #fcfcfc;
+	width: 200px;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	-webkit-transition: right 0.1s;
+	-ms-transition: right 0.1s;
+	transition: right 0.1s;
+	-webkit-transform: translateZ(0);
+   -moz-transform: translateZ(0);
+   -ms-transform: translateZ(0);
+   -o-transform: translateZ(0);
+   transform: translateZ(0);
+	right: 0px;
+}
+
+.sidebar .actualSidebar a {
+	display: block;
+	color: #494949;
+	padding: 15px;
+	padding-left: 20px;
+	font-size: 14px;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.sidebar .actualSidebar a:hover {
+	text-decoration: none;
+	background-color: #e8e8e8;
+	cursor: pointer;
+}
+
+.sidebar .actualSidebar a:active {
+	background-color: #d3d3d3;
+}
+
+.sidebar .actualSidebar.hidden {
+	-webkit-transition: right 0.1s;
+	-ms-transition: right 0.1s;
+	transition: right 0.1s;
+	-webkit-transform: translateZ(0);
+   -moz-transform: translateZ(0);
+   -ms-transform: translateZ(0);
+   -o-transform: translateZ(0);
+   transform: translateZ(0);
+	right: -200px;
+}
+
+.sidebar .closeSidebar {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 200px;
+}
+
+.sidebar a [class^="icon-"] {
+	margin-right: 5px;
+}
