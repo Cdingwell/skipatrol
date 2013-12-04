@@ -1,5 +1,8 @@
 <?php
 
+	header('Access-Control-Allow-Origin: *');
+	header('Access-Control-Allow-Methods: GET, POST');  
+
 	ini_set('display_errors', '0');
 	error_reporting(E_ALL | E_STRICT);
 
